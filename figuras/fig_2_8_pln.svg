@@ -1,0 +1,27 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="900" height="500" fill="#ffffff"/>
+<text x="450" y="30" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Pipeline de PLN tradicional</text>
+<polygon points="341.2,90 580,90 568.8,130 330,130" fill="#eef1f4" stroke="#5b6470" stroke-width="2"/>
+<text x="455.0" y="114.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Texto</text>
+<line x1="455" y1="130" x2="455" y2="142" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="330" y="142" width="250" height="40" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="455.0" y="166.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Tokenización</text>
+<line x1="455" y1="182" x2="455" y2="194" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="330" y="194" width="250" height="40" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="455.0" y="218.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Normalización / Lematización</text>
+<line x1="455" y1="234" x2="455" y2="246" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="330" y="246" width="250" height="40" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="455.0" y="270.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Etiquetado gramatical (POS)</text>
+<line x1="455" y1="286" x2="455" y2="298" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="330" y="298" width="250" height="40" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="455.0" y="322.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Reconocimiento de entidades (NER)</text>
+<line x1="455" y1="338" x2="455" y2="350" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="330" y="350" width="250" height="40" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="455.0" y="374.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Análisis de frecuencia</text>
+<line x1="455" y1="390" x2="455" y2="402" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<polygon points="341.2,402 580,402 568.8,442 330,442" fill="#f6e7e9" stroke="#b23a48" stroke-width="2"/>
+<text x="455.0" y="426.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Candidatos a término</text>
+<text x="700" y="250" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Identifica términos, pero no</text>
+<text x="700" y="270" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >genera noción ni impacto.</text>
+</svg>

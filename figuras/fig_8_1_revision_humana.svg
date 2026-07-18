@@ -1,0 +1,26 @@
+<svg viewBox="0 0 920 320" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="920" height="320" fill="#ffffff"/>
+<text x="460" y="28" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">El LEL generado y la revisión humana</text>
+<polygon points="37.92,120 150,120 132.07999999999998,184 20,184" fill="#eef1f4" stroke="#5b6470" stroke-width="2"/>
+<text x="85.0" y="148.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Corpus</text>
+<text x="85.0" y="164.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >(entrevistas)</text>
+<rect x="195" y="120" width="150" height="64" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="270.0" y="156.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Pipeline LLM</text>
+<polygon points="407.92,120 520,120 502.08,184 390,184" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="455.0" y="156.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">LEL borrador</text>
+<rect x="560" y="108" width="180" height="88" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="650.0" y="140.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Revisión del ingeniero</text>
+<text x="650.0" y="156.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">aceptar · corregir ·</text>
+<text x="650.0" y="172.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">descartar</text>
+<polygon points="802.92,120 900,120 882.08,184 785,184" fill="#f6e7e9" stroke="#b23a48" stroke-width="2"/>
+<text x="842.5" y="156.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">LEL validado</text>
+<line x1="150" y1="152" x2="195" y2="152" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="345" y1="152" x2="390" y2="152" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="520" y1="152" x2="560" y2="152" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="740" y1="152" x2="785" y2="152" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<path d="M 650,196 L 650,250 L 270,250 L 270,184" fill="none" stroke="#5b6470" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="150.4" y="240" width="239.2" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+<text x="270" y="253" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">retroalimentación: ajustar prompts</text>
+<text x="460" y="300" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >El enfoque generativo desplaza el esfuerzo humano de redactar el LEL a revisar y corregir un borrador.</text>
+</svg>

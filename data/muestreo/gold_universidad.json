@@ -1,0 +1,213 @@
+{
+  "proyecto": "Universidad",
+  "version": "",
+  "conjunto": "Gold muestreo",
+  "simbolos": [
+    {
+      "nombre": "Alumno",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Alumno"
+      ],
+      "impacto": [
+        "(ref) impacto de Alumno"
+      ],
+      "sinonimos": [],
+      "id": "U01"
+    },
+    {
+      "nombre": "Docente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Docente"
+      ],
+      "impacto": [
+        "(ref) impacto de Docente"
+      ],
+      "sinonimos": [],
+      "id": "U02"
+    },
+    {
+      "nombre": "Coordinador",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Coordinador"
+      ],
+      "impacto": [
+        "(ref) impacto de Coordinador"
+      ],
+      "sinonimos": [],
+      "id": "U03"
+    },
+    {
+      "nombre": "Bedel",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Bedel"
+      ],
+      "impacto": [
+        "(ref) impacto de Bedel"
+      ],
+      "sinonimos": [],
+      "id": "U04"
+    },
+    {
+      "nombre": "Materia",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Materia"
+      ],
+      "impacto": [
+        "(ref) impacto de Materia"
+      ],
+      "sinonimos": [],
+      "id": "U05"
+    },
+    {
+      "nombre": "Comisión",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Comisión"
+      ],
+      "impacto": [
+        "(ref) impacto de Comisión"
+      ],
+      "sinonimos": [],
+      "id": "U06"
+    },
+    {
+      "nombre": "Correlativa",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Correlativa"
+      ],
+      "impacto": [
+        "(ref) impacto de Correlativa"
+      ],
+      "sinonimos": [],
+      "id": "U07"
+    },
+    {
+      "nombre": "Acta",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Acta"
+      ],
+      "impacto": [
+        "(ref) impacto de Acta"
+      ],
+      "sinonimos": [],
+      "id": "U08"
+    },
+    {
+      "nombre": "Libreta",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Libreta"
+      ],
+      "impacto": [
+        "(ref) impacto de Libreta"
+      ],
+      "sinonimos": [],
+      "id": "U09"
+    },
+    {
+      "nombre": "Aula",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Aula"
+      ],
+      "impacto": [
+        "(ref) impacto de Aula"
+      ],
+      "sinonimos": [],
+      "id": "U10"
+    },
+    {
+      "nombre": "Final",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Final"
+      ],
+      "impacto": [
+        "(ref) impacto de Final"
+      ],
+      "sinonimos": [],
+      "id": "U11"
+    },
+    {
+      "nombre": "Inscribir a Materia",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Inscribir a Materia"
+      ],
+      "impacto": [
+        "(ref) impacto de Inscribir a Materia"
+      ],
+      "sinonimos": [
+        "Inscripción"
+      ],
+      "id": "U12"
+    },
+    {
+      "nombre": "Cursar",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Cursar"
+      ],
+      "impacto": [
+        "(ref) impacto de Cursar"
+      ],
+      "sinonimos": [],
+      "id": "U13"
+    },
+    {
+      "nombre": "Cargar Nota",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Cargar Nota"
+      ],
+      "impacto": [
+        "(ref) impacto de Cargar Nota"
+      ],
+      "sinonimos": [],
+      "id": "U14"
+    },
+    {
+      "nombre": "Tomar Asistencia",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Tomar Asistencia"
+      ],
+      "impacto": [
+        "(ref) impacto de Tomar Asistencia"
+      ],
+      "sinonimos": [],
+      "id": "U15"
+    },
+    {
+      "nombre": "Regularizada",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Regularizada"
+      ],
+      "impacto": [
+        "(ref) impacto de Regularizada"
+      ],
+      "sinonimos": [],
+      "id": "U16"
+    },
+    {
+      "nombre": "Aprobada",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Aprobada"
+      ],
+      "impacto": [
+        "(ref) impacto de Aprobada"
+      ],
+      "sinonimos": [],
+      "id": "U17"
+    }
+  ]
+}

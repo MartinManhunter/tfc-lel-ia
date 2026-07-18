@@ -1,0 +1,189 @@
+{
+  "proyecto": "Farmacéutica",
+  "version": "",
+  "conjunto": "Gold muestreo",
+  "simbolos": [
+    {
+      "nombre": "Farmacéutico",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Farmacéutico"
+      ],
+      "impacto": [
+        "(ref) impacto de Farmacéutico"
+      ],
+      "sinonimos": [],
+      "id": "F01"
+    },
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Cliente"
+      ],
+      "impacto": [
+        "(ref) impacto de Cliente"
+      ],
+      "sinonimos": [],
+      "id": "F02"
+    },
+    {
+      "nombre": "Droguería",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Droguería"
+      ],
+      "impacto": [
+        "(ref) impacto de Droguería"
+      ],
+      "sinonimos": [],
+      "id": "F03"
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Receta"
+      ],
+      "impacto": [
+        "(ref) impacto de Receta"
+      ],
+      "sinonimos": [],
+      "id": "F04"
+    },
+    {
+      "nombre": "Medicamento",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Medicamento"
+      ],
+      "impacto": [
+        "(ref) impacto de Medicamento"
+      ],
+      "sinonimos": [],
+      "id": "F05"
+    },
+    {
+      "nombre": "Stock",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Stock"
+      ],
+      "impacto": [
+        "(ref) impacto de Stock"
+      ],
+      "sinonimos": [],
+      "id": "F06"
+    },
+    {
+      "nombre": "Lote",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Lote"
+      ],
+      "impacto": [
+        "(ref) impacto de Lote"
+      ],
+      "sinonimos": [],
+      "id": "F07"
+    },
+    {
+      "nombre": "Obra Social",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Obra Social"
+      ],
+      "impacto": [
+        "(ref) impacto de Obra Social"
+      ],
+      "sinonimos": [],
+      "id": "F08"
+    },
+    {
+      "nombre": "Medicamento Controlado",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Medicamento Controlado"
+      ],
+      "impacto": [
+        "(ref) impacto de Medicamento Controlado"
+      ],
+      "sinonimos": [],
+      "id": "F09"
+    },
+    {
+      "nombre": "Dispensar Medicamento",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Dispensar Medicamento"
+      ],
+      "impacto": [
+        "(ref) impacto de Dispensar Medicamento"
+      ],
+      "sinonimos": [
+        "Dispensación"
+      ],
+      "id": "F10"
+    },
+    {
+      "nombre": "Pedir a Droguería",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Pedir a Droguería"
+      ],
+      "impacto": [
+        "(ref) impacto de Pedir a Droguería"
+      ],
+      "sinonimos": [],
+      "id": "F11"
+    },
+    {
+      "nombre": "Controlar Vencimiento",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Controlar Vencimiento"
+      ],
+      "impacto": [
+        "(ref) impacto de Controlar Vencimiento"
+      ],
+      "sinonimos": [],
+      "id": "F12"
+    },
+    {
+      "nombre": "Ingresar Mercadería",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Ingresar Mercadería"
+      ],
+      "impacto": [
+        "(ref) impacto de Ingresar Mercadería"
+      ],
+      "sinonimos": [],
+      "id": "F13"
+    },
+    {
+      "nombre": "Registrar en Libro",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Registrar en Libro"
+      ],
+      "impacto": [
+        "(ref) impacto de Registrar en Libro"
+      ],
+      "sinonimos": [],
+      "id": "F14"
+    },
+    {
+      "nombre": "Vencido",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Vencido"
+      ],
+      "impacto": [
+        "(ref) impacto de Vencido"
+      ],
+      "sinonimos": [],
+      "id": "F15"
+    }
+  ]
+}

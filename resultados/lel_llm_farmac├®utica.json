@@ -1,0 +1,201 @@
+{
+  "proyecto": "Farmacéutica",
+  "version": "",
+  "conjunto": "LLM (asistente, C2c)",
+  "simbolos": [
+    {
+      "nombre": "Farmacéutico",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el profesional que dispensa los Medicamentos."
+      ],
+      "impacto": [
+        "Lee la Receta y entrega el Medicamento."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien retira un Medicamento con Receta."
+      ],
+      "impacto": [
+        "Presenta la Receta y abona la diferencia."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Droguería",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es la distribuidora que provee los Medicamentos."
+      ],
+      "impacto": [
+        "Envía la mercadería que se ingresa al Stock."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la indicación del médico para un Medicamento."
+      ],
+      "impacto": [
+        "Habilita la Dispensación; los controlados usan receta especial."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Medicamento",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el producto que se dispensa al Cliente."
+      ],
+      "impacto": [
+        "Tiene Stock, Lote y fecha de vencimiento."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Stock",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la cantidad disponible de cada Medicamento."
+      ],
+      "impacto": [
+        "Baja con la Dispensación y sube al Ingresar Mercadería."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Lote",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la partida de un Medicamento con su vencimiento."
+      ],
+      "impacto": [
+        "Se controla para no dispensar Vencidos."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Obra Social",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la entidad que cubre parte del Medicamento."
+      ],
+      "impacto": [
+        "Aplica descuento sobre la Receta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Medicamento Controlado",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el psicotrópico o estupefaciente regulado."
+      ],
+      "impacto": [
+        "Requiere Receta especial y Registro en el Libro."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Dispensar Medicamento",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es entregar el Medicamento contra la Receta."
+      ],
+      "impacto": [
+        "Descuenta el Stock."
+      ],
+      "sinonimos": [
+        "Dispensación"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Pedir a Droguería",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es solicitar reposición cuando baja el Stock."
+      ],
+      "impacto": [
+        "La Droguería envía la mercadería."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Controlar Vencimiento",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es verificar las fechas de vencimiento del Stock."
+      ],
+      "impacto": [
+        "Retira de la venta lo que está por vencer."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Ingresar Mercadería",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es incorporar al Stock lo recibido de la Droguería."
+      ],
+      "impacto": [
+        "Registra Lote y vencimiento."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Registrar en Libro",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es asentar la dispensación de un Controlado."
+      ],
+      "impacto": [
+        "Queda disponible para auditoría sanitaria."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Vencido",
+      "tipo": "Estado",
+      "nocion": [
+        "Es el estado del Medicamento pasada su fecha."
+      ],
+      "impacto": [
+        "No puede dispensarse; se devuelve o descarta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Devolución",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es retornar mercadería a la Droguería."
+      ],
+      "impacto": [
+        "Se aplica a los Medicamentos por vencer."
+      ],
+      "sinonimos": [],
+      "id": ""
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "proyecto": "ecoFactory",
+  "version": "",
+  "conjunto": "Baseline-Frecuencia (PLN tradicional)",
+  "simbolos": [
+    {
+      "nombre": "Entrevistador",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ01"
+    },
+    {
+      "nombre": "Obra Social",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ02"
+    },
+    {
+      "nombre": "Secretaria",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ03"
+    },
+    {
+      "nombre": "Turno",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ04"
+    },
+    {
+      "nombre": "Doctor",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ05"
+    },
+    {
+      "nombre": "Historia Clínica",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ06"
+    },
+    {
+      "nombre": "Consulta",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ07"
+    },
+    {
+      "nombre": "Médico",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ08"
+    },
+    {
+      "nombre": "Pacientes",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ09"
+    },
+    {
+      "nombre": "Tiempo",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ10"
+    },
+    {
+      "nombre": "Viene",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ11"
+    },
+    {
+      "nombre": "Control",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ12"
+    },
+    {
+      "nombre": "Agenda",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ13"
+    },
+    {
+      "nombre": "Autorizaciones",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ14"
+    },
+    {
+      "nombre": "Autorización",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ15"
+    },
+    {
+      "nombre": "Consultorio",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ16"
+    },
+    {
+      "nombre": "Estudio",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ17"
+    },
+    {
+      "nombre": "Estudios",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ18"
+    },
+    {
+      "nombre": "Momento",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ19"
+    },
+    {
+      "nombre": "Obras Sociales",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ20"
+    },
+    {
+      "nombre": "Tratamiento",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ21"
+    },
+    {
+      "nombre": "Consultas",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ22"
+    },
+    {
+      "nombre": "Contame",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ23"
+    },
+    {
+      "nombre": "Igual",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ24"
+    },
+    {
+      "nombre": "Orden",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ25"
+    },
+    {
+      "nombre": "Paciente Nuevo",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ26"
+    },
+    {
+      "nombre": "Primero",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ27"
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ28"
+    },
+    {
+      "nombre": "Turnos",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ29"
+    },
+    {
+      "nombre": "Abrir",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ30"
+    },
+    {
+      "nombre": "Antecedentes",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ31"
+    },
+    {
+      "nombre": "Aparte",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ32"
+    }
+  ]
+}

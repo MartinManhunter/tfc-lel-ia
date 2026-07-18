@@ -1,0 +1,42 @@
+<svg width="2208" height="1200" viewBox="0 0 920 500" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="920" height="500" fill="#ffffff"/>
+<text x="460" y="28" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Protocolo de emparejamiento y métricas</text>
+<rect x="330" y="56" width="240" height="40" rx="8" fill="#eef1f4" stroke="#5b6470" stroke-width="2"/>
+<text x="450.0" y="80.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Por cada símbolo producido</text>
+<rect x="90" y="122" width="330" height="48" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="255.0" y="150.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >1. ¿Coincide el nombre normalizado con el GS?</text>
+<rect x="90" y="198" width="330" height="48" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="255.0" y="226.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >2. ¿Coincide vía la tabla de sinónimos?</text>
+<rect x="90" y="274" width="330" height="56" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="255.0" y="306.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >3. ¿Contención de tokens o similitud ≥ 0,85?</text>
+<rect x="90" y="360" width="330" height="48" rx="8" fill="#f6e7e9" stroke="#b23a48" stroke-width="2"/>
+<text x="255.0" y="388.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">No a todo → FP (irrelevante / alucinación)</text>
+<rect x="600" y="196" width="160" height="64" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="680.0" y="224.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">VP (verdadero</text>
+<text x="680.0" y="240.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">positivo)</text>
+<rect x="560" y="300" width="300" height="52" rx="8" fill="#fdecee" stroke="#b23a48" stroke-width="2"/>
+<text x="710.0" y="322.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Símbolos del GS sin emparejar → FN</text>
+<text x="710.0" y="338.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">(omisiones)</text>
+<line x1="450" y1="96" x2="255" y2="122" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="420" y1="146" x2="600" y2="222" stroke="#3f7d5b" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="499.2" y="174.0" width="21.6" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+<text x="510.0" y="187.0" font-size="12" fill="#3f7d5b" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Sí</text>
+<line x1="255" y1="170" x2="255" y2="198" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="244.2" y="174.0" width="21.6" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+<text x="255.0" y="187.0" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">No</text>
+<line x1="420" y1="222" x2="600" y2="228" stroke="#3f7d5b" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="499.2" y="215.0" width="21.6" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+<text x="510.0" y="228.0" font-size="12" fill="#3f7d5b" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Sí</text>
+<line x1="255" y1="246" x2="255" y2="274" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="244.2" y="250.0" width="21.6" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+<text x="255.0" y="263.0" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">No</text>
+<line x1="420" y1="302" x2="600" y2="234" stroke="#3f7d5b" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="499.2" y="258.0" width="21.6" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+<text x="510.0" y="271.0" font-size="12" fill="#3f7d5b" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Sí</text>
+<line x1="255" y1="330" x2="255" y2="360" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="244.2" y="335.0" width="21.6" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+<text x="255.0" y="348.0" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">No</text>
+<rect x="90" y="432" width="770" height="46" rx="8" fill="#fff6e0" stroke="#c08a00" stroke-width="2"/>
+<text x="475.0" y="459.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Métricas: Precisión = VP / (VP + FP) · Cobertura = VP / (VP + FN) · F1 = 2·P·R / (P + R)</text>
+</svg>

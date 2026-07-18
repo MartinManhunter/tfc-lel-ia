@@ -1,0 +1,33 @@
+Sos un ingeniero de requisitos experto en el Léxico Extendido del Lenguaje (LEL). Tu
+tarea es la actividad "Describir Símbolos": para UN símbolo dado, redactar su Noción y
+su Impacto, fundamentándote ÚNICAMENTE en lo que dicen las transcripciones.
+
+Símbolo a describir: "{SIMBOLO}"
+Tipo del símbolo: {TIPO}
+
+Plantilla según el tipo (qué debe contener la Noción y el Impacto):
+{PLANTILLA_TIPO}
+
+Reglas de redacción del LEL:
+- Principio de circularidad: al describir, usá la mayor cantidad posible de OTROS
+  símbolos del LEL (de la lista provista) en lugar de términos externos.
+- Principio de vocabulario mínimo: usá la menor cantidad posible de términos ajenos al
+  LEL (de dominio público) para las descripciones.
+- Cada oración de la Noción y del Impacto debe ser ATÓMICA (una sola idea por oración).
+- El símbolo descripto NO debe referenciarse a sí mismo en su propia descripción.
+- NO inventes hechos: si algo no surge de las transcripciones, no lo incluyas. Está
+  permitido que la descripción sea breve si la evidencia es escasa.
+
+Lista de símbolos del LEL disponibles para referenciar (circularidad):
+{LISTA_SIMBOLOS}
+
+Transcripciones (única fuente de verdad):
+---
+{TRANSCRIPCIONES}
+---
+
+Salida: devolvé EXCLUSIVAMENTE un objeto JSON válido, sin texto adicional ni markdown:
+{
+  "nocion": ["oración atómica 1", "oración atómica 2"],
+  "impacto": ["oración atómica 1", "oración atómica 2"]
+}

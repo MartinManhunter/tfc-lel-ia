@@ -1,0 +1,87 @@
+{
+  "proyecto": "ecoFactory",
+  "version": "",
+  "conjunto": "Baseline-Frecuencia (PLN tradicional)",
+  "simbolos": [
+    {
+      "nombre": "Cuota",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ01"
+    },
+    {
+      "nombre": "Socio",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ02"
+    },
+    {
+      "nombre": "Dueño",
+      "tipo": "Sujeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ03"
+    },
+    {
+      "nombre": "Entrevistador",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ04"
+    },
+    {
+      "nombre": "Clases",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ05"
+    },
+    {
+      "nombre": "Molinete",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ06"
+    },
+    {
+      "nombre": "Plan",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ07"
+    },
+    {
+      "nombre": "Carnet",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ08"
+    },
+    {
+      "nombre": "Deja",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ09"
+    },
+    {
+      "nombre": "Paga",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ10"
+    }
+  ]
+}

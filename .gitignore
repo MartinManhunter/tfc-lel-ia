@@ -1,0 +1,31 @@
+# --- Secretos: NUNCA versionar claves de API ---
+.env
+*.key
+secrets*.yaml
+
+# --- Entornos y cachés de Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Node (generación del documento) ---
+node_modules/
+
+# --- Artefactos transitorios de render ---
+paginas/
+*.tmp
+*.log
+build_docx.bak.js
+
+# --- Salidas pesadas opcionales (descomentar si no querés versionarlas) ---
+# resultados/*.json
+# *.pdf
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Notas internas del asistente (no publicar) ---
+.CLAUDE_notas_internas.md

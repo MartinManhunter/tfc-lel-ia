@@ -1,0 +1,205 @@
+{
+  "proyecto": "Veterinaria",
+  "version": "",
+  "conjunto": "Gold Standard muestreo",
+  "simbolos": [
+    {
+      "nombre": "Veterinario",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Veterinario"
+      ],
+      "impacto": [
+        "(ref) impacto de Veterinario"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Recepcionista",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Recepcionista"
+      ],
+      "impacto": [
+        "(ref) impacto de Recepcionista"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Cliente"
+      ],
+      "impacto": [
+        "(ref) impacto de Cliente"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Mascota",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Mascota"
+      ],
+      "impacto": [
+        "(ref) impacto de Mascota"
+      ],
+      "sinonimos": [
+        "Paciente"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Turno",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Turno"
+      ],
+      "impacto": [
+        "(ref) impacto de Turno"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Historia Clínica",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Historia Clínica"
+      ],
+      "impacto": [
+        "(ref) impacto de Historia Clínica"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Receta"
+      ],
+      "impacto": [
+        "(ref) impacto de Receta"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Vacuna",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Vacuna"
+      ],
+      "impacto": [
+        "(ref) impacto de Vacuna"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Recordatorio",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Recordatorio"
+      ],
+      "impacto": [
+        "(ref) impacto de Recordatorio"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Agendar Turno",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Agendar Turno"
+      ],
+      "impacto": [
+        "(ref) impacto de Agendar Turno"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Atender Consulta",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Atender Consulta"
+      ],
+      "impacto": [
+        "(ref) impacto de Atender Consulta"
+      ],
+      "sinonimos": [
+        "Consulta"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Vacunar",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Vacunar"
+      ],
+      "impacto": [
+        "(ref) impacto de Vacunar"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cobrar Consulta",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Cobrar Consulta"
+      ],
+      "impacto": [
+        "(ref) impacto de Cobrar Consulta"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Dar de Alta Cliente",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Dar de Alta Cliente"
+      ],
+      "impacto": [
+        "(ref) impacto de Dar de Alta Cliente"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Turno Confirmado",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Turno Confirmado"
+      ],
+      "impacto": [
+        "(ref) impacto de Turno Confirmado"
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Internado",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Internado"
+      ],
+      "impacto": [
+        "(ref) impacto de Internado"
+      ],
+      "sinonimos": [
+        "Paciente Internado"
+      ],
+      "id": ""
+    }
+  ]
+}

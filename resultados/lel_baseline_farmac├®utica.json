@@ -1,0 +1,223 @@
+{
+  "proyecto": "ecoFactory",
+  "version": "",
+  "conjunto": "Baseline-Frecuencia (PLN tradicional)",
+  "simbolos": [
+    {
+      "nombre": "Stock",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ01"
+    },
+    {
+      "nombre": "Farmacéutico",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ02"
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ03"
+    },
+    {
+      "nombre": "Medicamento",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ04"
+    },
+    {
+      "nombre": "Medicamentos",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ05"
+    },
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ06"
+    },
+    {
+      "nombre": "Droguería",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ07"
+    },
+    {
+      "nombre": "Obra Social",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ08"
+    },
+    {
+      "nombre": "Paciente",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ09"
+    },
+    {
+      "nombre": "Cantidad",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ10"
+    },
+    {
+      "nombre": "Cobertura",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ11"
+    },
+    {
+      "nombre": "Dispensar",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ12"
+    },
+    {
+      "nombre": "Obras Sociales",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ13"
+    },
+    {
+      "nombre": "Vencimientos",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ14"
+    },
+    {
+      "nombre": "Coberturas",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ15"
+    },
+    {
+      "nombre": "Controlado",
+      "tipo": "Estado",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ16"
+    },
+    {
+      "nombre": "Cualquier",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ17"
+    },
+    {
+      "nombre": "Diferencia",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ18"
+    },
+    {
+      "nombre": "Dispensación",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ19"
+    },
+    {
+      "nombre": "Disponible",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ20"
+    },
+    {
+      "nombre": "Entrevistador Contame",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ21"
+    },
+    {
+      "nombre": "Especial",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ22"
+    },
+    {
+      "nombre": "Especiales",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ23"
+    },
+    {
+      "nombre": "Estantería",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ24"
+    },
+    {
+      "nombre": "Facturación",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ25"
+    },
+    {
+      "nombre": "Farmacia",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ26"
+    },
+    {
+      "nombre": "Libro",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ27"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[Entrevistador] Contame un poco cómo es el día a día acá en la veterinaria.
+
+[Veterinario] Mirá, arrancamos a la mañana con los turnos que están agendados. La gente saca turno por teléfono o por el WhatsApp, la recepcionista lo carga en el sistema y queda el turno confirmado. Después llega el cliente con la mascota y ahí empieza la consulta.
+
+[Entrevistador] ¿Qué pasa en una consulta?
+
+[Veterinario] Reviso al paciente, lo peso, lo ausculto, veo el motivo por el que vino. Todo eso lo voy anotando en la historia clínica de la mascota. Cada animal tiene su historia clínica, donde queda todo: las vacunas que se dio, los tratamientos, las visitas anteriores. Si hace falta, le doy una receta para que compren la medicación, o le aplico una vacuna ahí mismo.
+
+[Entrevistador] ¿Y la vacunación cómo la manejan?
+
+[Veterinario] La vacuna tiene su calendario. Cuando vacuno, lo registro en la historia clínica y el sistema genera un recordatorio para la próxima dosis. A veces la mascota necesita quedarse internada, por una cirugía o porque está delicada; ahí pasa a estar internada y la controlamos varias veces por día hasta que le damos el alta.
+
+[Entrevistador] Cuando termina la consulta, ¿qué sigue?
+
+[Veterinario] Termina la consulta y el cliente pasa por recepción a pagar. La recepcionista cobra la consulta, los estudios o la vacuna, y emite el comprobante. Si el cliente es de los que vienen seguido, ya lo tenemos cargado y es más rápido.

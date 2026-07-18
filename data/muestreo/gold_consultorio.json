@@ -1,0 +1,177 @@
+{
+  "proyecto": "Consultorio médico",
+  "version": "",
+  "conjunto": "Gold muestreo",
+  "simbolos": [
+    {
+      "nombre": "Médico",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Médico"
+      ],
+      "impacto": [
+        "(ref) impacto de Médico"
+      ],
+      "sinonimos": [],
+      "id": "M01"
+    },
+    {
+      "nombre": "Secretaria",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Secretaria"
+      ],
+      "impacto": [
+        "(ref) impacto de Secretaria"
+      ],
+      "sinonimos": [],
+      "id": "M02"
+    },
+    {
+      "nombre": "Paciente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Paciente"
+      ],
+      "impacto": [
+        "(ref) impacto de Paciente"
+      ],
+      "sinonimos": [],
+      "id": "M03"
+    },
+    {
+      "nombre": "Turno",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Turno"
+      ],
+      "impacto": [
+        "(ref) impacto de Turno"
+      ],
+      "sinonimos": [],
+      "id": "M04"
+    },
+    {
+      "nombre": "Historia Clínica",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Historia Clínica"
+      ],
+      "impacto": [
+        "(ref) impacto de Historia Clínica"
+      ],
+      "sinonimos": [],
+      "id": "M05"
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Receta"
+      ],
+      "impacto": [
+        "(ref) impacto de Receta"
+      ],
+      "sinonimos": [],
+      "id": "M06"
+    },
+    {
+      "nombre": "Estudio",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Estudio"
+      ],
+      "impacto": [
+        "(ref) impacto de Estudio"
+      ],
+      "sinonimos": [],
+      "id": "M07"
+    },
+    {
+      "nombre": "Obra Social",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Obra Social"
+      ],
+      "impacto": [
+        "(ref) impacto de Obra Social"
+      ],
+      "sinonimos": [],
+      "id": "M08"
+    },
+    {
+      "nombre": "Sobreturno",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Sobreturno"
+      ],
+      "impacto": [
+        "(ref) impacto de Sobreturno"
+      ],
+      "sinonimos": [],
+      "id": "M09"
+    },
+    {
+      "nombre": "Agendar Turno",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Agendar Turno"
+      ],
+      "impacto": [
+        "(ref) impacto de Agendar Turno"
+      ],
+      "sinonimos": [],
+      "id": "M10"
+    },
+    {
+      "nombre": "Atender Consulta",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Atender Consulta"
+      ],
+      "impacto": [
+        "(ref) impacto de Atender Consulta"
+      ],
+      "sinonimos": [
+        "Consulta"
+      ],
+      "id": "M11"
+    },
+    {
+      "nombre": "Pedir Estudio",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Pedir Estudio"
+      ],
+      "impacto": [
+        "(ref) impacto de Pedir Estudio"
+      ],
+      "sinonimos": [],
+      "id": "M12"
+    },
+    {
+      "nombre": "Dar de Alta Paciente",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Dar de Alta Paciente"
+      ],
+      "impacto": [
+        "(ref) impacto de Dar de Alta Paciente"
+      ],
+      "sinonimos": [],
+      "id": "M13"
+    },
+    {
+      "nombre": "Gestionar Autorización",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Gestionar Autorización"
+      ],
+      "impacto": [
+        "(ref) impacto de Gestionar Autorización"
+      ],
+      "sinonimos": [],
+      "id": "M14"
+    }
+  ]
+}

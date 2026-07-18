@@ -1,0 +1,45 @@
+Entrevista 4: Responsable ERP (proveedor del ERP)
+
+[Federico]
+Buenas tardes venimos de parte del cliente al que le estamos haciendo un proyecto de software. Queremos hacer algunas preguntas sobre el ERP para facilitar nuestro entendimiento.
+
+[Responsable ERP]
+Bueno, okey
+
+[Federico]
+En qué medida se pueden automatizar procesos de facturación en el ERP
+
+[Responsable ERP]
+El ERP tiene una gestión de facturación. Vos en el ERP puedes cargar productos y generar la factura A, B o C. El ERP tiene la gestión de facturación, y vos elegís cómo enviar la factura, por mail o el canal que quieras. Cuando vendemos el software lo vendemos funcional
+
+[Federico]
+y brindan capacitación?
+
+[Responsable ERP]
+Sí tenemos capacitación dependiendo de los módulos que contraten nuestros clientes. El ERP tiene distintos módulos. Facturación es uno de esos módulos. La gente que contrata el modulo de facturacion generalmente se la capacita en este modulo
+
+[Federico]
+en cuanto a la Integración del ERP, Tienen alguna integración armada?
+
+[Responsable ERP]
+Sí, tenemos integraciones hechas con distintos productos y puntos de venta. Como por ejemplo dragon fish, que realiza punto de ventas para los shopping más importante en Argentina. Los comercios usan dragon fish y nos integramos a ellos como web service que es la tecnología que están utilizando.
+
+[Federico]
+Nosotros podríamos automatizar algo por fuera, y mediante una API tomar información del ERP R = ¿A que se refiere por fuera?
+
+F = A que con una fuente externa tomemos información del ERP.
+
+[Responsable ERP]
+Sí nosotros utilizamos las tecnologías estándares para integración de software del mercado. sino una api convencional de internet, tenemos programadores que pueden realizar la integración sin ningún problema.
+
+[Federico]
+Bien, y para cerrar.. ¿Qué tipo de seguridad y mantenimiento se le da al ERP?
+
+[Responsable ERP]
+Eso depende del cliente no lo hacemos nosotros. Vendemos o alquilamos el ERP entero al cliente. El cliente lo monta en su empresa y es responsable de los backups.Nosotros le proveemos usuarios, contraseñas y llaves de seguridad para los distintos módulos. Esos son los niveles de seguridad del ERP. Pero depende de cada cliente, dependiendo de sus niveles de seguridad. Depende de las políticas de cada empresa.
+
+[Federico]
+Bueno creo que estamos cubiertos por nuestro lado, muchas gracias.
+
+[Responsable ERP]
+bueno, gracias.

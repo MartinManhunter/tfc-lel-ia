@@ -1,0 +1,189 @@
+{
+  "proyecto": "Hotel",
+  "version": "",
+  "conjunto": "LLM (asistente, C2c)",
+  "simbolos": [
+    {
+      "nombre": "Recepcionista",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien gestiona la atención en la recepción."
+      ],
+      "impacto": [
+        "Hace la Reserva, el Check-in y el Check-out."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Huésped",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es la persona que se aloja en el hotel."
+      ],
+      "impacto": [
+        "Hace una Reserva y ocupa una Habitación."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Reserva",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el pedido de alojamiento para ciertas fechas."
+      ],
+      "impacto": [
+        "Se confirma según la Disponibilidad de Habitaciones."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Habitación",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la unidad de alojamiento del hotel."
+      ],
+      "impacto": [
+        "Puede estar Ocupada, Disponible o bloqueada por limpieza."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cuenta",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el detalle de noches y consumos del Huésped."
+      ],
+      "impacto": [
+        "Se cierra en el Check-out y se factura."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Factura",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el comprobante del cobro al Huésped."
+      ],
+      "impacto": [
+        "Se emite al hacer el Check-out."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Llave",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el acceso a la Habitación asignada."
+      ],
+      "impacto": [
+        "Se entrega en el Check-in y se devuelve en el Check-out."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Hacer Reserva",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es registrar un pedido de alojamiento."
+      ],
+      "impacto": [
+        "Verifica la Disponibilidad y confirma la Reserva."
+      ],
+      "sinonimos": [
+        "Reservar"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Check-in",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es el ingreso del Huésped y la asignación de Habitación."
+      ],
+      "impacto": [
+        "La Habitación pasa a estar Ocupada."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Check-out",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es la salida del Huésped y el cierre de la Cuenta."
+      ],
+      "impacto": [
+        "Se cobra, se emite la Factura y la Habitación queda Disponible."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Verificar Disponibilidad",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es controlar si hay Habitaciones libres para las fechas."
+      ],
+      "impacto": [
+        "Determina si la Reserva se puede confirmar."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Ocupada",
+      "tipo": "Estado",
+      "nocion": [
+        "Es el estado de la Habitación con un Huésped alojado."
+      ],
+      "impacto": [
+        "Impide asignarla a otra Reserva."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Disponible",
+      "tipo": "Estado",
+      "nocion": [
+        "Es el estado de la Habitación libre y limpia."
+      ],
+      "impacto": [
+        "Habilita una nueva asignación."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Overbooking",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la sobreventa de Reservas por encima de las Habitaciones."
+      ],
+      "impacto": [
+        "Obliga a reubicar Huéspedes."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Consumo",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un gasto del Huésped cargado a la Habitación."
+      ],
+      "impacto": [
+        "Se suma a la Cuenta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    }
+  ]
+}

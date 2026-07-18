@@ -1,0 +1,24 @@
+# Configuración del prototipo de construcción del LEL con IA Generativa
+# Elegí "la que mejor funcione" corriendo el experimento con cada proveedor/modelo.
+
+proveedor: anthropic        # openai | anthropic | echo (echo = sin red, solo valida)
+modelo: ""                  # COMPLETAR con el modelo vigente del proveedor elegido
+temperatura: 0.2            # baja, para favorecer reproducibilidad
+max_tokens: 4000
+
+# Modelos sugeridos para el benchmarking (completar con los nombres vigentes):
+#   openai    -> p. ej. un modelo GPT de la familia disponible
+#   anthropic -> p. ej. un modelo Claude de la familia disponible
+#   local     -> exponer un endpoint compatible con OpenAI y usar proveedor: openai
+
+# Corpus de entrada: las cuatro entrevistas reales del estudio original de ecoFactory
+# (ver data/corpus/NOTA_CORPUS.md). Todos los tratamientos usan este mismo corpus.
+corpus:
+  - data/corpus/entrevista_1_dueno.txt
+  - data/corpus/entrevista_2_gerente_comercial.txt
+  - data/corpus/entrevista_3_operario.txt
+  - data/corpus/entrevista_4_responsable_erp.txt
+
+gold:
+  completo: data/gold/gs_completo.json
+  corpus: data/gold/gs_corpus.json

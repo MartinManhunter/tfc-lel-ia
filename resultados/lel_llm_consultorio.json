@@ -1,0 +1,201 @@
+{
+  "proyecto": "Consultorio médico",
+  "version": "",
+  "conjunto": "LLM (asistente, C2c)",
+  "simbolos": [
+    {
+      "nombre": "Médico",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el profesional que atiende a los Pacientes."
+      ],
+      "impacto": [
+        "Atiende la Consulta, pide Estudios y hace la Receta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Secretaria",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien gestiona la parte administrativa y la agenda."
+      ],
+      "impacto": [
+        "Agenda Turnos, da de alta Pacientes y gestiona autorizaciones."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Paciente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es la persona que asiste a la Consulta."
+      ],
+      "impacto": [
+        "Saca Turno, es atendido y recibe la Receta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Turno",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la reserva de un horario de atención con el Médico."
+      ],
+      "impacto": [
+        "Se agenda; ante urgencias puede darse un Sobreturno."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Historia Clínica",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el registro del Paciente con antecedentes y consultas."
+      ],
+      "impacto": [
+        "Se abre y se actualiza en cada Consulta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la indicación de medicación que emite el Médico."
+      ],
+      "impacto": [
+        "El Paciente la lleva a la farmacia."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Estudio",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un análisis o práctica que el Médico solicita."
+      ],
+      "impacto": [
+        "Puede requerir autorización de la Obra Social."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Obra Social",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la entidad que cubre las prestaciones del Paciente."
+      ],
+      "impacto": [
+        "Autoriza Estudios y cubre parte del costo."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Sobreturno",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un turno extra que el Médico encaja ante una urgencia."
+      ],
+      "impacto": [
+        "Altera la agenda de la Secretaria."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Agendar Turno",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es reservar un horario de atención para el Paciente."
+      ],
+      "impacto": [
+        "Genera un Turno en la agenda."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Atender Consulta",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es la actividad en que el Médico revisa al Paciente."
+      ],
+      "impacto": [
+        "Actualiza la Historia Clínica; deriva en Receta o Estudio."
+      ],
+      "sinonimos": [
+        "Consulta"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Pedir Estudio",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es solicitar un análisis o práctica al Paciente."
+      ],
+      "impacto": [
+        "Requiere autorización de la Obra Social."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Gestionar Autorización",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es tramitar ante la Obra Social la cobertura de una práctica."
+      ],
+      "impacto": [
+        "Habilita la realización del Estudio."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Copago",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el importe que abona el Paciente y no cubre la Obra Social."
+      ],
+      "impacto": [
+        "Lo cobra la Secretaria."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Recordatorio",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el aviso del Turno que se envía al Paciente."
+      ],
+      "impacto": [
+        "Reduce el ausentismo."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Registrar Paciente",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es dar de alta a un Paciente nuevo en el sistema."
+      ],
+      "impacto": [
+        "Habilita a agendarle Turnos."
+      ],
+      "sinonimos": [],
+      "id": ""
+    }
+  ]
+}

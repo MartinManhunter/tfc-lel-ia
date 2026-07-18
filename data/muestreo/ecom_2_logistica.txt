@@ -1,0 +1,19 @@
+[Entrevistador] ¿Cuál es tu tarea en la logística de la tienda?
+
+[Operador] Yo me encargo de que el pedido llegue efectivamente al cliente, de la puerta del depósito para afuera y un poco para adentro también. Cuando un pedido queda confirmado, con el pago aprobado, me aparece en la lista de pedidos para preparar. Ahí arranca mi trabajo: agarro el pedido, voy al depósito y junto los productos, lo que se llama el picking. Recorro las estanterías, saco cada producto en la cantidad que pide el pedido, y los controlo uno por uno contra el detalle, para no mandar de menos ni cambiar un producto por otro. Cuando está todo, armo el paquete, lo embalo bien para que no se rompa en el camino. Eso es la preparación.
+
+[Entrevistador] ¿Y una vez que el paquete está armado?
+
+[Operador] Después viene el despacho. Le genero la etiqueta de envío, que lleva los datos del cliente, la dirección y un código de seguimiento, y se la pego al paquete. Después se lo entrego al transportista, que es la empresa de correo o de logística que hace la entrega a domicilio. A veces el transportista pasa a buscar los paquetes al depósito, a veces los llevamos nosotros a una sucursal. A partir de que el transportista se lleva el paquete, el pedido queda en estado en camino, y el cliente puede ver el seguimiento con ese código, así sabe por dónde anda su paquete y cuándo le va a llegar. Cuando el transportista lo entrega y el cliente lo recibe, el pedido pasa a estar entregado y para nosotros se cierra.
+
+[Entrevistador] ¿Qué pasa con las devoluciones?
+
+[Operador] Las devoluciones son parte del día a día, en e-commerce son inevitables. Al cliente le llegó algo fallado, o no era lo que esperaba, o le quedó chico, y pide la devolución. Genera un pedido de devolución, nos manda el producto de vuelta por el correo, y cuando llega al depósito yo lo recibo. Lo primero que hago es controlar que el producto esté en condiciones, que no esté usado ni dañado, que venga con su empaque. Si está todo bien, lo reingreso al stock, es decir, ese producto vuelve a estar disponible para la venta. Y después, según lo que el cliente pidió, se le devuelve la plata o se le manda un cambio por otro producto o por otro talle.
+
+[Entrevistador] ¿Qué es lo que más te complica en tu trabajo?
+
+[Operador] Lo que más me complica es cuando el depósito y la web no están sincronizados. El sistema le dice al cliente que hay stock, el cliente compra, el pedido me cae para preparar, y yo voy a la estantería a buscar el producto y no está: porque en realidad se había roto, o se traspapeló en otro lado del depósito, o alguien lo sacó y no lo descontó. Ahí quedo yo en el peor lugar, teniendo que avisar que un pedido que ya se pagó no lo podemos cumplir. La otra son los transportistas: a veces marcan un paquete como entregado y el cliente jura que nunca le llegó, y ahí se arma un lío en el que estamos en el medio nosotros, teniendo que reclamarle al correo y a la vez contener al cliente que está enojado y con razón.
+
+[Entrevistador] ¿Cómo se coordina tu parte con la parte comercial?
+
+[Operador] Todo el tiempo. Yo dependo de que la información de stock que carga la parte comercial sea real, y ellos dependen de que yo despache rápido para que el cliente esté contento. Cuando entra una promoción fuerte y se dispara la cantidad de pedidos, tengo que estar preparado para el volumen, porque si no se me acumulan los pedidos sin preparar y se atrasan todas las entregas. La comunicación entre logística y ventas es lo que hace que la rueda gire sin que se caiga nada.

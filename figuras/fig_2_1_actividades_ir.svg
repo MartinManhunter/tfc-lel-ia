@@ -1,0 +1,23 @@
+<svg viewBox="0 0 900 390" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="900" height="390" fill="#ffffff"/>
+<text x="450" y="28" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Actividades de la Ingeniería de Requisitos</text>
+<rect x="40" y="120" width="180" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="130.0" y="160.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Elicitación</text>
+<line x1="220" y1="155" x2="250" y2="155" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="250" y="120" width="180" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="340.0" y="160.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Análisis y Modelado</text>
+<line x1="430" y1="155" x2="460" y2="155" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="460" y="120" width="180" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="550.0" y="160.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Especificación</text>
+<line x1="640" y1="155" x2="670" y2="155" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="670" y="120" width="180" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="760.0" y="160.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Validación</text>
+<rect x="40" y="250" width="810" height="56" rx="8" fill="#f6e7e9" stroke="#b23a48" stroke-width="2"/>
+<text x="445.0" y="283.0" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Gestión de Requisitos (trazabilidad y gestión de cambios a lo largo de todo el proceso)</text>
+<line x1="130" y1="250" x2="130" y2="192" stroke="#b23a48" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="340" y1="250" x2="340" y2="192" stroke="#b23a48" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="550" y1="250" x2="550" y2="192" stroke="#b23a48" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="760" y1="250" x2="760" y2="192" stroke="#b23a48" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="450" y="360" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Las tres primeras producen y refinan los requisitos; la validación los contrasta con clientes y usuarios.</text>
+</svg>

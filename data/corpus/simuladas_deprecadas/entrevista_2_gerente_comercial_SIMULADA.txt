@@ -1,0 +1,67 @@
+Entrevista 2: Gerente Comercial
+
+[Federico]
+Buenas, ¿cómo va? Mi nombre es Federico, soy de la consultora X, vengo trabajando junto con mi colega Martín en el relevamiento. Antes que nada, gracias por el tiempo. La idea de hoy es entender cómo funciona toda la parte comercial de la empresa, así después podemos acompañar mejor lo del sistema. Vamos a ir charlando tranquilos, contame lo que se te ocurra.
+
+[Gerente Comercial]
+Bárbaro, sí, encantado. Yo estoy a cargo de toda el área comercial, así que cualquier cosa que necesiten de ventas, clientes, precios, lo que sea, lo manejo yo.
+
+[Federico]
+Perfecto. Para arrancar, contame un poco cómo está organizada la cartera de clientes, ¿qué tipo de clientes tienen?
+
+[Gerente Comercial]
+Mirá, nosotros trabajamos con dos tipos de cliente bien distintos. Por un lado están los mayoristas, que son los que nos compran en cantidad, grandes volúmenes de bolsas, normalmente para revender ellos después. Y por otro lado tenemos el minorista, que es el que te compra poquito, a veces un comercio chico, a veces directamente un consumidor que quiere unas cajas. Son dos mundos diferentes, los tratamos distinto.
+
+[Federico]
+¿Y por qué los tratan distinto? ¿En qué se diferencia uno de otro en el día a día?
+
+[Gerente Comercial]
+Y porque no le podés cobrar lo mismo a uno que te lleva diez mil bolsas que al que te lleva cien. El mayorista tiene un precio especial, por volumen, con bonificaciones si te compra de determinada cantidad para arriba. El minorista paga el precio de lista digamos, el de góndola. Después también cambian las condiciones de pago: al mayorista grande capricho le damos cuenta corriente, treinta días, esas cosas; al minorista es casi siempre contado. Entonces sí, son circuitos distintos.
+
+[Federico]
+Recién mencionaste el precio de lista. ¿Cómo manejan los precios, hay una lista de precios formal?
+
+[Gerente Comercial]
+Sí, tenemos una lista de precios que es como la biblia nuestra. Ahí está cada producto con su precio. Lo que pasa es que tenemos distintos niveles: el precio minorista, y después los precios por volumen para los mayoristas, que van bajando según la cantidad. La lista la actualizamos seguido, sobre todo ahora con la inflación, cada vez que cambia el costo de la materia prima hay que tocar la lista. Y eso es clave que esté bien cargado en el sistema, porque si el precio está mal en la lista, después sale mal en el pedido y termina saliendo mal la factura.
+
+[Federico]
+Claro. Contame cómo es el circuito de una venta, desde que el cliente quiere comprar hasta que se concreta.
+
+[Gerente Comercial]
+A ver, el cliente nos contacta, puede ser por teléfono, por mail, a veces el vendedor lo va a visitar. Nos pasa qué necesita, qué cantidad, qué tipo de bolsa. Con eso se arma el pedido, se carga en el sistema con el cliente, el producto y la cantidad, tomando los precios de la lista. Ahí, antes de mandarlo a preparar, nosotros desde lo comercial damos el ok: chequeamos que el cliente esté al día, que no tenga deuda, que tengamos stock para cumplir. Si está todo bien, el pedido queda aprobado y pasa a la parte de logística para que lo preparen y lo entreguen.
+
+[Federico]
+¿Y por qué es importante esa aprobación comercial antes de mandarlo a preparar?
+
+[Gerente Comercial]
+Porque si no, te mandás cualquiera. Imaginate que le despachás mercadería a un cliente que te debe medio millón de pesos hace tres meses, o que te comprometés con una cantidad que no tenés. La aprobación es el filtro. Una vez que el pedido está aprobado ya nadie discute, va para adelante. Si no está aprobado, queda frenado hasta que se resuelva el tema, la deuda o el stock.
+
+[Federico]
+Pasando a otra cosa, ¿qué información necesitás vos del sistema para tu trabajo de todos los días?
+
+[Gerente Comercial]
+Yo vivo de los reportes. Necesito saber cuánto vendimos en el mes, comparado con el mes anterior. Necesito ver qué productos se venden más y cuáles se quedan. Necesito saber por cliente, sobre todo los mayoristas grandes, cuánto me compró cada uno en el período, porque en base a eso negocio. Todo eso hoy lo saco del sistema, algunos reportes salen bien, otros los termino armando a mano en una planilla porque no me dan la info como la necesito.
+
+[Federico]
+¿Y eso de armarlo a mano te genera problemas?
+
+[Gerente Comercial]
+Y sí, me come tiempo y me puedo equivocar. Pero bueno, ese es un tema aparte. El tema más grave es otro.
+
+[Federico]
+Contame, ¿qué dificultades ves hoy que te gustaría resolver?
+
+[Gerente Comercial]
+El mayor dolor de cabeza son los errores. A veces desde administración cargan mal los datos de un cliente, la dirección, el tipo de cliente, y eso después arrastra problemas: sale la factura mal, o el camión va a una dirección equivocada y volvés a fojas cero. Otro problema es la visibilidad: yo le prometo a un cliente una entrega y no tengo del todo claro si hay stock o si el pedido se aprobó o quedó trabado en algún lado. Me entero tarde. Entonces el cliente me llama enojado, y yo quedo pagando. Si yo tuviera todo eso claro y al día en una sola pantalla, me cambiaría la vida.
+
+[Federico]
+Entiendo. ¿Y por qué pensás que pasan esos errores de carga?
+
+[Gerente Comercial]
+Mirá, en parte porque es todo muy manual y a las apuradas, y en parte porque la información está en varios lados. El que carga el cliente no es el mismo que factura, y a veces no se hablan. Si el sistema te obligara a cargar bien desde el principio y todos vieran lo mismo, te ahorrás la mitad de los líos.
+
+[Federico]
+Buenísimo, me queda muy claro el panorama comercial. Por mi parte sería esto. Te vamos a hacer llegar un resumen de lo que hablamos para que lo revises. Muchas gracias por el tiempo.
+
+[Gerente Comercial]
+No, gracias a ustedes. Cualquier cosa me escriben.

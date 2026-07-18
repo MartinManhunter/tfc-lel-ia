@@ -1,0 +1,55 @@
+Entrevista 3: Funcional del ERP
+
+[Martin]
+Hola, buenas tardes. Soy Martín, de la consultora X. Estoy con el relevamiento del sistema junto con Federico. Gracias por recibirnos. Hoy queríamos entender el ERP desde el lado funcional, cómo está armado por dentro y cómo se encadenan las cosas, para complementar lo que ya hablamos con el operario y con la parte comercial. Arrancamos con preguntas generales y vamos profundizando.
+
+[Funcional ERP]
+Perfecto, sin problema. Yo soy el que conoce cómo está configurado el sistema y cómo tendría que funcionar cada circuito, así que pregunten lo que quieran.
+
+[Martin]
+Para empezar, ¿cómo está estructurado el ERP a nivel funcional? ¿Qué partes tiene?
+
+[Funcional ERP]
+El ERP está armado por módulos. Tenemos el módulo de contabilidad, el de facturación, el de compras y ventas, y la parte que administra los pedidos, que es como el corazón operativo. La gracia del ERP es que los módulos están integrados: lo que cargás en uno impacta en el otro. Por ejemplo, cuando se concreta una venta, eso después tiene que reflejarse en la contabilidad sin que nadie vuelva a cargar nada. Esa es la idea, aunque en la práctica no siempre se usa así.
+
+[Martin]
+Contame con detalle el circuito de un pedido dentro del sistema, desde que se carga hasta que se factura.
+
+[Funcional ERP]
+Bueno, el pedido se carga en la administración de pedidos: se elige el cliente, se eligen los productos con su cantidad, y el sistema toma los precios de la lista de precios según si el cliente es mayorista o minorista. Una vez cargado, el pedido tiene que pasar por una aprobación, donde se valida que esté todo en orden, el crédito del cliente y el stock. Cuando el pedido queda aprobado, el sistema habilita generar la orden de entrega para la logística, y recién después de que se entrega se factura. La factura, en el circuito ideal, debería generarse a partir del pedido aprobado de manera casi automática.
+
+[Martin]
+Decís "en el circuito ideal". ¿Por qué, en la práctica es distinto?
+
+[Funcional ERP]
+Claro, porque el sistema permite facturar automático a partir del pedido, pero los operarios muchas veces lo hacen a mano, entran al módulo de facturación y facturan ellos. No es que esté mal, pero se pierde la integración y ahí es donde se cuelan errores. Es un tema de uso más que del sistema en sí.
+
+[Martin]
+Hablando de la factura, ¿cómo funciona la integración con AFIP?
+
+[Funcional ERP]
+Esa parte es importante. El ERP tiene la integración con AFIP. Cuando se emite una factura, el sistema se conecta con AFIP para validar la operación: corrobora la condición impositiva del cliente, valida los datos, y obtiene la autorización que le da validez legal al comprobante. Sin esa validación contra AFIP, la factura no es válida. Por eso, después de facturar, conviene siempre hacer una verificación de las facturas, chequear que efectivamente quedaron bien emitidas y autorizadas, que se corresponden con el pedido, que los importes cierran.
+
+[Martin]
+¿Y qué pasa cuando esa verificación detecta que algo está mal?
+
+[Funcional ERP]
+Ahí entra el ajuste de errores de facturación. Si una factura salió mal, con un importe equivocado, un precio que no correspondía o un dato del cliente errado, hay que corregirla. Según el caso se hace una nota de crédito, se reemite, se ajusta. Es un laburo que idealmente no debería existir, porque significa que algo se cargó mal antes, pero pasa seguido. La mayoría de los ajustes vienen de errores de carga aguas arriba: precio mal tomado, cliente mal seleccionado.
+
+[Martin]
+Volviendo a las listas de precios que mencionaste, ¿cómo se configuran en el sistema?
+
+[Funcional ERP]
+La lista de precios se carga en el sistema con el precio de cada producto. Lo que tiene de particular es que maneja precios diferenciados: el precio para el minorista y los precios por volumen para los mayoristas. Cuando armás un pedido, el sistema tendría que tomar solo el precio que corresponde según el tipo de cliente. Si la lista está desactualizada o mal cargada, todo el circuito que sigue sale mal, por eso mantenerla al día es crítico.
+
+[Martin]
+Por último, ¿cómo se manejan los reportes desde el ERP?
+
+[Funcional ERP]
+El sistema genera reportes a partir de toda la información que se va registrando. Podés sacar reportes de ventas por período, de productos vendidos, reportes de las entregas hechas, y reportes financieros para la parte contable. La calidad del reporte depende de que los datos se hayan cargado bien; si la carga fue prolija, el reporte sale solo. Si no, hay que andar emparchando a mano, que es lo que tratamos de evitar.
+
+[Martin]
+Buenísimo, quedó muy clara la parte funcional. Vamos a integrar esto con lo del operario y lo comercial. Te acercamos un resumen para que lo valides. Muchas gracias por el tiempo.
+
+[Funcional ERP]
+De nada, lo que necesiten avisen.

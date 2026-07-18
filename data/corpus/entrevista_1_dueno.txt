@@ -1,0 +1,88 @@
+Entrevista 1: Dueño de ecoFactory
+
+[Martin]
+Ya estoy grabando.
+
+[Dueño ecoFactory]
+Bueno, ¿cómo les va?
+
+[Martin]
+Todo bien, un gusto. Bueno, vamos a empezar a hacer algunas preguntas que necesitamos para poder avanzar con nuestro proyecto. En primer lugar, quisiéramos saber cuáles son los principales desafíos o dificultades que enfrenta hoy en día la empresa en la fabricación y venta de bolsas ecológicas.
+
+[Dueño ecoFactory]
+Bueno, hoy tenemos un proceso que es bastante manual para hacer el trabajo cotidiano. Entonces, estamos buscando automatizar algunas partes de todo lo que es la gestión de la empresa en algunos lugares muy puntuales o específicos.
+
+[Federico]
+¿Y cuáles serían los procesos específicos a automatizar?
+
+[Dueño ecoFactory]
+Bueno, nosotros tenemos algunos depósitos que están en la provincia de Buenos Aires. Hoy, para poder indicarle al depósito cuál es el paquete que tiene que enviar, estamos trabajando vía mails, entonces estamos enviando la información vía mails con el depósito y la interacción con el depósito no es lo suficientemente buena, porque se cometen muchos errores, se reciben los mails, pero después se pasan manualmente a documentos de Word, planillas de Excel, van y vienen para un lado o para el otro, y se termina a veces cometiendo errores, las cantidades de los productos, la cantidad de bolsas, el tipo de bolsa, a veces se... un error de factores humanos, digamos. Se producen errores y se termina, en definitiva, el cliente termina recibiendo cosas que no pidió o tipos de bolsas que no pidió y a veces eso trae aparejado problemas de que hay que volver a hacer otro pedido porque significa más costo para nosotros además el cliente por ahí se enoja y no nos compra más hay una serie de problemas y todo lo que tiene que ver con la gestión de la preparación y la entrega de los productos que hacemos. Eso sin contar con la logística, no?, que bueno, eso también es todo un tema, la logística en sí, que tiene que ver con la cantidad de de días que se tardan en hacer de un lado o ir al otro.
+
+[Dueño ecoFactory]
+Entonces ahí tenemos problemas bastante importantes. También tenemos problemas en la parte administrativa, porque como es todo vía planillas y documentos de Word que van y vienen por mail, los pedidos no se generan bien y por consiguiente eso arrastra problemas en la facturación, entonces la factura sale mal y entramos con problemas hay un doble trabajo de verificación de si la factura se corresponde con el pedido y si el remito que recibió la persona hay que chequear, puntear y a veces no coincide el remito con el pedido parece que se le entregaron cosas que no fueron pedidas entonces después son difíciles de facturar y en definitiva a veces le llega la factura al cliente que el cliente llama y dice "No, esta factura es cuaquier cosa". Entonces, tenés que volver a hacer la facturación que es un problema porque también estamos atados a la AFIP y la facturación no se puede modificar tan facilmente la facturación, entonces ahí tenemos ciertos problemas.
+
+[Martin]
+Perfecto. Y desde la visión de la empresa, digamos, ¿cómo espera o cómo creen que la automatización puede contribuir a mejorar esos aspectos?
+
+[Dueño ecoFactory]
+Mirá, lo mínimo que se espera, lo mínimo que espero es que, digamos, no te digo que vos apretés un botón y sea... y se haga todo, pero lo mínimo que espero es que se reduzcan mínimamente los problemas que hay con función de pedido, con función de entrega, digamos, armado de paquetes, entrega, remito y facturación. Mitigar los errores. Al menos esos errores.
+
+[Martin]
+Bien.
+
+[Dueño ecoFactory]
+Esos errores. Porque después hay otros y a veces el área de gestión a veces carga mal el cliente, carga mal la dirección del cliente y después en la auténtica envían el camión al lugar donde... no corresponde, todo se encarece, bueno... pero por este tipo de cosas de que la información del cliente también viaja en un documento de word, una planilla de excel, y es negable, bueno... entonces la idea mínimamente es preservar en principio todo lo que tiene que ver con pedidos, remitos y facturas.
+
+[Federico]
+Teniendo en cuenta que esos son como los criterios de éxito...
+
+[Dueño ecoFactory]
+Es lo más importante.
+
+[Federico]
+¿Con qué frecuencia se van a elaborar estos pedidos? ¿Tiene que ser en real-time o se puede generar una librería?
+
+[Dueño ecoFactory]
+No, en general los pedidos nacionales no son real-time. Los pedidos, generalmente, el cliente llama a la empresa y el área comercial va realizando los pedidos o haciendo un seguimiento de los pedidos generando paquetes de pedidos que se hacen una vez por día digamos se hace toda la gestión de... bueno, se hacen distintas gestiones la primera es la gestión del cliente, la identificación del cliente que se hace una vez por día más o menos y ahí se les da comienzo a las pedidas otra cosa muy distinta es cuando llega un cliente nuevo que ahí hay que identificar el cliente la dirección y demás cosas. Y la frecuencia es bastante... nos va bien, es bastante alta, nos va bien. Tenemos bastantes pedidos, por suerte confían en nosotros.
+
+[Martin]
+Muy bien. ¿Hay algún tipo, recién mencionabas AFIP, ¿existen integraciones con sistemas o plataformas externas que tengamos que considerar durante todo el proceso de desarrollo?
+
+[Dueño ecoFactory]
+Nosotros trabajamos con un software de gestión, de administración, en ERP, que ese tiene la integración con la AFIP, entiendo yo. Creo que la integración con los mecanismos formales del país está cubierta, entiendo yo, por la idea de ERP.
+
+[Martin]
+Perfecto.
+
+[Dueño ecoFactory]
+Porque es más contable.
+
+[Federico]
+Y yendo al tema del presupuesto, ¿hay algún presupuesto definido? ¿Se espera que lo generemos? ¿Una licitación?
+
+[Dueño ecoFactory]
+No, no se va a hacer licitación. No sé, digamos, si ustedes... Digamos que no hay problemas presupuestarios. Estamos en un ideal en donde en principio no hay problemas presupuestarios. Después habrá que ver en detalle, puntualmente, cuánto cuesta cada cosa. Pero, digamos, en principio no habría restricciones presupuestarias. No tenemos limitación de presupuesto.
+
+[Martin]
+Y en cuanto a plazos o calendario para la implementación desde la transición del A al B, ¿tenemos alguna restricción?
+
+[Dueño ecoFactory]
+No, la idea es tratar de hacerlo lo más rápido posible porque obviamente esto mejora la calidad de la empresa y cuanto más tardemos más problemas tengo con los clientes y puedo llegar a perder clientes que no estoy perdiendo pero tengo dificultad. Quiero aclarar esto: No estoy perdiendo clientes. Tengo dificultades con los clientes. Que son dos cosas distintas. Por lo cual quiero mejorar los procesos para no tener dificultades con los clientes. Pero no pierdo clientes. Y por otro lado, que esto se perdura en beneficio para obtener más clientes, por supuesto.
+
+[Martin]
+Entonces priorizamos resolverlo sin importar el presupuesto, digamos, esa va a ser un poco la lógica.
+
+[Dueño ecoFactory]
+Digamos, sí, no hay limitaciones presupuestarias.
+
+[Martin]
+Perfecto, listo, listo. Bueno, creo que con eso es suficiente, por ahí tenemos que hablar con especialistas de distintas áreas como para solverntar algunas dudas.
+
+[Federico]
+¿Cuál cree que es la contraparte en EcoFactory para el tema de recursos o para el tema de llegar a la parte tecnológica?
+
+[Dueño ecoFactory]
+Para la parte tecnológica, EcoFactory tiene... nosotros no tenemos...Si bien no tenemos formalizado un área de desarrollo, un área de sistemas, hay un responsable de todo lo que tiene que ver con sistemas, que es el que se encarga de comprar las computadoras, es el que se encargó de elegir el software de gestión administrativa. Es como una especie de líder técnico, uno o dos personas, una persona. Hay un responsable, hay un poquito más de personas, pero hay un responsable con el que ustedes puedan hablar. De todos modos, el tema de avanzar, la idea es que hablen con el gerente de Comercialización. Bien, perfecto. que es con quien yo voy a interactuar y que va a tener que ser el responsable, digamos, directo de esta...
+
+[Martin]
+Sí, la parte comercial. Perfecto. Listo. Bueno, muchísimas gracias por su tiempo.

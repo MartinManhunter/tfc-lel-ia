@@ -1,0 +1,193 @@
+{
+  "proyecto": "E-commerce",
+  "version": "",
+  "conjunto": "Gold muestreo",
+  "simbolos": [
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Cliente"
+      ],
+      "impacto": [
+        "(ref) impacto de Cliente"
+      ],
+      "sinonimos": [],
+      "id": "E01"
+    },
+    {
+      "nombre": "Operador de Logística",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Operador de Logística"
+      ],
+      "impacto": [
+        "(ref) impacto de Operador de Logística"
+      ],
+      "sinonimos": [],
+      "id": "E02"
+    },
+    {
+      "nombre": "Transportista",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Transportista"
+      ],
+      "impacto": [
+        "(ref) impacto de Transportista"
+      ],
+      "sinonimos": [],
+      "id": "E03"
+    },
+    {
+      "nombre": "Producto",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Producto"
+      ],
+      "impacto": [
+        "(ref) impacto de Producto"
+      ],
+      "sinonimos": [],
+      "id": "E04"
+    },
+    {
+      "nombre": "Catálogo",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Catálogo"
+      ],
+      "impacto": [
+        "(ref) impacto de Catálogo"
+      ],
+      "sinonimos": [],
+      "id": "E05"
+    },
+    {
+      "nombre": "Carrito",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Carrito"
+      ],
+      "impacto": [
+        "(ref) impacto de Carrito"
+      ],
+      "sinonimos": [],
+      "id": "E06"
+    },
+    {
+      "nombre": "Pedido",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Pedido"
+      ],
+      "impacto": [
+        "(ref) impacto de Pedido"
+      ],
+      "sinonimos": [],
+      "id": "E07"
+    },
+    {
+      "nombre": "Stock",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Stock"
+      ],
+      "impacto": [
+        "(ref) impacto de Stock"
+      ],
+      "sinonimos": [],
+      "id": "E08"
+    },
+    {
+      "nombre": "Confirmar Pedido",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Confirmar Pedido"
+      ],
+      "impacto": [
+        "(ref) impacto de Confirmar Pedido"
+      ],
+      "sinonimos": [],
+      "id": "E09"
+    },
+    {
+      "nombre": "Preparar Pedido",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Preparar Pedido"
+      ],
+      "impacto": [
+        "(ref) impacto de Preparar Pedido"
+      ],
+      "sinonimos": [
+        "Preparación"
+      ],
+      "id": "E10"
+    },
+    {
+      "nombre": "Despachar Pedido",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Despachar Pedido"
+      ],
+      "impacto": [
+        "(ref) impacto de Despachar Pedido"
+      ],
+      "sinonimos": [
+        "Despacho"
+      ],
+      "id": "E11"
+    },
+    {
+      "nombre": "Procesar Pago",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Procesar Pago"
+      ],
+      "impacto": [
+        "(ref) impacto de Procesar Pago"
+      ],
+      "sinonimos": [],
+      "id": "E12"
+    },
+    {
+      "nombre": "Gestionar Devolución",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Gestionar Devolución"
+      ],
+      "impacto": [
+        "(ref) impacto de Gestionar Devolución"
+      ],
+      "sinonimos": [
+        "Devolución"
+      ],
+      "id": "E13"
+    },
+    {
+      "nombre": "Confirmado",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Confirmado"
+      ],
+      "impacto": [
+        "(ref) impacto de Confirmado"
+      ],
+      "sinonimos": [],
+      "id": "E14"
+    },
+    {
+      "nombre": "Entregado",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Entregado"
+      ],
+      "impacto": [
+        "(ref) impacto de Entregado"
+      ],
+      "sinonimos": [],
+      "id": "E15"
+    }
+  ]
+}

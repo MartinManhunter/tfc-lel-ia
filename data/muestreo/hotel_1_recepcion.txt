@@ -1,0 +1,27 @@
+[Entrevistador] Contame cómo funciona la recepción del hotel.
+
+[Recepcionista] El corazón de todo es la reserva. El huésped hace una reserva, y puede llegar por varios canales: por teléfono directo al hotel, por nuestra página web, o por una de esas agencias de turismo online. En la reserva elige las fechas de entrada y salida y el tipo de habitación que quiere, porque tenemos distintas categorías: individuales, dobles, suites. Yo, antes de confirmar, verifico la disponibilidad para esas fechas: entro al sistema y veo si hay una habitación libre del tipo que pide para todas las noches de la estadía. Si hay, confirmo la reserva y le pido una tarjeta de crédito para garantizarla, por si después no se presenta.
+
+[Entrevistador] ¿Las tarifas son siempre las mismas?
+
+[Recepcionista] No, para nada. La tarifa depende del tipo de habitación y de la temporada. En temporada alta, fines de semana largos, vacaciones, los valores suben, y en temporada baja bajan. También hay tarifas distintas según el canal: las agencias online manejan sus propios precios y a nosotros nos cobran una comisión por cada reserva que nos mandan. Así que la misma habitación, la misma noche, puede tener valores diferentes según cómo y cuándo se reservó.
+
+[Entrevistador] ¿Qué pasa cuando el huésped llega al hotel?
+
+[Recepcionista] Cuando llega, hago el check-in. Busco su reserva en el sistema, le pido el documento, le tomo los datos, y le asigno una habitación concreta, porque una cosa es el tipo de habitación que reservó y otra es la habitación puntual, el número, que le doy en ese momento según lo que esté disponible y limpio. Le entrego la llave, o la tarjeta magnética, y en ese instante esa habitación pasa a estar ocupada en el sistema. Le explico los horarios del desayuno, el wifi, el horario de check-out, todo eso. Si durante la estadía quiere quedarse una noche más, extiendo la reserva, siempre que la habitación siga disponible para esa noche extra; si no, tengo que cambiarlo de habitación.
+
+[Entrevistador] ¿Y durante la estadía, cómo se manejan los gastos?
+
+[Recepcionista] Todo lo que el huésped consume se va cargando a la cuenta de la habitación. El desayuno si no está incluido, lo que consume del frigobar, una cena en el restaurante del hotel, la lavandería, el estacionamiento. Cada consumo se suma a la cuenta, así el huésped no anda pagando cosa por cosa, sino que se le acumula todo y lo salda al final.
+
+[Entrevistador] ¿Y cuando se va?
+
+[Recepcionista] Ahí hago el check-out. Cierro la cuenta del huésped: sumo las noches de alojamiento más todos los consumos que fue haciendo, reviso que esté todo bien cargado, le cobro y le emito la factura. Me devuelve la llave y la habitación pasa a estar disponible otra vez… pero con una salvedad importante: antes de dársela a un nuevo huésped, la mucama la tiene que limpiar y acondicionar. Hasta que la habitación no está limpia y revisada, queda en estado bloqueada, no la puedo asignar. Así que en el panel yo veo tres o cuatro estados posibles de cada habitación: disponible, ocupada, bloqueada por limpieza, o en mantenimiento si tiene algo roto.
+
+[Entrevistador] Mencionaste un panel. ¿Cómo controlás qué habitaciones tenés?
+
+[Recepcionista] Sí, tengo un panel donde veo el estado de todas las habitaciones de un vistazo, con sus colores. Con eso manejo la disponibilidad en tiempo real y decido a quién ubico dónde. El gran problema nuestro es el overbooking: a veces el sistema, sobre todo cuando entran reservas por varias agencias a la vez, deja entrar más reservas que habitaciones para las mismas fechas, apostando a que un porcentaje va a cancelar. Cuando la apuesta sale bien, no pasa nada. Pero cuando no cancela nadie y se me presentan más huéspedes que habitaciones tengo, es un desastre: tengo que reubicar a alguien en otro hotel de categoría similar y pagar la diferencia, que es lo peor que te puede pasar en recepción, porque el huésped llega cansado, con su reserva confirmada en la mano, y yo no tengo dónde ponerlo.
+
+[Entrevistador] ¿Otras situaciones que te compliquen?
+
+[Recepcionista] Las cancelaciones de último momento y los no-show, los que reservaron y nunca aparecieron ni avisaron. Y algo clásico: una reserva que venía por una agencia y que la agencia no me terminó de pasar bien al sistema, entonces el huésped llega con su comprobante de la agencia y yo no lo tengo cargado, y tengo que ponerme a resolver eso con la persona ahí parada esperando. La coordinación entre lo que venden las agencias y lo que yo veo en mi sistema es un dolor de cabeza permanente.

@@ -1,0 +1,27 @@
+[Entrevistador] Doctor, gracias por el tiempo. Contame cómo es un día típico acá en el consultorio.
+
+[Médico] Bueno, mirá, yo atiendo por turnos. La secretaria me arma la agenda del día y yo voy viendo un paciente atrás de otro, en general cada quince o veinte minutos, depende de si es una primera consulta o un control. Cuando entra el paciente, lo primero que hago es abrir su historia clínica. Ahí tengo todo: los antecedentes, las patologías que tiene, las alergias, las consultas anteriores, los estudios que le pedí y los resultados, y lo que le fui recetando en el tiempo. Si es un paciente nuevo, le abro la historia clínica en el momento y le cargo los antecedentes que me cuenta.
+
+[Entrevistador] ¿Y qué pasa concretamente durante una consulta?
+
+[Médico] Lo primero es escuchar el motivo de consulta, por qué viene. Lo reviso, lo examino, según el caso le tomo la presión, lo ausculto, lo que haga falta. Con eso me armo una impresión diagnóstica. A veces con eso alcanza y le indico un tratamiento directamente. Pero muchas veces necesito más información y le pido estudios: un análisis de sangre, una radiografía, una ecografía, lo que corresponda. Le doy una orden para el estudio, que es el papel que él lleva al laboratorio o al centro de imágenes. Después vuelve con el resultado, en general en otra consulta que llamamos de control, y en base a eso confirmo el diagnóstico y defino o ajusto el tratamiento.
+
+[Entrevistador] Mencionaste el tratamiento. ¿Cómo se documenta eso?
+
+[Médico] Casi siempre termino haciéndole una receta, que es lo que el paciente lleva a la farmacia para comprar la medicación. En la receta va el medicamento, la dosis y cómo lo tiene que tomar. Todo eso, la indicación, el tratamiento, queda registrado en la historia clínica, con la fecha. Y le indico cuándo tiene que volver para el control. Esa historia clínica para mí es sagrada, es lo que me permite hacerle un seguimiento serio al paciente en el tiempo. Si no registro bien, la próxima vez que viene no me acuerdo de qué le había pedido ni cómo venía evolucionando.
+
+[Entrevistador] ¿Y el tema de las obras sociales cómo entra en todo esto?
+
+[Médico] Ah, eso es un mundo aparte. La mayoría de los pacientes viene por obra social o por prepaga, muy pocos son particulares que pagan la consulta de su bolsillo. Cada obra social tiene sus reglas: qué prácticas cubre, qué estudios necesitan una autorización previa, qué medicación tiene descuento y cuánto. Yo la receta y la orden de estudio las hago igual, según lo que el paciente necesita clínicamente, eso no lo negocio. Pero después la secretaria se pelea con las autorizaciones. Hay estudios caros, una resonancia por ejemplo, que la obra social no te los autoriza si no mandás un resumen de historia clínica justificando por qué lo pedís. Entonces yo tengo que redactar esa justificación, y a veces igual te lo rechazan y hay que insistir.
+
+[Entrevistador] ¿Y cómo manejás cuando se te llena la agenda y aparece algo urgente?
+
+[Médico] Y ahí está una de las partes más complicadas del día. A veces me llama un paciente que ya conozco, que está descompensado o con un cuadro que no puede esperar, y yo no tengo ningún turno libre en toda la semana. Entonces le doy un sobreturno: lo encajo entre dos pacientes que ya tenían turno, o al final de la jornada. Eso lo decido yo en el momento, según cómo venga la mano y qué tan urgente sea. La secretaria a veces se enoja porque le desarma toda la agenda que armó con tanto cuidado, y tiene razón en parte, pero si el paciente está mal yo no lo puedo mandar a la guardia de un hospital y desentenderme.
+
+[Entrevistador] ¿Derivás pacientes a otros profesionales?
+
+[Médico] Sí, muchas veces. Si el paciente necesita un especialista, un cardiólogo, un traumatólogo, le hago una derivación, que es una nota para que lo atienda el otro profesional, y le explico por qué. Eso también queda en la historia clínica. Y cuando el especialista lo ve, idealmente me manda una contrarreferencia contándome qué encontró, aunque en la práctica eso funciona a medias.
+
+[Entrevistador] Para cerrar, ¿qué es lo que más te complica del día a día?
+
+[Médico] Mirá, clínicamente me siento cómodo. Lo que me desgasta es lo administrativo alrededor: las autorizaciones que demoran, las obras sociales que cambian las coberturas sin avisar, y la sensación de que buena parte de mi tiempo se va en papeles y no en el paciente. Y los sobreturnos, que son necesarios pero me estiran la jornada y me generan roces con la secretaria.

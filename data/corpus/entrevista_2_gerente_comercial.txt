@@ -1,0 +1,106 @@
+Entrevista 2: Gerente Comercial
+
+[Martin]
+Bueno, en base a lo que estuvimos hablando con el dueño entendemos que hay algunos problemas que se pueden solucionar. Si bien los clientes están contentos se pueden optimizar sus procesos.
+
+[Gerente Comercial]
+¡El que no está contento soy yo! él está contento porque le pagan.
+
+[Martin]
+Claro
+
+[Gerente Comercial]
+los quilombos los tengo yo
+
+[Martin]
+la idea es trabajar en conjunto para mejorar esas áreas que están funcionando mal
+
+[Gerente Comercial]
+no están funcionando mal, quiero aclarar eso. La idea no es cambiar porque algo funciona mal, es mejorar!
+
+[Martin]
+bueno en primer lugar, quisiéramos preguntarte que tecnologías se están usando hoy?
+
+[Gerente Comercial]
+Ninguna, acá la atención al cliente es personalizada, hay 2 o 3 personas trabajando en comercialización y llevan las cuentas de los clientes más importantes. Tengan en cuenta que trabajamos solo con clientes mayoristas, trabajamos con Coto, Supermercados. Bueno con todos los lugares que se les ocurra que pueda trabajar con bolsas ecológicas y en cantidad. Tengan en cuenta que podemos fabricar, 1000, 2000 o 4000 en una tirada. Tenemos alrededor de 800 pedidos por semana. Entre 800 y 1000 en una semana para que tengan una idea.
+
+[Martin]
+Bien, bien. Y sería óptimo tener diferenciado los módulos de facturación?
+
+[Gerente Comercial]
+Los módulos ya están diferenciados, tenemos un sistema de facturación que es intocable. Ni proponen reemplazar el software de gestión. Lo que sí pueden proponer es automatizar o integrar. Por eso les hablaba de este software que investigue que se puede integrar al ERP. Acá todo pasa a través del ERP. La idea acá es mejorar todo lo que existe. Hoy todo es manual, se procesa en el ERP, El ERP genera un PDF y eso va para un lado y para el otro. Y todo lo que vuelve se carga devuelta al ERP.
+
+[Federico]
+Todo manual?
+
+[Gerente Comercial]
+Todo manual.Por ejemplo la gente de depósito avisa que se generó una entrega, y cuando reviso no coincide con lo generado en la planilla. Y yo lo tengo que cargar a mano. Primero tengo que chequear el pedido, y cargar a mano en el ERP, que a veces no coinciden y tengo que depurar a mano, sacar diferencias, todo es contra el ERP y  A mano.
+
+[Federico]
+El dueño nos comentó que deberíamos definir el stack tecnológico con vos (GC)?
+
+[Gerente Comercial]
+¿qué es un stack?
+
+[Federico]
+La herramientas que vamos a utilizar para la automatización
+
+[Gerente Comercial]
+si no tengo problema, lo que no se puede es reemplazar el ERP. Lo que sí se pueden comunicar o gestionar con nosotros modificaciones en el ERP. Si se pueden cambiar los procesos administrativos de ERP.
+
+[Martin]
+Bien, bien.  Una de las preguntas que seguían es que más allá de lo que nos puede llevar  a nosotros como empresa  automatizar estos procesos, tendríamos que capacitar al personal que va a utilizarlo sobre cómo trabajar con la plataforma.
+
+[Gerente Comercial]
+Por supuesto, una vez que se defina la solución hay que capacitar para utilizarla. Repito, lo único que no se puede hacer es reemplazar el ERP, y las modificaciones las podemos gestionar con la empresa proveedora.
+
+[Martin]
+Bueno, en cuanto a la gestión del personal, tenemos algún equipo para trabajar con nosotros o nos ocupamos de conformar el equipo necesario.
+
+[Gerente Comercial]
+¿A qué personal se refiere? aca el personal que tenemos se tiene que ocupar 100% de las tareas administrativas que tenemos.
+
+[Martin]
+Claro, me refiero a desarrolladores, qa..
+
+[Gerente Comercial]
+¿Qué es eso? desarrollador o qa? Nosotros no tenemos. ¿Tenemos que salir a contratar?
+
+[Martin]
+y me parece que sí. Hay que verlo con la gente del ERP.
+
+[Gerente Comercial]
+Yo no sé si el dueño tiene planeado salir a contratar técnicos especiales para hacer algo. Me parece que no. Eso nunca fue discutido
+
+[Federico]
+Bien, y cuales son los objetivos? Más allá de la optimización del servicio. Cual es el objetivo?
+
+[Gerente Comercial]
+Acá lo que se busca es la mejora de la gestión interna.El cliente no se entera de los problemas, va, no debería. A veces pasa, que recibe un pedido que no le corresponde, o 3 días más tarde o algún detalle de facturación. El dueño exagera un poco. Pero eso no quiere decir que nosotros adentro hacemos un esfuerzo muy grande para trabajar.
+
+[Martin]
+Claro se busca ser más eficientes.
+
+[Gerente Comercial]
+Nosotros queremos ser más eficaces y más eficientes. Me gustan esos terminos de administracion de empresas
+
+[Martin]
+y en términos de estrategia de comercialización, ¿Hay algún presupuesto definido, o límite para mantenernos?
+
+[Gerente Comercial]
+Esas son características de la empresa que no se para que les pueda servir.
+
+[Federico]
+¿Hay algún límite en el presupuesto para este trabajo?
+
+[Gerente Comercial]
+Tengo entendido que el dueño no tiene límites en el presupuesto.
+
+[Federico]
+Bueno gracias
+
+[Martin]
+Creo que con esto ya estamos por hoy.
+
+[Gerente Comercial]
+Bueno gracias, nos vemos.

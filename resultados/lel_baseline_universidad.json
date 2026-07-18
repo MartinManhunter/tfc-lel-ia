@@ -1,0 +1,319 @@
+{
+  "proyecto": "ecoFactory",
+  "version": "",
+  "conjunto": "Baseline-Frecuencia (PLN tradicional)",
+  "simbolos": [
+    {
+      "nombre": "Alumno",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ01"
+    },
+    {
+      "nombre": "Alumnos",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ02"
+    },
+    {
+      "nombre": "Entrevistador",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ03"
+    },
+    {
+      "nombre": "Final",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ04"
+    },
+    {
+      "nombre": "Materia",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ05"
+    },
+    {
+      "nombre": "Materias",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ06"
+    },
+    {
+      "nombre": "Docente",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ07"
+    },
+    {
+      "nombre": "Coordinador",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ08"
+    },
+    {
+      "nombre": "Asistencia",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ09"
+    },
+    {
+      "nombre": "Comisiones",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ10"
+    },
+    {
+      "nombre": "Cursada",
+      "tipo": "Estado",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ11"
+    },
+    {
+      "nombre": "Aprueba",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ12"
+    },
+    {
+      "nombre": "Bedel",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ13"
+    },
+    {
+      "nombre": "Comisión",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ14"
+    },
+    {
+      "nombre": "Inscripción",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ15"
+    },
+    {
+      "nombre": "Parciales",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ16"
+    },
+    {
+      "nombre": "Sistema",
+      "tipo": "Sujeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ17"
+    },
+    {
+      "nombre": "Correlativas",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ18"
+    },
+    {
+      "nombre": "Cuatrimestre",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ19"
+    },
+    {
+      "nombre": "Cursar",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ20"
+    },
+    {
+      "nombre": "Examen",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ21"
+    },
+    {
+      "nombre": "Horario",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ22"
+    },
+    {
+      "nombre": "Libreta",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ23"
+    },
+    {
+      "nombre": "Queda",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ24"
+    },
+    {
+      "nombre": "Regularidad",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ25"
+    },
+    {
+      "nombre": "Aula",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ26"
+    },
+    {
+      "nombre": "Base De Datos",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ27"
+    },
+    {
+      "nombre": "Carrera",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ28"
+    },
+    {
+      "nombre": "Docentes",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ29"
+    },
+    {
+      "nombre": "Plan",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ30"
+    },
+    {
+      "nombre": "Regular",
+      "tipo": "Verbo",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ31"
+    },
+    {
+      "nombre": "Toma",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ32"
+    },
+    {
+      "nombre": "Acta",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ33"
+    },
+    {
+      "nombre": "Aulas",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ34"
+    },
+    {
+      "nombre": "Cargo",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ35"
+    },
+    {
+      "nombre": "Casos",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ36"
+    },
+    {
+      "nombre": "Ejemplo",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ37"
+    },
+    {
+      "nombre": "Genera",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ38"
+    },
+    {
+      "nombre": "Inscribe",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ39"
+    }
+  ]
+}

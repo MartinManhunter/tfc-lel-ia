@@ -1,0 +1,25 @@
+<svg viewBox="0 0 980 290" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="980" height="290" fill="#ffffff"/>
+<text x="490" y="28" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Circuito del pedido en ecoFactory</text>
+<rect x="20" y="120" width="140" height="74" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="90.0" y="153.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Cliente realiza</text>
+<text x="90.0" y="169.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Pedido</text>
+<line x1="160" y1="157" x2="180" y2="157" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="180" y="120" width="140" height="74" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="250.0" y="153.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Aprobación: crédito</text>
+<text x="250.0" y="169.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">y stock</text>
+<line x1="320" y1="157" x2="340" y2="157" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="340" y="120" width="140" height="74" rx="8" fill="#fff6e0" stroke="#c08a00" stroke-width="2"/>
+<text x="410.0" y="161.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Pedido Aprobado</text>
+<line x1="480" y1="157" x2="500" y2="157" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="500" y="120" width="140" height="74" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="570.0" y="161.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Orden de Entrega</text>
+<line x1="640" y1="157" x2="660" y2="157" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="660" y="120" width="140" height="74" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="730.0" y="161.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Facturación + AFIP</text>
+<line x1="800" y1="157" x2="820" y2="157" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="820" y="120" width="140" height="74" rx="8" fill="#fff6e0" stroke="#c08a00" stroke-width="2"/>
+<text x="890.0" y="161.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Pedido Finalizado</text>
+<text x="490" y="250" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Los recuadros ámbar son Estados del LEL (Pedido Aprobado, Pedido Finalizado); el resto, actividades y objetos del circuito.</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg width="2208" height="1080" viewBox="0 0 920 450" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="920" height="450" fill="#ffffff"/>
+<text x="460" y="28" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Líneas de trabajo futuro</text>
+<rect x="330" y="190" width="260" height="80" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="460.0" y="226.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Prototipo de construcción del LEL</text>
+<text x="460.0" y="242.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">con IA Generativa (esta tesis)</text>
+<rect x="40" y="60" width="250" height="64" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="165.0" y="96.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Generación automática de Escenarios</text>
+<rect x="620" y="60" width="250" height="64" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="745.0" y="88.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Validación con organizaciones</text>
+<text x="745.0" y="104.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >reales</text>
+<rect x="40" y="330" width="250" height="64" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="165.0" y="366.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Más dominios y modelos</text>
+<rect x="620" y="330" width="250" height="64" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="745.0" y="358.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Ajuste fino (fine-tuning)</text>
+<text x="745.0" y="374.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >especializado</text>
+<rect x="330" y="360" width="250" height="64" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="455.0" y="388.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Integración en una herramienta de</text>
+<text x="455.0" y="404.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >IR</text>
+<line x1="360" y1="190" x2="200" y2="124" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="560" y1="190" x2="720" y2="124" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="360" y1="270" x2="200" y2="330" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="560" y1="270" x2="720" y2="330" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="460" y1="270" x2="460" y2="360" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+</svg>

@@ -1,0 +1,127 @@
+{
+  "proyecto": "ecoFactory",
+  "version": "",
+  "conjunto": "Baseline-Frecuencia (PLN tradicional)",
+  "simbolos": [
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ01"
+    },
+    {
+      "nombre": "Entrevistador",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ02"
+    },
+    {
+      "nombre": "Mascota",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ03"
+    },
+    {
+      "nombre": "Recepcionista",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ04"
+    },
+    {
+      "nombre": "Veterinario",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ05"
+    },
+    {
+      "nombre": "Historia Clínica",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ06"
+    },
+    {
+      "nombre": "Pasa",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ07"
+    },
+    {
+      "nombre": "Queda",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ08"
+    },
+    {
+      "nombre": "Turno",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ09"
+    },
+    {
+      "nombre": "Vacuna",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ10"
+    },
+    {
+      "nombre": "Cobro",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ11"
+    },
+    {
+      "nombre": "Internada",
+      "tipo": "Estado",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ12"
+    },
+    {
+      "nombre": "Sistema",
+      "tipo": "Sujeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ13"
+    },
+    {
+      "nombre": "Termina La Consulta",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ14"
+    },
+    {
+      "nombre": "Alta",
+      "tipo": "Objeto",
+      "nocion": [],
+      "impacto": [],
+      "sinonimos": [],
+      "id": "FREQ15"
+    }
+  ]
+}

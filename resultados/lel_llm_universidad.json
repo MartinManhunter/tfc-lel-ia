@@ -1,0 +1,213 @@
+{
+  "proyecto": "Universidad",
+  "version": "",
+  "conjunto": "LLM (asistente, C2c)",
+  "simbolos": [
+    {
+      "nombre": "Alumno",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien cursa las Materias de la carrera."
+      ],
+      "impacto": [
+        "Se inscribe a Materias, cursa y rinde el Final."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Docente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien dicta una Comisión y evalúa."
+      ],
+      "impacto": [
+        "Toma Asistencia, toma el Final y carga notas en el Acta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Coordinador",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien supervisa la parte académica."
+      ],
+      "impacto": [
+        "Asigna Docentes y controla las Correlativas."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Bedel",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el nexo entre alumnos, docentes y administración."
+      ],
+      "impacto": [
+        "Asigna Aulas y controla los cupos de las Comisiones."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Materia",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es una asignatura del plan de estudios."
+      ],
+      "impacto": [
+        "Se dicta en Comisiones; requiere Correlativas."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Comisión",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el grupo de cursada de una Materia."
+      ],
+      "impacto": [
+        "Tiene un Docente y un Aula asignada."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Correlativa",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la Materia requisito para cursar otra."
+      ],
+      "impacto": [
+        "Condiciona la inscripción del Alumno."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Acta",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el documento oficial con las notas del Final."
+      ],
+      "impacto": [
+        "La firma el Docente y vuelca la nota a la Libreta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Libreta",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el registro de Materias aprobadas del Alumno."
+      ],
+      "impacto": [
+        "Se usa para tramitar el título."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Aula",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el espacio físico donde se dicta una Comisión."
+      ],
+      "impacto": [
+        "La asigna el Bedel según la cantidad de inscriptos."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Final",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el examen que aprueba definitivamente la Materia."
+      ],
+      "impacto": [
+        "Requiere tener la Materia Regularizada."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Inscribir a Materia",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es anotarse a una Materia en un cuatrimestre."
+      ],
+      "impacto": [
+        "El sistema controla las Correlativas."
+      ],
+      "sinonimos": [
+        "Inscripción"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Cursar",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es asistir y rendir los parciales de una Materia."
+      ],
+      "impacto": [
+        "Si se aprueba, la Materia queda Regularizada."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cargar Nota",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es volcar la nota del Final al Acta."
+      ],
+      "impacto": [
+        "Actualiza la Libreta del Alumno."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Tomar Asistencia",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es registrar la presencia de los Alumnos."
+      ],
+      "impacto": [
+        "Condiciona la regularidad."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Recursar",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es volver a cursar una Materia no aprobada."
+      ],
+      "impacto": [
+        "Ocurre si el Alumno queda libre o pierde la regularidad."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cupo",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el número máximo de inscriptos de una Comisión."
+      ],
+      "impacto": [
+        "Limita las inscripciones."
+      ],
+      "sinonimos": [],
+      "id": ""
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+Entrevista 3: Operario ERP
+
+[Martin]
+Hola buenas tardes. Mi nombre es Martín, soy de la consultora X. Estamos acá para hacer algunas preguntas relacionadas al funcionamiento del ERP. Estamos queriendo recopilar un poco de información. Toda información es útil en este proceso.
+
+[Martin]
+En primer lugar quería preguntar si dentro de cómo está planteada ahora la estructura del ERP, el usuario es capaz de obtener información detallada sobre ventas, ingresos, costos y otros aspectos del negocio dentro de la aplicación.
+
+[Operario ERP]
+Si, nosotros tenemos módulos comprados el ERP que es el módulo de contabilidad, módulo de facturación y módulo de compras y ventas. Los módulos tienen distintos tipos de salidas, uno es un reporte, otro es un tipo de planilla. Uno es un reporte, otro es un PDF que viene del sistema, todo lo que se hace en esos módulos o de las actividades más importantes, o sino también, planillas de Excel que son la información con la que nosotros nos manejamos para trabajar, para hacer toda la gestión de la empresa.
+
+[Martin]
+Perfecto, bueno, un poco eso responde la pregunta que iba a ser que era “Qué módulos o funciones están implementados y están integrados entre sí, interactúan entre sí?”
+
+[Operario ERP]
+Si si si, están totalmente integrados, todo lo que haces en uno va pasando al otro, de hecho el modulo de contabilidad uno no va haciendo los asientos, va haciéndose solo.
+
+[Martin]
+Es automático. Bien, Perfecto. ¿Muy bien, y nosotros como cuando queramos manipular el ERP para poder trabajar y ver que opciones obtenemos para automatizar esos procesos, tenemos posibilidad de acceder a la Base de Datos? ¿De ver los datos que están?
+
+[Operario ERP]
+Lo que se puede hacer es hablar con la gente que proveyó el ERP para hacer alguna replica, del ERP no podemos darle acceso al vivo, pero podemos hacer un corte del ERP a una fecha determinada y ahí ustedes podrán…No se si van a poder consultar las bases de datos, no sé, habría que llamar a la gente proveedora del ERP a ver si pueden hacer eso, si se puede o no, porque nosotros, por ejemplo, no trabajamos con bases de datos. Tenemos un técnico en informática que viene a hacer los backups que está programado una vez por día y una vez por semana. Es un servicio técnico que contratamos a terceros, pero nosotros de las bases de datos lo único que sabemos es que hay una base de datos.
+
+[Martin]
+Pero a la que ustedes no acceden.
+
+[Operario ERP]
+Nosotros no manejamos, no tenemos nada que ver con eso.
+
+[Martin]
+Eso es lo que queremos saber. Perfecto.
+Después bueno…
+
+[Dueño ecFactory]
+Nosotros operamos el sistema.
+
+[Martin]
+Perfecto, después que tipo de informes y análisis se pueden generar a partir de los datos del ERP? ¿Cuales son los informes que ustedes manejan?
+
+[Operario ERP]
+Los informes más comunes que se manejan es todo lo que tiene que ver con los pedidos, los remitos y la facturación y las altas bajas y modificaciones del stock.
+
+[Martin]
+Tienen informes específicos sobre eso también. Y bueno, ya esto una pregunta más desde la perspectiva del operario de ERP. ¿Desde su perspectiva, cuales son los principales desafíos o áreas que podrían mejorarse dentro del uso del ERP? Desde el punto de vista funcional digamos.
+
+[Operario ERP]
+La verdad no sabría que decirte, mira, yo trabajo con pedidos y me imagino que habrán cosas que se pueden hacer mejor pero la verdad no sabría decirte…
+
+[Martin]
+Notas alguna actividad que podría ser más ágil o que sentís que podría facilitar tu trabajo?
+
+[Operario ERP]
+A mí el ERP me parece que es ágil, que es práctico, me parece que es amigable con el usuario. Yo no tengo problemas con respecto al ERP.
+
+[Martin]
+No notas algo que digas “Esta tarea es muy tediosa o muy repetitiva y se podría automatizar”?
+
+[Operario ERP]
+Todas las tareas en administración son repetitivas. Porque son trabajosas y repetitivas, por ejemplo, cada vez que hay que hacer una compra de materia prima hay que cargar la materia prima, cada vez que un cliente llama para pedir algo hay que hacer el pedido, cada vez que el deposito recibe los productos nos envía la orden de compra y hay que cargarla, cada vez que se l entrega un cliente que se le vendió tenemos que cargar la confirmación de la venta y el proceso de facturación es un proceso totalmente manual. Manual en el sentido de que se hace contra el sistema, teniendo cargado todas las cosas, se hace entrando al sistema y facturando. Eso lo hacen todas las empresas así.
+
+[Martin]
+Nosotros lo pensamos desde la perspectiva de cómo podemos mejorar un poco esos procesos, quizás de repente algunos predefinidos de facturación o algunas, por ejemplo, algunas empresas tienen el mismo tipo de facturación mensualmente y eso se puede llevar a algo estandarizado que pueda cargarse de manera…
+
+[Operario ERP]
+Que yo sepa, la empresa tiene ya sus buenos años y ya está todo definido y estandarizado, no sé si querrán cambiar algo.
+
+[Martin]
+Está bien, solo preguntábamos para tener más opciones para explorar pero creo que con eso estamos bien. Gracias por su tiempo.

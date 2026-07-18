@@ -1,0 +1,27 @@
+[Entrevistador] Contame cómo funciona la parte académica de la carrera.
+
+[Coordinador] Bueno, la carrera tiene un plan de estudios, que es la estructura de todas las materias organizadas por año y por cuatrimestre, desde primero hasta el último. Cada materia se dicta en comisiones, que son los grupos de cursada. Una materia con muchos alumnos puede tener varias comisiones, cada una con su docente a cargo, su día y su horario. El alumno, cada cuatrimestre, se inscribe a las materias que quiere cursar, siempre y cuando cumpla con las correlativas.
+
+[Entrevistador] ¿Qué son exactamente las correlativas?
+
+[Coordinador] Son los requisitos de precedencia entre materias. Para poder cursar una materia, el plan te exige tener aprobadas o al menos regularizadas otras materias anteriores. Por ejemplo, no podés cursar Base de Datos II si no tenés regularizada Base de Datos I, y no te podés anotar al final de Base de Datos II si no tenés aprobado el final de Base de Datos I. El sistema de inscripción controla eso automáticamente: si el alumno no cumple las correlativas, directamente no lo deja anotarse a la materia. Mantener bien cargadas las correlativas de todo el plan es una responsabilidad mía, porque un error ahí le traba la inscripción a un montón de alumnos.
+
+[Entrevistador] ¿Cómo es el circuito completo de una materia, desde que el alumno se inscribe hasta que la aprueba?
+
+[Coordinador] El alumno se inscribe a la materia en su comisión, cursa durante todo el cuatrimestre, y el docente le va tomando parciales, que son los exámenes parciales de la cursada. Si aprueba los parciales, o el recuperatorio en su caso, el alumno queda regular, es decir, regulariza la materia. Estar regular quiere decir que aprobó la cursada pero todavía le falta el examen final. Con la materia regularizada, el alumno se puede anotar a una mesa de examen final. Si aprueba el final, la materia queda aprobada y el docente vuelca la nota al acta. El acta es el documento oficial de la mesa de examen, donde el docente carga las notas de todos los alumnos que rindieron ese final, y que después se firma y queda asentado.
+
+[Entrevistador] ¿Y qué pasa si el alumno no aprueba?
+
+[Coordinador] Hay varios caminos. Si durante la cursada el alumno no aprueba los parciales ni los recuperatorios, queda libre en la materia y la tiene que recursar el cuatrimestre siguiente, es decir cursarla de nuevo desde cero. Otro caso muy común: el alumno regulariza la cursada pero después no rinde el final, y la regularidad tiene un plazo de vencimiento, digamos un par de años. Si se le vence la regularidad sin haber aprobado el final, pierde la condición de regular y también tiene que recursar. Eso genera muchos reclamos, porque el alumno regularizó, dejó pasar el tiempo confiado, y cuando se decide a rendir descubre que ya perdió la regularidad y tiene que hacer toda la cursada otra vez.
+
+[Entrevistador] ¿Cómo participan los docentes en todo esto?
+
+[Coordinador] El docente tiene a cargo una o varias comisiones. Dicta las clases, toma asistencia, prepara y toma los parciales, toma los finales en las mesas de examen y carga las notas en las actas. Yo, como coordinador, superviso que todas las comisiones tengan su docente asignado antes de que empiece el cuatrimestre, que las correlativas del plan estén bien cargadas, que las mesas de final estén programadas, y resuelvo los casos particulares que se salen de lo común.
+
+[Entrevistador] ¿Qué tipo de casos particulares?
+
+[Coordinador] Por ejemplo, un alumno que viene de otra universidad y pide equivalencias: hay que analizar los programas de las materias que aprobó allá y decidir si equivalen a materias nuestras, para no hacerle recursar algo que ya sabe. O alumnos que piden cursar en condición condicional porque están rindiendo una correlativa en simultáneo. O conflictos de horario cuando dos materias que el alumno necesita se dan al mismo tiempo. Todo eso lo resuelvo yo, caso por caso, y muchas veces sin un sistema que me ayude, a pura planilla y criterio.
+
+[Entrevistador] Para cerrar, ¿qué es lo que más te complica?
+
+[Coordinador] La coordinación entre todo: que las comisiones abran con docente y aula, que los cupos alcancen para la demanda, que las actas se cierren en tiempo y forma. Y el tema de la regularidad vencida, que genera un montón de casos y de reclamos que se podrían evitar si el sistema le avisara al alumno que se le está por vencer.

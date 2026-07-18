@@ -1,0 +1,36 @@
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="900" height="400" fill="#ffffff"/>
+<text x="450" y="30" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Proceso de creación del LEL</text>
+<polygon points="48,150 150,150 132,220 30,220" fill="#eef1f4" stroke="#5b6470" stroke-width="2"/>
+<text x="90.0" y="173.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >UdeD +</text>
+<text x="90.0" y="189.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Objetivos del</text>
+<text x="90.0" y="205.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Sistema</text>
+<rect x="190" y="150" width="130" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="255.0" y="181.0" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Recolectar</text>
+<text x="255.0" y="200.0" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Símbolos</text>
+<rect x="360" y="150" width="130" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="425.0" y="181.0" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Clasificar</text>
+<text x="425.0" y="200.0" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Símbolos</text>
+<rect x="530" y="150" width="130" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="595.0" y="181.0" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Describir</text>
+<text x="595.0" y="200.0" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Símbolos</text>
+<line x1="150" y1="185" x2="190" y2="185" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="320" y1="185" x2="360" y2="185" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="490" y1="185" x2="530" y2="185" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<polygon points="715.68,108 850,108 834.32,164 700,164" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="775.0" y="141.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">LEL</text>
+<polygon points="715.68,200 850,200 834.32,256 700,256" fill="#fff6e0" stroke="#c08a00" stroke-width="2"/>
+<text x="775.0" y="216.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Fichas de</text>
+<text x="775.0" y="232.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Información</text>
+<text x="775.0" y="248.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Anticipada</text>
+<line x1="660" y1="175" x2="700" y2="138" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="660" y1="195" x2="700" y2="226" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="300" y="40" width="130" height="46" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="365.0" y="68.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Verificar</text>
+<rect x="300" y="290" width="130" height="46" rx="8" fill="#f6e7e9" stroke="#b23a48" stroke-width="2"/>
+<text x="365.0" y="318.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Validar</text>
+<path d="M 190 150 Q 190 120.0 307.5 120.0 Q 425.0 120.0 425.0 90 Q 425.0 120.0 542.5 120.0 Q 660 120.0 660 150" fill="none" stroke="#3f7d5b" stroke-width="2.5"/>
+<path d="M 190 220 Q 190 252.5 307.5 252.5 Q 425.0 252.5 425.0 285 Q 425.0 252.5 542.5 252.5 Q 660 252.5 660 220" fill="none" stroke="#b23a48" stroke-width="2.5"/>
+<text x="450" y="372" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Flujo principal (Recolectar→Clasificar→Describir) con retroalimentación por verificación y validación.</text>
+</svg>

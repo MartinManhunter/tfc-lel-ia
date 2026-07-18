@@ -1,0 +1,217 @@
+{
+  "proyecto": "E-commerce",
+  "version": "",
+  "conjunto": "LLM (asistente, C2c)",
+  "simbolos": [
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien compra Productos en la tienda online."
+      ],
+      "impacto": [
+        "Arma el Carrito y confirma el Pedido."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Operador de Logística",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien prepara y despacha los Pedidos."
+      ],
+      "impacto": [
+        "Prepara el Pedido y lo entrega al Transportista."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Transportista",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es la empresa de correo que entrega el Pedido."
+      ],
+      "impacto": [
+        "Traslada el Pedido hasta el Cliente."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Producto",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el bien que se ofrece en el Catálogo."
+      ],
+      "impacto": [
+        "Se agrega al Carrito; descuenta del Stock al confirmar."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Catálogo",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la lista de Productos con precio y Stock."
+      ],
+      "impacto": [
+        "Determina qué puede comprar el Cliente."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Carrito",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el conjunto de Productos que el Cliente va a comprar."
+      ],
+      "impacto": [
+        "Al hacer checkout genera el Pedido."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Pedido",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la solicitud de compra con Productos y cantidades."
+      ],
+      "impacto": [
+        "Se confirma con el Pago y se prepara para el envío."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Stock",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la cantidad disponible de cada Producto."
+      ],
+      "impacto": [
+        "Se descuenta al confirmar un Pedido."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Confirmar Pedido",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es cerrar la compra tras aprobarse el Pago."
+      ],
+      "impacto": [
+        "El Pedido pasa a Confirmado y descuenta Stock."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Preparar Pedido",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es juntar y controlar los Productos del Pedido."
+      ],
+      "impacto": [
+        "Deja el Pedido listo para el Despacho."
+      ],
+      "sinonimos": [
+        "Preparación"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Despachar Pedido",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es entregar el Pedido al Transportista."
+      ],
+      "impacto": [
+        "El Pedido queda en camino con Seguimiento."
+      ],
+      "sinonimos": [
+        "Despacho"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Procesar Pago",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es cobrar el Pedido mediante la pasarela."
+      ],
+      "impacto": [
+        "Si se aprueba, confirma el Pedido."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Gestionar Devolución",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es procesar el retorno de un Producto."
+      ],
+      "impacto": [
+        "Reingresa el Producto al Stock."
+      ],
+      "sinonimos": [
+        "Devolución"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Confirmado",
+      "tipo": "Estado",
+      "nocion": [
+        "Es el estado del Pedido con Pago aprobado."
+      ],
+      "impacto": [
+        "Habilita la preparación."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Entregado",
+      "tipo": "Estado",
+      "nocion": [
+        "Es el estado del Pedido recibido por el Cliente."
+      ],
+      "impacto": [
+        "Cierra el Pedido."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Seguimiento",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el código para rastrear el Pedido en camino."
+      ],
+      "impacto": [
+        "Permite al Cliente ver dónde está su paquete."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Promoción",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un descuento o beneficio aplicable al Carrito."
+      ],
+      "impacto": [
+        "Reduce el total del Pedido."
+      ],
+      "sinonimos": [],
+      "id": ""
+    }
+  ]
+}

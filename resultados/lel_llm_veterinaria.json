@@ -1,0 +1,219 @@
+{
+  "proyecto": "Veterinaria",
+  "version": "",
+  "conjunto": "LLM (asistente, C2c)",
+  "simbolos": [
+    {
+      "nombre": "Veterinario",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el profesional que atiende a los pacientes en la clínica."
+      ],
+      "impacto": [
+        "Atiende la Consulta, vacuna y registra en la Historia Clínica."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Recepcionista",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es quien gestiona la agenda y la atención en el mostrador."
+      ],
+      "impacto": [
+        "Agenda Turnos, da de alta Clientes y cobra la Consulta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el dueño de la Mascota que solicita la atención."
+      ],
+      "impacto": [
+        "Saca Turno y abona la Consulta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Mascota",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el animal que recibe la atención veterinaria."
+      ],
+      "impacto": [
+        "Tiene una Historia Clínica; recibe Vacunas y tratamientos."
+      ],
+      "sinonimos": [
+        "Paciente"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Turno",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la reserva de un horario de atención para una Mascota."
+      ],
+      "impacto": [
+        "Se agenda y queda en estado Turno Confirmado."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Historia Clínica",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el registro de la Mascota con sus visitas, Vacunas y tratamientos."
+      ],
+      "impacto": [
+        "Se actualiza en cada Consulta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Receta",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es la indicación de medicación que entrega el Veterinario."
+      ],
+      "impacto": [
+        "Se emite durante la Consulta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Vacuna",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el biológico que se aplica a la Mascota según un calendario."
+      ],
+      "impacto": [
+        "Se registra en la Historia Clínica y genera un Recordatorio."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Recordatorio",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el aviso de la próxima dosis o del Turno."
+      ],
+      "impacto": [
+        "Se envía al Cliente."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Comprobante",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el documento que respalda el cobro."
+      ],
+      "impacto": [
+        "Se emite al cobrar la Consulta."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Agendar Turno",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es la actividad de reservar un horario de atención.",
+        "La realiza la Recepcionista."
+      ],
+      "impacto": [
+        "Genera un Turno Confirmado y un Recordatorio."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Atender Consulta",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es la actividad en la que el Veterinario revisa a la Mascota."
+      ],
+      "impacto": [
+        "Actualiza la Historia Clínica; puede derivar en Receta o Vacuna."
+      ],
+      "sinonimos": [
+        "Consulta"
+      ],
+      "id": ""
+    },
+    {
+      "nombre": "Vacunar",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es la actividad de aplicar una Vacuna a la Mascota."
+      ],
+      "impacto": [
+        "Se registra en la Historia Clínica."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Cobrar Consulta",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es la actividad de cobrar la atención al Cliente.",
+        "La realiza la Recepcionista."
+      ],
+      "impacto": [
+        "Emite el Comprobante."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Registrar Cliente",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es la actividad de dar de alta a un Cliente nuevo y su Mascota."
+      ],
+      "impacto": [
+        "Abre una Historia Clínica."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Turno Confirmado",
+      "tipo": "Estado",
+      "nocion": [
+        "Es el estado del Turno una vez agendado y confirmado."
+      ],
+      "impacto": [
+        "Habilita el envío del Recordatorio."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "Internado",
+      "tipo": "Estado",
+      "nocion": [
+        "Es el estado de la Mascota que queda en observación o cirugía."
+      ],
+      "impacto": [
+        "Se controla hasta el alta."
+      ],
+      "sinonimos": [
+        "Paciente Internado"
+      ],
+      "id": ""
+    }
+  ]
+}

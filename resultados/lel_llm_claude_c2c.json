@@ -1,0 +1,276 @@
+{
+  "proyecto": "ecoFactory",
+  "version": "referencia-corpusB-real",
+  "conjunto": "corrida_referencia_C2c_corpusB_real",
+  "simbolos": [
+    {
+      "id": "S01",
+      "nombre": "Dueño",
+      "tipo": "Sujeto",
+      "sinonimos": [
+        "Dueño de ecoFactory"
+      ],
+      "nocion": [
+        "Es la persona a cargo de ecoFactory, la empresa que fabrica y distribuye bolsas ecológicas."
+      ],
+      "impacto": [
+        "Define los objetivos y las prioridades del proyecto de automatización.",
+        "Interactúa con el Gerente Comercial para las decisiones del área comercial."
+      ]
+    },
+    {
+      "id": "S02",
+      "nombre": "Gerente Comercial",
+      "tipo": "Sujeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la persona a cargo del área comercial de ecoFactory, con dos o tres personas a cargo de la atención personalizada de Cliente Mayorista."
+      ],
+      "impacto": [
+        "Gestiona las cuentas de los Cliente Mayorista más importantes.",
+        "Carga a mano en el Sistema ERP los datos de entregas cuando no coinciden con lo generado en la planilla."
+      ]
+    },
+    {
+      "id": "S03",
+      "nombre": "Operario ERP",
+      "tipo": "Sujeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la persona que opera el Sistema ERP en las tareas administrativas diarias de ecoFactory."
+      ],
+      "impacto": [
+        "Carga Pedido, Remito y Factura en el Sistema ERP.",
+        "Genera informes sobre Pedido, Remito y Facturación."
+      ]
+    },
+    {
+      "id": "S04",
+      "nombre": "Responsable ERP",
+      "tipo": "Sujeto",
+      "sinonimos": [
+        "proveedor del ERP"
+      ],
+      "nocion": [
+        "Es la persona de la empresa proveedora del Sistema ERP, externa a ecoFactory, que brinda soporte funcional y comercial del sistema."
+      ],
+      "impacto": [
+        "Explica los módulos disponibles del Sistema ERP y su forma de Integración.",
+        "Provee usuarios, contraseñas y llaves de seguridad para los distintos módulos del Sistema ERP."
+      ]
+    },
+    {
+      "id": "S05",
+      "nombre": "Sistema ERP",
+      "tipo": "Sujeto",
+      "sinonimos": [
+        "ERP",
+        "software de gestión"
+      ],
+      "nocion": [
+        "Es el sistema de gestión administrativa que usa ecoFactory, provisto por una empresa externa.",
+        "Está organizado en módulos (contabilidad, facturación, compras y ventas)."
+      ],
+      "impacto": [
+        "Genera Factura de tipo A, B o C.",
+        "Registra Pedido, Remito y el estado del stock.",
+        "Se integra con AFIP y con proveedores externos mediante API."
+      ]
+    },
+    {
+      "id": "S06",
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la persona u organización que le compra Bolsa Ecológica a ecoFactory."
+      ],
+      "impacto": [
+        "Genera un Pedido.",
+        "Recibe Factura y Remito de ecoFactory."
+      ]
+    },
+    {
+      "id": "S07",
+      "nombre": "Cliente Mayorista",
+      "tipo": "Sujeto",
+      "sinonimos": [
+        "cliente mayorista"
+      ],
+      "nocion": [
+        "Es un tipo de Cliente que le compra a ecoFactory en cantidad (miles de unidades por tirada), como cadenas de supermercados."
+      ],
+      "impacto": [
+        "Es atendido de forma personalizada por el Gerente Comercial.",
+        "Genera aproximadamente entre 800 y 1000 Pedido por semana entre todos los Cliente Mayorista."
+      ]
+    },
+    {
+      "id": "S08",
+      "nombre": "AFIP",
+      "tipo": "Sujeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el organismo externo con el que el Sistema ERP mantiene una integración formal para la Facturación."
+      ],
+      "impacto": [
+        "Restringe la posibilidad de modificar una Factura ya emitida."
+      ]
+    },
+    {
+      "id": "O01",
+      "nombre": "Bolsa Ecológica",
+      "tipo": "Objeto",
+      "sinonimos": [
+        "bolsas ecológicas",
+        "Producto"
+      ],
+      "nocion": [
+        "Es el producto que fabrica y distribuye ecoFactory, en distintos tipos."
+      ],
+      "impacto": [
+        "Es incluida en un Pedido por el Cliente.",
+        "Se fabrica en tiradas de 1000, 2000 o 4000 unidades."
+      ]
+    },
+    {
+      "id": "O02",
+      "nombre": "Pedido",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la solicitud de Bolsa Ecológica que un Cliente realiza a ecoFactory."
+      ],
+      "impacto": [
+        "Es cargado por el Operario ERP en el Sistema ERP.",
+        "Debe corresponderse con el Remito y con la Factura emitida.",
+        "Es agrupado una vez por día para su gestión."
+      ]
+    },
+    {
+      "id": "O03",
+      "nombre": "Remito",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el comprobante de entrega asociado a un Pedido."
+      ],
+      "impacto": [
+        "Debe chequearse contra el Pedido para verificar que coincidan.",
+        "Cuando no coincide con el Pedido, obliga a depurar la diferencia a mano."
+      ]
+    },
+    {
+      "id": "O04",
+      "nombre": "Factura",
+      "tipo": "Objeto",
+      "sinonimos": [
+        "Facturas"
+      ],
+      "nocion": [
+        "Es el comprobante fiscal que ecoFactory emite a un Cliente por un Pedido, de tipo A, B o C."
+      ],
+      "impacto": [
+        "Debe corresponderse con el Pedido y con el Remito.",
+        "No puede modificarse fácilmente una vez emitida, por la integración con AFIP.",
+        "Puede enviarse al Cliente por mail o por el canal que se elija."
+      ]
+    },
+    {
+      "id": "O05",
+      "nombre": "Depósito",
+      "tipo": "Objeto",
+      "sinonimos": [
+        "Depósitos"
+      ],
+      "nocion": [
+        "Es el lugar físico en la provincia de Buenos Aires donde ecoFactory almacena la Bolsa Ecológica antes de su entrega."
+      ],
+      "impacto": [
+        "Recibe por mail la indicación de qué Pedido enviar.",
+        "Genera errores de entrega cuando la comunicación por mail y planillas falla."
+      ]
+    },
+    {
+      "id": "O06",
+      "nombre": "Stock",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la cantidad disponible de Bolsa Ecológica registrada en el Sistema ERP."
+      ],
+      "impacto": [
+        "Se actualiza mediante altas, bajas y modificaciones registradas por el Operario ERP."
+      ]
+    },
+    {
+      "id": "O07",
+      "nombre": "Base de Datos",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el repositorio de datos del Sistema ERP, no accedido directamente por el personal de ecoFactory."
+      ],
+      "impacto": [
+        "Es resguardada mediante Backup una vez por día y una vez por semana por un servicio técnico externo."
+      ]
+    },
+    {
+      "id": "O08",
+      "nombre": "Backup",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la copia de resguardo de la Base de Datos del Sistema ERP."
+      ],
+      "impacto": [
+        "Es realizada por un técnico en informática contratado a terceros, con una frecuencia diaria y semanal."
+      ]
+    },
+    {
+      "id": "V01",
+      "nombre": "Facturación",
+      "tipo": "Verbo",
+      "sinonimos": [
+        "facturar"
+      ],
+      "nocion": [
+        "Es la actividad de emitir una Factura a partir de un Pedido, a cargo del Operario ERP."
+      ],
+      "impacto": [
+        "Se realiza en la práctica de forma manual, entrando al Sistema ERP y cargando cada dato.",
+        "Genera problemas cuando el Pedido o el Remito no coinciden con lo facturado."
+      ]
+    },
+    {
+      "id": "V02",
+      "nombre": "Automatizar",
+      "tipo": "Verbo",
+      "sinonimos": [
+        "automatización"
+      ],
+      "nocion": [
+        "Es la acción que busca el Dueño para reducir el trabajo manual en la gestión de Pedido, Remito y Facturación."
+      ],
+      "impacto": [
+        "No reemplaza al Sistema ERP; se realiza integrando o comunicando con él.",
+        "Debe gestionarse con el Responsable ERP cuando implica modificaciones al Sistema ERP."
+      ]
+    },
+    {
+      "id": "V03",
+      "nombre": "Integración",
+      "tipo": "Verbo",
+      "sinonimos": [
+        "integrar"
+      ],
+      "nocion": [
+        "Es la acción de conectar el Sistema ERP con software externo mediante una API u otra tecnología estándar de mercado."
+      ],
+      "impacto": [
+        "Es ofrecida por el Responsable ERP a los clientes del proveedor del Sistema ERP.",
+        "Ya existe, por ejemplo, con puntos de venta de terceros."
+      ]
+    }
+  ]
+}

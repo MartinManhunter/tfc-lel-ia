@@ -1,0 +1,189 @@
+{
+  "proyecto": "Hotel",
+  "version": "",
+  "conjunto": "Gold muestreo",
+  "simbolos": [
+    {
+      "nombre": "Recepcionista",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Recepcionista"
+      ],
+      "impacto": [
+        "(ref) impacto de Recepcionista"
+      ],
+      "sinonimos": [],
+      "id": "H01"
+    },
+    {
+      "nombre": "Huésped",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Huésped"
+      ],
+      "impacto": [
+        "(ref) impacto de Huésped"
+      ],
+      "sinonimos": [],
+      "id": "H02"
+    },
+    {
+      "nombre": "Mucama",
+      "tipo": "Sujeto",
+      "nocion": [
+        "(ref) Mucama"
+      ],
+      "impacto": [
+        "(ref) impacto de Mucama"
+      ],
+      "sinonimos": [],
+      "id": "H03"
+    },
+    {
+      "nombre": "Reserva",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Reserva"
+      ],
+      "impacto": [
+        "(ref) impacto de Reserva"
+      ],
+      "sinonimos": [],
+      "id": "H04"
+    },
+    {
+      "nombre": "Habitación",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Habitación"
+      ],
+      "impacto": [
+        "(ref) impacto de Habitación"
+      ],
+      "sinonimos": [],
+      "id": "H05"
+    },
+    {
+      "nombre": "Cuenta",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Cuenta"
+      ],
+      "impacto": [
+        "(ref) impacto de Cuenta"
+      ],
+      "sinonimos": [],
+      "id": "H06"
+    },
+    {
+      "nombre": "Factura",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Factura"
+      ],
+      "impacto": [
+        "(ref) impacto de Factura"
+      ],
+      "sinonimos": [],
+      "id": "H07"
+    },
+    {
+      "nombre": "Llave",
+      "tipo": "Objeto",
+      "nocion": [
+        "(ref) Llave"
+      ],
+      "impacto": [
+        "(ref) impacto de Llave"
+      ],
+      "sinonimos": [],
+      "id": "H08"
+    },
+    {
+      "nombre": "Hacer Reserva",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Hacer Reserva"
+      ],
+      "impacto": [
+        "(ref) impacto de Hacer Reserva"
+      ],
+      "sinonimos": [
+        "Reservar"
+      ],
+      "id": "H09"
+    },
+    {
+      "nombre": "Check-in",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Check-in"
+      ],
+      "impacto": [
+        "(ref) impacto de Check-in"
+      ],
+      "sinonimos": [],
+      "id": "H10"
+    },
+    {
+      "nombre": "Check-out",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Check-out"
+      ],
+      "impacto": [
+        "(ref) impacto de Check-out"
+      ],
+      "sinonimos": [],
+      "id": "H11"
+    },
+    {
+      "nombre": "Verificar Disponibilidad",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Verificar Disponibilidad"
+      ],
+      "impacto": [
+        "(ref) impacto de Verificar Disponibilidad"
+      ],
+      "sinonimos": [],
+      "id": "H12"
+    },
+    {
+      "nombre": "Limpiar Habitación",
+      "tipo": "Verbo",
+      "nocion": [
+        "(ref) Limpiar Habitación"
+      ],
+      "impacto": [
+        "(ref) impacto de Limpiar Habitación"
+      ],
+      "sinonimos": [],
+      "id": "H13"
+    },
+    {
+      "nombre": "Ocupada",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Ocupada"
+      ],
+      "impacto": [
+        "(ref) impacto de Ocupada"
+      ],
+      "sinonimos": [],
+      "id": "H14"
+    },
+    {
+      "nombre": "Disponible",
+      "tipo": "Estado",
+      "nocion": [
+        "(ref) Disponible"
+      ],
+      "impacto": [
+        "(ref) impacto de Disponible"
+      ],
+      "sinonimos": [],
+      "id": "H15"
+    }
+  ]
+}

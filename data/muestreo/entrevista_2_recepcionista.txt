@@ -1,0 +1,15 @@
+[Entrevistador] ¿Cuál es tu tarea principal en la veterinaria?
+
+[Recepcionista] Yo manejo la agenda. Atiendo el teléfono, la gente pide un turno y yo lo agendo en el sistema. Cuando lo confirmo, queda el turno confirmado y le mando un recordatorio al cliente el día anterior.
+
+[Entrevistador] ¿Cómo registran a un cliente nuevo?
+
+[Recepcionista] Si es un cliente nuevo, lo doy de alta: cargo sus datos y los datos de la mascota. A cada mascota se le abre una historia clínica. Si ya es cliente, busco su ficha y listo.
+
+[Entrevistador] ¿Y el tema de los pagos?
+
+[Recepcionista] Cuando el veterinario termina la consulta, el cliente viene y yo cobro la consulta. Cobro lo que sea, la consulta, una vacuna, un estudio, y emito el comprobante. También vendemos alimento y accesorios, eso también lo cobro.
+
+[Entrevistador] ¿Algo que hoy te complique?
+
+[Recepcionista] Lo de los recordatorios a veces es manual y se me pasa alguno. Y cuando una mascota queda internada, tengo que avisarle al dueño cómo evoluciona, pero eso lo hacemos medio a mano, no está tan sistematizado.

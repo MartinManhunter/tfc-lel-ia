@@ -1,0 +1,32 @@
+<svg width="2160" height="912" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#6b7280"/></marker></defs>
+<rect width="900" height="380" fill="#ffffff"/>
+<text x="450" y="30" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Pipeline del prototipo basado en LLM</text>
+<rect x="20" y="150" width="120" height="70" rx="8" fill="#eef1f4" stroke="#5b6470" stroke-width="2"/>
+<text x="80.0" y="189.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Transcripciones</text>
+<rect x="170" y="150" width="150" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="245.0" y="181.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">1. Extraer</text>
+<text x="245.0" y="197.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">candidatos</text>
+<rect x="360" y="150" width="150" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="435.0" y="181.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">2. Clasificar</text>
+<text x="435.0" y="197.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">(S/O/V/E)</text>
+<rect x="550" y="150" width="150" height="70" rx="8" fill="#e8eef7" stroke="#3b6ea5" stroke-width="2"/>
+<text x="625.0" y="181.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">3. Describir</text>
+<text x="625.0" y="197.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">(noción/impacto)</text>
+<line x1="140" y1="185" x2="170" y2="185" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="320" y1="185" x2="360" y2="185" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="510" y1="185" x2="550" y2="185" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="720" y="150" width="150" height="70" rx="8" fill="#e6f0ea" stroke="#3f7d5b" stroke-width="2"/>
+<text x="795.0" y="181.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">4. Auto-verificar</text>
+<text x="795.0" y="197.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">(checklist)</text>
+<line x1="700" y1="185" x2="720" y2="185" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<rect x="720" y="280" width="150" height="56" rx="8" fill="#f6e7e9" stroke="#b23a48" stroke-width="2"/>
+<text x="795.0" y="312.5" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">LEL generado</text>
+<line x1="795" y1="220" x2="795" y2="280" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
+<line x1="245" y1="250" x2="245" y2="222" stroke="#3b6ea5" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="435" y1="250" x2="435" y2="222" stroke="#3b6ea5" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="625" y1="250" x2="625" y2="222" stroke="#3b6ea5" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<rect x="170" y="250" width="530" height="40" rx="8" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+<text x="435.0" y="274.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Cada etapa usa un prompt propio que codifica las reglas del método LEL</text>
+<text x="450" y="350" font-size="12" fill="#5b6470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Configuraciones: C2a (básica) · C2b (multi-etapa con ejemplos) · C2c (multi-etapa + auto-verificación).</text>
+</svg>

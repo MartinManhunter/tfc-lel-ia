@@ -1,0 +1,23 @@
+[Entrevistador] Contame cómo funciona tu tienda online.
+
+[Dueño] Nosotros vendemos productos por la web, no tenemos local a la calle. Todo lo que ofrecemos está en el catálogo, que es la lista de productos publicados, cada uno con su foto, su descripción, su precio y el stock disponible. Los productos los tenemos organizados por categorías para que el cliente encuentre lo que busca. El cliente entra a la página, navega el catálogo, filtra por categoría o busca por nombre, y los productos que le interesan los va poniendo en el carrito, que es como el changuito virtual donde junta lo que se va a llevar.
+
+[Entrevistador] ¿Qué pasa cuando el cliente decide comprar?
+
+[Dueño] Cuando termina de cargar el carrito, hace el checkout. Ahí elige la forma de pago y la dirección de envío, y confirma la compra. En ese momento se genera el pedido, con el detalle de todos los productos y las cantidades, los datos del cliente y la dirección. El pago lo procesamos con una pasarela de pagos, que es el servicio que cobra con tarjeta de crédito, débito o transferencia y nos avisa si el pago se aprobó o se rechazó. Si el pago se aprueba, el pedido pasa a estar confirmado y se manda a preparar. Si el pago se rechaza, el pedido queda pendiente y, muy importante, el stock no se descuenta hasta que el pago no esté confirmado.
+
+[Entrevistador] Contame más sobre el stock, que parece clave.
+
+[Dueño] El stock es absolutamente clave, es donde más nos jugamos. Cada producto tiene una cantidad disponible cargada. Cuando un cliente confirma un pedido y el pago se aprueba, esa cantidad se descuenta del stock automáticamente. El problema más feo es cuando dos clientes compran el último producto casi al mismo tiempo: los dos hacen el checkout, los dos pagan, y yo tengo stock para uno solo. Ahí no me queda otra que cancelar uno de los pedidos y devolverle la plata a ese cliente, que es horrible para la imagen de la marca, porque le vendiste algo, le cobraste, y después le decís que no lo tenés. Por eso el manejo fino del stock y la sincronización es lo que más me quita el sueño.
+
+[Entrevistador] ¿Cómo manejás los precios y las promociones?
+
+[Dueño] Los precios los cargo y los actualizo desde el catálogo, producto por producto o por categoría cuando hay un aumento general. Y armo promociones seguido, porque en e-commerce la promo es lo que mueve la aguja: descuentos por cantidad, cupones de descuento que el cliente ingresa en el checkout, envío gratis a partir de cierto monto de compra, ofertas por fecha especial. Todo eso lo configuro yo y se aplica automáticamente al carrito cuando el cliente cumple la condición, por ejemplo cuando supera el monto para el envío gratis. Tengo que tener cuidado de que las promos no se pisen entre ellas o termino regalando el producto.
+
+[Entrevistador] ¿Qué información mirás para tomar decisiones?
+
+[Dueño] Lo que más miro son los reportes de ventas. Necesito saber qué producto se vende bien y cuál está parado ocupando lugar en el depósito y plata inmovilizada. Con eso decido qué repongo, qué pongo en oferta para sacarlo, y qué directamente dejo de vender. También miro los carritos abandonados, que son los clientes que cargaron productos y no terminaron de comprar; a veces les mando un recordatorio o un cupón para que vuelvan y cierren la compra.
+
+[Entrevistador] ¿Qué es lo que más te complica?
+
+[Dueño] La sincronización entre la web y el depósito real, sin dudas. Que lo que dice el sistema que tengo sea efectivamente lo que hay en la estantería. Cuando eso se desfasa, empiezan los problemas de vender lo que no tenés. Y coordinar con la parte de logística para que los pedidos salgan rápido, porque el cliente de hoy quiere el producto para ayer, y si demorás la entrega te llenan de reclamos y de malas reseñas.

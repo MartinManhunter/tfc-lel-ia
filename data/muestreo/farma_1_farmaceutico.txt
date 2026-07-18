@@ -1,0 +1,23 @@
+[Entrevistador] Contame cómo funciona la farmacia por dentro.
+
+[Farmacéutico] El día a día, la tarea central, es dispensar medicamentos. El cliente viene con una receta del médico, yo la leo, verifico que esté bien hecha y vigente, que tenga los datos del profesional y del paciente, y le entrego el medicamento que corresponde a lo prescripto. Eso es la dispensación. Parece simple pero tiene su complejidad, porque hay que chequear que el medicamento sea el correcto, la presentación, la cantidad, y a veces asesorar al cliente sobre cómo tomarlo. Si el medicamento tiene cobertura de la obra social del paciente, cargo la receta en el sistema de esa obra social, que me valida la cobertura y el porcentaje de descuento, y al cliente le cobro solamente la diferencia, la parte que no le cubren.
+
+[Entrevistador] ¿Cómo manejan el stock de medicamentos?
+
+[Farmacéutico] Cada medicamento tiene su stock, su cantidad disponible en la farmacia. Cuando el stock de un producto baja de cierto punto, hago un pedido a la droguería, que es la distribuidora mayorista que nos provee los medicamentos. En general trabajamos con más de una droguería, según precios y disponibilidad. La droguería nos manda la mercadería, normalmente muy rápido, y cuando llega nosotros la ingresamos al stock, es decir la cargamos como disponible. Y acá viene algo crítico: cada unidad que ingresa tiene un lote y una fecha de vencimiento, y eso lo tengo que registrar y controlar sí o sí, porque no puedo, bajo ningún concepto, vender un medicamento vencido.
+
+[Entrevistador] Contame más sobre el tema de los vencimientos.
+
+[Farmacéutico] Es una de mis responsabilidades más serias. Controlo los vencimientos de forma permanente. Los productos que están próximos a vencer los tengo que ir separando y sacando de la venta antes de que se venzan, y hacer la devolución a la droguería cuando el acuerdo lo permite, o descartarlos siguiendo el procedimiento correspondiente. Por eso, cuando ingreso mercadería nueva, la acomodo en la estantería de manera que quede adelante lo que vence primero y atrás lo que vence después, así naturalmente sale primero lo más próximo a vencer. Dispensar algo vencido no es solo un problema comercial, es un problema legal y sanitario grave, me pone en riesgo la matrícula y, sobre todo, la salud del paciente.
+
+[Entrevistador] ¿Hay medicamentos que requieran un tratamiento especial?
+
+[Farmacéutico] Sí, y es la parte más delicada de todas: los medicamentos controlados, que son los psicotrópicos y los estupefacientes. Esos no se pueden dispensar con una receta común: requieren una receta especial, archivada, con más datos, y tengo la obligación de llevar un libro recetario donde registro cada dispensación de un controlado: qué se entregó, en qué cantidad, a qué paciente, con qué receta y de qué médico. La autoridad sanitaria me puede auditar ese libro en cualquier momento, y todo tiene que cerrar perfecto: lo que entró, lo que salió y lo que queda en stock de cada controlado. Un descuadre ahí es gravísimo. Es la parte del trabajo donde no hay margen para el error.
+
+[Entrevistador] ¿Trabajan con obras sociales especiales o programas?
+
+[Farmacéutico] Sí, además de las obras sociales comunes, manejamos coberturas especiales, planes de medicación crónica, PAMI para los jubilados, que tienen sus propias reglas y sus propios sistemas de validación. Cada uno con su circuito de autorización y de facturación. Después, igual que en cualquier comercio, yo tengo que armar la facturación a cada obra social por lo que dispensé con cobertura, con las recetas y los troqueles como respaldo, para que me reintegren la parte que cubrieron.
+
+[Entrevistador] ¿Qué es lo que más te complica en el día a día?
+
+[Farmacéutico] Fundamentalmente dos cosas. Una es la diferencia entre el stock que dice el sistema y el stock real que hay en la estantería, sobre todo cruzado con los vencimientos: mantener eso cuadrado y al día lleva un trabajo enorme. Y la otra son las obras sociales, que cambian las coberturas, los vademécum, los porcentajes, muchas veces sin avisar, y de golpe rechazan una receta que estaba perfecta, y el cliente se enoja conmigo por algo que no depende de mí, que decidió la obra social. Estoy en el mostrador dando la cara por decisiones que se toman en otro lado.
