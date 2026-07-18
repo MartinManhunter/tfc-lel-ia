@@ -74,12 +74,16 @@ patrón se repite (LLM F1 promedio ≈ 0,90 frente a ≈ 0,50 del PLN por frecue
 │   ├── run_baseline_frecuencia.py
 │   ├── run_baseline_spacy.py
 │   ├── run_pipeline_llm.py
-│   └── run_evaluacion.py     Motor de evaluación determinístico
+│   ├── run_evaluacion.py     Motor de evaluación determinístico
+│   ├── graficar_resultado.py Gráfico de barras comparando 1-2 corridas (ver abajo)
+│   └── reporte_lel_html.py   Vista HTML navegable de un LEL (ver abajo)
 ├── prompts/                Los 4 prompts del pipeline (una etapa cada uno)
 ├── data/
 │   ├── corpus/               Las 4 entrevistas reales de ecoFactory (+ NOTA_CORPUS.md)
 │   ├── gold/                 Gold Standards en JSON (completo y recuperable)
-│   └── muestreo/             Los 6 dominios adicionales con sus entrevistas y Gold Standards
+│   ├── muestreo/              Los 6 dominios adicionales con sus entrevistas y Gold Standards
+│   └── pruebas/               Entrevistas inventadas para pruebas exploratorias — NO forman
+│                              parte del corpus del trabajo ni de su evaluación (ver README_PRUEBAS.md)
 ├── resultados/             Salidas de las corridas (LEL generados + reportes)
 ├── config.yaml             Configuración (proveedor, modelo, temperatura, corpus)
 ├── requirements.txt        Dependencias de Python
@@ -90,6 +94,22 @@ patrón se repite (LLM F1 promedio ≈ 0,90 frente a ≈ 0,50 del PLN por frecue
 
 > El repositorio incluye también `build_docx.js` y `gen_figuras*.py`, que generan el documento
 > y sus figuras; no son parte del prototipo evaluado.
+
+## Herramientas para explorar resultados
+
+Dos utilitarios opcionales, pensados para inspeccionar a simple vista cualquier LEL producido
+(no forman parte del prototipo evaluado en el Capítulo 7, son solo de ayuda para leer resultados):
+
+```bash
+pip install matplotlib   # si no lo tenés ya
+
+# Gráfico de barras comparando 1 o 2 corridas (precisión, cobertura, F1, tipo, descripciones)
+python scripts/graficar_resultado.py resultados/lel_baseline_frecuencia.json resultados/lel_llm_C2c_corpusB_real.json
+
+# Vista HTML navegable de un LEL: símbolos agrupados por tipo, con noción e impacto
+python scripts/reporte_lel_html.py resultados/lel_llm_C2c_corpusB_real.json
+# abrir el .html generado en resultados/ con el navegador
+```
 
 ## Cómo empezar
 
