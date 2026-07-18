@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>LEL — lel_llm_tintoreria_TEST</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 960px; margin: 30px auto;
+         padding: 0 20px; color: #222; background: #fafafa; }
+  h1 { font-size: 1.5em; border-bottom: 3px solid #333; padding-bottom: 8px; }
+  .resumen { display: flex; gap: 14px; margin: 18px 0 28px; flex-wrap: wrap; }
+  .chip { padding: 8px 16px; border-radius: 20px; color: white; font-weight: 600; font-size: 0.92em; }
+  .simbolo { background: white; border-left: 6px solid #ccc; border-radius: 6px;
+              padding: 12px 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .simbolo .nombre { font-weight: 700; font-size: 1.08em; }
+  .simbolo .tipo { display: inline-block; font-size: 0.75em; font-weight: 700; color: white;
+                     padding: 2px 9px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+  .simbolo .sinonimos { color: #777; font-size: 0.85em; font-style: italic; }
+  .campo { margin-top: 6px; font-size: 0.94em; }
+  .campo b { color: #444; }
+  .vacio { color: #bbb; font-style: italic; }
+  h2.grupo { margin-top: 32px; padding: 6px 12px; border-radius: 6px; color: white; }
+  .meta { color: #666; font-size: 0.88em; margin-bottom: 20px; }
+</style>
+</head>
+<body>
+<h1>LEL — lel_llm_tintoreria_TEST</h1>
+<p class="meta">Proyecto: <b>Tintorería Delgado (prueba)</b> · Conjunto: corrida_referencia_TEST_no_oficial · Total de símbolos: <b>15</b></p>
+<div class="resumen"><span class="chip" style="background:#2f6f4f">Sujeto: 4</span><span class="chip" style="background:#3b6ea5">Objeto: 7</span><span class="chip" style="background:#b2701a">Verbo: 3</span><span class="chip" style="background:#8a3b8f">Estado: 1</span></div>
+<h2 class="grupo" style="background:#2f6f4f">Sujeto (4)</h2>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Cliente</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la persona que trae una Prenda a la Tintorería para su lavado, planchado o arreglo.</div>
+  <div class="campo"><b>Impacto:</b> Paga una Seña al dejar la Prenda y el Saldo al retirarla. Recibe el Ticket al dejar la Prenda y el Comprobante al retirarla.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Dueño</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  <div class="sinonimos">Sinónimos: Martín Delgado</div>
+  <div class="campo"><b>Noción:</b> Es la persona a cargo de la Tintorería, con quince años en el barrio.</div>
+  <div class="campo"><b>Impacto:</b> Decide personalmente los descuentos y reclamos por daños en el lavado; no delega esas decisiones en los empleados.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Norma</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  <div class="sinonimos">Sinónimos: empleada del mostrador</div>
+  <div class="campo"><b>Noción:</b> Es la empleada que atiende el mostrador de la Tintorería.</div>
+  <div class="campo"><b>Impacto:</b> Recibe la Prenda del Cliente y completa la Planilla. Entrega el Ticket y busca la Prenda por su número cuando el Cliente la retira.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Proveedor de Productos Químicos</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la empresa que provee mensualmente los Productos Químicos para el lavado en seco, con habilitación especial.</div>
+  <div class="campo"><b>Impacto:</b> Envía el pedido una vez por mes.</div>
+</div>
+<h2 class="grupo" style="background:#3b6ea5">Objeto (7)</h2>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Comprobante</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el papel con el sello de la Tintorería que se entrega al Cliente al retirar la Prenda.</div>
+  <div class="campo"><b>Impacto:</b> Sirve de respaldo ante un Reclamo posterior.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Perchero de Prendas Listas</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el lugar donde se cuelgan las Prendas ya lavadas, ordenadas por el número del Ticket.</div>
+  <div class="campo"><b>Impacto:</b> No está conectado al sistema de Facturación, por lo que nadie sabe automáticamente qué Prenda quedó sin retirar por mucho tiempo.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Planilla</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el registro donde Norma anota la Prenda recibida, su tela, manchas y precio.</div>
+  <div class="campo"><b>Impacto:</b> Determina el precio a cobrar según el tipo de Prenda.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Prenda</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  <div class="sinonimos">Sinónimos: ropa</div>
+  <div class="campo"><b>Noción:</b> Es la ropa que el Cliente trae a la Tintorería para lavado, planchado o arreglo de costura.</div>
+  <div class="campo"><b>Impacto:</b> Se registra en la Planilla con su tela y precio. Una vez lavada, queda en el Perchero de Prendas Listas hasta que el Cliente la retira.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Productos Químicos</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Son los insumos para el lavado en seco, provistos por el Proveedor de Productos Químicos.</div>
+  <div class="campo"><b>Impacto:</b> Requieren una habilitación especial para su venta y compra.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Reclamo</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el planteo que hace un Cliente cuando una Prenda resultó dañada durante el lavado.</div>
+  <div class="campo"><b>Impacto:</b> Lo resuelve directamente el Dueño, con un descuento o, si la Prenda es de valor, con la cobertura de un seguro.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Ticket</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el comprobante numerado que Norma entrega al Cliente al recibir la Prenda.</div>
+  <div class="campo"><b>Impacto:</b> Se usa para ubicar la Prenda en el Perchero de Prendas Listas y para reclamar el Comprobante al retirar.</div>
+</div>
+<h2 class="grupo" style="background:#b2701a">Verbo (3)</h2>
+<div class="simbolo" style="border-left-color:#b2701a">
+  <span class="nombre">Facturar</span><span class="tipo" style="background:#b2701a">Verbo</span>
+  
+  <div class="campo"><b>Noción:</b> Es la carga diaria, a mano, de cada Prenda que entra con su precio en el sistema de la computadora.</div>
+  <div class="campo"><b>Impacto:</b> Genera el total facturado del día, sin cruzarse con el Perchero de Prendas Listas.</div>
+</div>
+<div class="simbolo" style="border-left-color:#b2701a">
+  <span class="nombre">Lavar en Seco</span><span class="tipo" style="background:#b2701a">Verbo</span>
+  <div class="sinonimos">Sinónimos: lavado</div>
+  <div class="campo"><b>Noción:</b> Es el proceso que se realiza en el taller sobre la Prenda recibida.</div>
+  <div class="campo"><b>Impacto:</b> Demora entre dos y tres días, salvo que se pague un adicional por el servicio express. Puede dañar la Prenda si la tela es delicada, dando lugar a un Reclamo.</div>
+</div>
+<div class="simbolo" style="border-left-color:#b2701a">
+  <span class="nombre">Recibir Prenda</span><span class="tipo" style="background:#b2701a">Verbo</span>
+  
+  <div class="campo"><b>Noción:</b> Es la acción de Norma de tomar la Prenda del Cliente en el mostrador, anotarla en la Planilla y entregar el Ticket.</div>
+  <div class="campo"><b>Impacto:</b> Puede incluir el cobro de una Seña.</div>
+</div>
+<h2 class="grupo" style="background:#8a3b8f">Estado (1)</h2>
+<div class="simbolo" style="border-left-color:#8a3b8f">
+  <span class="nombre">Prenda Lista</span><span class="tipo" style="background:#8a3b8f">Estado</span>
+  
+  <div class="campo"><b>Noción:</b> Es el estado de una Prenda una vez terminado el lavado.</div>
+  <div class="campo"><b>Impacto:</b> Habilita que el Cliente la retire contra la presentación del Ticket.</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+{
+  "proyecto": "Tintorería Delgado (prueba)",
+  "conjunto": "corrida_referencia_TEST_no_oficial",
+  "simbolos": [
+    {
+      "id": "S01",
+      "nombre": "Dueño",
+      "tipo": "Sujeto",
+      "sinonimos": [
+        "Martín Delgado"
+      ],
+      "nocion": [
+        "Es la persona a cargo de la Tintorería, con quince años en el barrio."
+      ],
+      "impacto": [
+        "Decide personalmente los descuentos y reclamos por daños en el lavado; no delega esas decisiones en los empleados."
+      ]
+    },
+    {
+      "id": "S02",
+      "nombre": "Norma",
+      "tipo": "Sujeto",
+      "sinonimos": [
+        "empleada del mostrador"
+      ],
+      "nocion": [
+        "Es la empleada que atiende el mostrador de la Tintorería."
+      ],
+      "impacto": [
+        "Recibe la Prenda del Cliente y completa la Planilla.",
+        "Entrega el Ticket y busca la Prenda por su número cuando el Cliente la retira."
+      ]
+    },
+    {
+      "id": "S03",
+      "nombre": "Cliente",
+      "tipo": "Sujeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la persona que trae una Prenda a la Tintorería para su lavado, planchado o arreglo."
+      ],
+      "impacto": [
+        "Paga una Seña al dejar la Prenda y el Saldo al retirarla.",
+        "Recibe el Ticket al dejar la Prenda y el Comprobante al retirarla."
+      ]
+    },
+    {
+      "id": "S04",
+      "nombre": "Proveedor de Productos Químicos",
+      "tipo": "Sujeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es la empresa que provee mensualmente los Productos Químicos para el lavado en seco, con habilitación especial."
+      ],
+      "impacto": [
+        "Envía el pedido una vez por mes."
+      ]
+    },
+    {
+      "id": "O01",
+      "nombre": "Prenda",
+      "tipo": "Objeto",
+      "sinonimos": [
+        "ropa"
+      ],
+      "nocion": [
+        "Es la ropa que el Cliente trae a la Tintorería para lavado, planchado o arreglo de costura."
+      ],
+      "impacto": [
+        "Se registra en la Planilla con su tela y precio.",
+        "Una vez lavada, queda en el Perchero de Prendas Listas hasta que el Cliente la retira."
+      ]
+    },
+    {
+      "id": "O02",
+      "nombre": "Ticket",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el comprobante numerado que Norma entrega al Cliente al recibir la Prenda."
+      ],
+      "impacto": [
+        "Se usa para ubicar la Prenda en el Perchero de Prendas Listas y para reclamar el Comprobante al retirar."
+      ]
+    },
+    {
+      "id": "O03",
+      "nombre": "Planilla",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el registro donde Norma anota la Prenda recibida, su tela, manchas y precio."
+      ],
+      "impacto": [
+        "Determina el precio a cobrar según el tipo de Prenda."
+      ]
+    },
+    {
+      "id": "O04",
+      "nombre": "Comprobante",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el papel con el sello de la Tintorería que se entrega al Cliente al retirar la Prenda."
+      ],
+      "impacto": [
+        "Sirve de respaldo ante un Reclamo posterior."
+      ]
+    },
+    {
+      "id": "O05",
+      "nombre": "Perchero de Prendas Listas",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el lugar donde se cuelgan las Prendas ya lavadas, ordenadas por el número del Ticket."
+      ],
+      "impacto": [
+        "No está conectado al sistema de Facturación, por lo que nadie sabe automáticamente qué Prenda quedó sin retirar por mucho tiempo."
+      ]
+    },
+    {
+      "id": "O06",
+      "nombre": "Productos Químicos",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Son los insumos para el lavado en seco, provistos por el Proveedor de Productos Químicos."
+      ],
+      "impacto": [
+        "Requieren una habilitación especial para su venta y compra."
+      ]
+    },
+    {
+      "id": "O07",
+      "nombre": "Reclamo",
+      "tipo": "Objeto",
+      "sinonimos": [],
+      "nocion": [
+        "Es el planteo que hace un Cliente cuando una Prenda resultó dañada durante el lavado."
+      ],
+      "impacto": [
+        "Lo resuelve directamente el Dueño, con un descuento o, si la Prenda es de valor, con la cobertura de un seguro."
+      ]
+    },
+    {
+      "id": "V01",
+      "nombre": "Recibir Prenda",
+      "tipo": "Verbo",
+      "sinonimos": [],
+      "nocion": [
+        "Es la acción de Norma de tomar la Prenda del Cliente en el mostrador, anotarla en la Planilla y entregar el Ticket."
+      ],
+      "impacto": [
+        "Puede incluir el cobro de una Seña."
+      ]
+    },
+    {
+      "id": "V02",
+      "nombre": "Lavar en Seco",
+      "tipo": "Verbo",
+      "sinonimos": [
+        "lavado"
+      ],
+      "nocion": [
+        "Es el proceso que se realiza en el taller sobre la Prenda recibida."
+      ],
+      "impacto": [
+        "Demora entre dos y tres días, salvo que se pague un adicional por el servicio express.",
+        "Puede dañar la Prenda si la tela es delicada, dando lugar a un Reclamo."
+      ]
+    },
+    {
+      "id": "V03",
+      "nombre": "Facturar",
+      "tipo": "Verbo",
+      "sinonimos": [],
+      "nocion": [
+        "Es la carga diaria, a mano, de cada Prenda que entra con su precio en el sistema de la computadora."
+      ],
+      "impacto": [
+        "Genera el total facturado del día, sin cruzarse con el Perchero de Prendas Listas."
+      ]
+    },
+    {
+      "id": "E01",
+      "nombre": "Prenda Lista",
+      "tipo": "Estado",
+      "sinonimos": [],
+      "nocion": [
+        "Es el estado de una Prenda una vez terminado el lavado."
+      ],
+      "impacto": [
+        "Habilita que el Cliente la retire contra la presentación del Ticket."
+      ]
+    }
+  ]
+}
