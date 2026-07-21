@@ -92,8 +92,10 @@ patrón se repite (LLM F1 promedio ≈ 0,90 frente a ≈ 0,50 del PLN por frecue
 └── Tesis_TFC_Romano.pdf    El documento del trabajo
 ```
 
-> El repositorio incluye también `build_docx.js` y `gen_figuras*.py`, que generan el documento
-> y sus figuras; no son parte del prototipo evaluado.
+> El repositorio incluye también `build_docx.js`, `gen_figuras*.py` y `calcular_indice.py`,
+> que generan el documento, sus figuras y su índice; no son parte del prototipo evaluado.
+> El índice se arma en dos pasadas: `node build_docx.js` → convertir a PDF →
+> `python calcular_indice.py` (calcula los números de página) → `node build_docx.js`.
 
 ## Herramientas para explorar resultados
 

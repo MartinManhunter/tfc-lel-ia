@@ -6,12 +6,39 @@ const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   ImageRun, Header, Footer, AlignmentType, LevelFormat, HeadingLevel,
   BorderStyle, WidthType, ShadingType, PageNumber, PageBreak,
-  TableOfContents, VerticalAlign, TabStopType, TabStopPosition
+  TableOfContents, VerticalAlign, TabStopType, TabStopPosition, LeaderType
 } = require("docx");
 
 const DIR = __dirname;
 const PNG = path.join(DIR, "figuras_png");
 const DIMS = JSON.parse(fs.readFileSync(path.join(PNG, "dims.json"), "utf-8"));
+
+// ---------- Índice estático (sin campos de Word) ----------
+// Los números de página se toman de toc_pages.json, que genera calcular_indice.js
+// a partir del PDF ya renderizado. Si no existe, se usan marcadores.
+const TOC_ENTRIES = [];
+const TOC_PAGES_FILE = path.join(DIR, "toc_pages.json");
+const TOC_PAGES = fs.existsSync(TOC_PAGES_FILE)
+  ? JSON.parse(fs.readFileSync(TOC_PAGES_FILE, "utf-8")) : [];
+const registrar = (lvl, text) => { TOC_ENTRIES.push({ lvl, text }); };
+
+function indiceParrafos() {
+  return TOC_ENTRIES.map((e, i) => {
+    const pag = TOC_PAGES[i] !== undefined ? String(TOC_PAGES[i]) : "00";
+    const sangria = { 1: 0, 2: 280, 3: 560 }[e.lvl];
+    return new Paragraph({
+      tabStops: [{ type: TabStopType.RIGHT, position: 9000, leader: LeaderType.DOT }],
+      spacing: { after: e.lvl === 1 ? 60 : 20, line: 240 },
+      indent: { left: sangria },
+      children: [new TextRun({
+        text: e.text + "\t" + pag,
+        bold: e.lvl === 1,
+        size: e.lvl === 1 ? 21 : 20,
+        font: "Times New Roman"
+      })]
+    });
+  });
+}
 
 // ---------- Paleta ----------
 const AZUL = "1F4E79", AZULC = "2E75B6", GRIST = "404040", TXT = "1A1A1A", CAPCOL = "595959";
@@ -40,9 +67,9 @@ const P = (text, opts = {}) => new Paragraph({
   children: runs(text),
   ...opts
 });
-const H1 = (text) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun(text)], spacing: { before: 420, after: 200 }, keepNext: true, pageBreakBefore: true });
-const H2 = (text) => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(text)], keepNext: true });
-const H3 = (text) => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun(text)], keepNext: true });
+const H1 = (text) => (registrar(1, text), new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun(text)], spacing: { before: 420, after: 200 }, keepNext: true, pageBreakBefore: true }));
+const H2 = (text) => (registrar(2, text), new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(text)], keepNext: true }));
+const H3 = (text) => (registrar(3, text), new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun(text)], keepNext: true }));
 
 function FIG(file, caption, maxW = 560) {
   const [w, h] = DIMS[file];
@@ -154,6 +181,7 @@ front.push(tcenter("Directora: Dra. Graciela D. S. Hadad", 24));
 front.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 800 }, children: [new TextRun({ text: "Buenos Aires, Argentina — 2026", size: 22, color: GRIST })] }));
 
 // ---------- RESUMEN ----------
+registrar(1, "Resumen");
 front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun("Resumen")] }));
 front.push(P("La construcción manual del modelo Léxico Extendido del Lenguaje (LEL) a partir de la información elicitada es una actividad central de la Ingeniería de Requisitos orientada al cliente, pero también laboriosa y propensa a omisiones e inconsistencias. Este Trabajo Final de Carrera diseña e implementa un prototipo funcional capaz de asistir en la construcción del LEL a partir de la transcripción de entrevistas grabadas, empleando Inteligencia Artificial Generativa, específicamente Grandes Modelos de Lenguaje (LLM)."));
 front.push(P("El foco del trabajo es el prototipo y la evaluación de en qué medida la Inteligencia Artificial Generativa mejora la construcción del LEL frente a su construcción utilizando Procesamiento de Lenguaje Natural (PLN) tradicional. Para ponerlo a prueba se define un *Gold Standard* de referencia —un LEL construido manualmente que actúa como patrón de comparación— y se contrastan tres enfoques: dos líneas base (*baselines*) de PLN tradicional y un pipeline basado en LLM que extrae, clasifica y describe los símbolos del LEL, con una etapa de auto-verificación. Como caso de muestreo principal se emplea ecoFactory, una empresa real cuyo LEL fue construido manualmente y publicado por los autores en el Workshop em Engenharia de Requisitos (WER 2024) a partir de entrevistas en las que los usuarios fueron interpretados en rol, y se lo complementa con varios dominios adicionales para evaluar la generalidad del enfoque. El trabajo se apoya, además, en una línea de trabajo previa de la Universidad de Belgrano que empleó PLN para construir un bosquejo del LEL."));
@@ -161,6 +189,7 @@ front.push(P("La evaluación combina métricas objetivas —precisión, cobertur
 front.push(new Paragraph({ spacing: { before: 120 }, children: [new TextRun({ text: "Palabras clave: ", bold: true }), new TextRun("Ingeniería de Requisitos, Léxico Extendido del Lenguaje, Inteligencia Artificial Generativa, Grandes Modelos de Lenguaje, Procesamiento de Lenguaje Natural, Elicitación.")] }));
 
 // ---------- ABSTRACT ----------
+registrar(1, "Abstract");
 front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun("Abstract")] }));
 front.push(P("Manually building the Language Extended Lexicon (LEL) from elicited information is a core activity of client-oriented Requirements Engineering, yet it is laborious and prone to omissions and inconsistencies. This work designs and implements a functional prototype that assists LEL construction from the transcription of recorded interviews, using Generative Artificial Intelligence, in particular Large Language Models (LLMs)."));
 front.push(P("The work extends a research line at Universidad de Belgrano that used traditional Natural Language Processing (NLP) to build a draft LEL. It relies on a real case study —the company ecoFactory— whose LEL was manually built and published by the authors at the Workshop on Requirements Engineering (WER 2024) from interviews in which the users were role-played. A reference Gold Standard is defined and three approaches are compared: two traditional NLP baselines and an LLM-based pipeline that extracts, classifies and describes the LEL symbols, with a self-verification stage. Evaluation combines objective metrics with a qualitative analysis of defects and hallucinations."));
@@ -168,7 +197,8 @@ front.push(new Paragraph({ spacing: { before: 120 }, children: [new TextRun({ te
 
 // ---------- ÍNDICE ----------
 front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun("Índice")] }));
-front.push(new TableOfContents("Tabla de contenidos", { hyperlink: true, headingStyleRange: "1-3" }));
+const TOC_SLOT = front.length;
+front.push(new Paragraph({ children: [] }));   // marcador: se reemplaza por el índice
 
 // =====================================================================
 // CAPÍTULO 1 — INTRODUCCIÓN
@@ -1203,6 +1233,8 @@ anexos.push(P("*Integración* — **Noción:** Es la acción de conectar el Sist
 // =====================================================================
 // ENSAMBLADO
 // =====================================================================
+front.splice(TOC_SLOT, 1, ...indiceParrafos());
+
 const doc = new Document({
   styles: {
     default: { document: { run: { font: "Times New Roman", size: 22, color: TXT } } },
