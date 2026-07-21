@@ -20,7 +20,7 @@ if __name__ == "__main__":
     if args.gold:
         golds = {os.path.splitext(os.path.basename(g))[0]: g for g in args.gold}
     else:
-        golds = {"GS-Corpus (14)": os.path.join(RAIZ, "data/gold/gs_corpus.json"),
+        golds = {"GS-Corpus (15)": os.path.join(RAIZ, "data/gold/gs_corpus.json"),
                  "GS-Completo (21)": os.path.join(RAIZ, "data/gold/gs_completo.json")}
 
     md = [f"# Reporte de evaluación — `{nombre}`", ""]

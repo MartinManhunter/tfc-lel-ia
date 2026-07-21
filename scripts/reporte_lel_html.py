@@ -4,7 +4,7 @@ noción e impacto), para inspeccionar visualmente el resultado de una corrida.
 
 Uso:
   python scripts/reporte_lel_html.py resultados/lel_baseline_frecuencia.json
-  python scripts/reporte_lel_html.py resultados/lel_llm_C2c_corpusB_real.json --out mi_reporte.html
+  python scripts/reporte_lel_html.py resultados/lel_llm_C2c_referencia.json --out mi_reporte.html
 
 Genera un .html que se abre haciendo doble clic (o clic derecho -> "Open with Live
 Server" / "Reveal in File Explorer" desde VS Code, o simplemente arrastrándolo al navegador).

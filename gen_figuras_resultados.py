@@ -66,15 +66,15 @@ barras(
     ylim=1.12
 )
 
-# ---------- Fig 5.3: GS-Completo (21) vs GS-Recuperable (15) por tipo ----------
+# ---------- Fig 5.3: GS-Completo (21) vs GS-Corpus (15) por tipo ----------
 def barras_agrupadas_tipo():
     tipos = ["Sujeto", "Objeto", "Verbo", "Estado"]
     completo = [6, 5, 8, 2]      # GS-Completo = 21
-    recuperable = [4, 4, 6, 1]   # GS-Recuperable = 15
+    recuperable = [4, 4, 6, 1]   # GS-Corpus = 15
     fig, ax = plt.subplots(figsize=(7.6, 4.2), dpi=150)
     x = np.arange(len(tipos)); w = 0.38
-    b1 = ax.bar(x - w/2, completo, w, label="GS-Completo (21)", color=AZUL)
-    b2 = ax.bar(x + w/2, recuperable, w, label="GS-Recuperable (15)", color="#7ba3c9")
+    b1 = ax.bar(x - w/2, completo, w, label="GS-Completo (21)", color=ROJO)
+    b2 = ax.bar(x + w/2, recuperable, w, label="GS-Corpus (15)", color=AZUL)
     for bars in (b1, b2):
         for b in bars:
             h = b.get_height()

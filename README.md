@@ -36,7 +36,7 @@ para explorar la generalidad del enfoque.
 ## Resultados (resumen)
 
 Sobre el corpus de cuatro entrevistas reales de ecoFactory, comparando contra el
-**GS-Recuperable** (los 15 símbolos con sustento textual en el corpus):
+**GS-Corpus** (los 15 símbolos con sustento textual en el corpus):
 
 | Métrica | Baseline frecuencia (C1a) | Pipeline LLM (C2c) |
 |---------|:---:|:---:|
@@ -80,7 +80,7 @@ patrón se repite (LLM F1 promedio ≈ 0,90 frente a ≈ 0,50 del PLN por frecue
 ├── prompts/                Los 4 prompts del pipeline (una etapa cada uno)
 ├── data/
 │   ├── corpus/               Las 4 entrevistas reales de ecoFactory (+ NOTA_CORPUS.md)
-│   ├── gold/                 Gold Standards en JSON (completo y recuperable)
+│   ├── gold/                 Gold Standards en JSON: gs_completo.json (21) y gs_corpus.json (15)
 │   ├── muestreo/              Los 6 dominios adicionales con sus entrevistas y Gold Standards
 │   └── pruebas/               Entrevistas inventadas para pruebas exploratorias — NO forman
 │                              parte del corpus del trabajo ni de su evaluación (ver README_PRUEBAS.md)
@@ -104,10 +104,10 @@ Dos utilitarios opcionales, pensados para inspeccionar a simple vista cualquier 
 pip install matplotlib   # si no lo tenés ya
 
 # Gráfico de barras comparando 1 o 2 corridas (precisión, cobertura, F1, tipo, descripciones)
-python scripts/graficar_resultado.py resultados/lel_baseline_frecuencia.json resultados/lel_llm_C2c_corpusB_real.json
+python scripts/graficar_resultado.py resultados/lel_baseline_frecuencia.json resultados/lel_llm_C2c_referencia.json
 
 # Vista HTML navegable de un LEL: símbolos agrupados por tipo, con noción e impacto
-python scripts/reporte_lel_html.py resultados/lel_llm_C2c_corpusB_real.json
+python scripts/reporte_lel_html.py resultados/lel_llm_C2c_referencia.json
 # abrir el .html generado en resultados/ con el navegador
 ```
 
@@ -126,7 +126,7 @@ python scripts/run_pipeline_llm.py
 # 3. Correr el baseline de frecuencia (C1a) — determinístico, sin dependencias externas
 python scripts/run_baseline_frecuencia.py
 python scripts/run_evaluacion.py resultados/lel_baseline_frecuencia.json \
-    --gold data/gold/gs_corpus_extendido.json data/gold/gs_completo.json
+    --gold data/gold/gs_corpus.json data/gold/gs_completo.json
 
 # 4. Correr el baseline spaCy (C1b) — requiere el modelo de español (sin API)
 python -m spacy download es_core_news_md
@@ -137,7 +137,7 @@ python scripts/run_baseline_spacy.py
 export ANTHROPIC_API_KEY="..."      # o OPENAI_API_KEY
 python scripts/run_pipeline_llm.py --config C2c
 python scripts/run_evaluacion.py resultados/lel_llm_C2c.json \
-    --gold data/gold/gs_corpus_extendido.json data/gold/gs_completo.json
+    --gold data/gold/gs_corpus.json data/gold/gs_completo.json
 ```
 
 El detalle completo de cada paso, incluido el protocolo de la corrida ciega (2–3 modelos,

@@ -1,7 +1,7 @@
 {
   "proyecto": "ecoFactory",
-  "version": "referencia-corpusB-real",
-  "conjunto": "corrida_referencia_C2c_corpusB_real",
+  "version": "referencia",
+  "conjunto": "corrida_referencia_C2c",
   "simbolos": [
     {
       "id": "S01",

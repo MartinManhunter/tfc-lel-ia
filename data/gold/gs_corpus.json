@@ -1,7 +1,8 @@
 {
   "proyecto": "ecoFactory",
-  "version": "1.0",
+  "version": "1.1",
   "conjunto": "GS-Corpus",
+  "nota": "Subconjunto del GS-Completo con sustento textual en las cuatro entrevistas reales de ecoFactory (Dueño, Gerente Comercial, Operario ERP, Responsable ERP). Es el blanco alcanzable de la evaluación; la diferencia con el GS-Completo (21) es la brecha de recuperabilidad. Ver RECONCILIACION.md.",
   "simbolos": [
     {
       "id": "V01",
@@ -73,6 +74,18 @@
       "impacto": [
         "Es utilizado en operaciones de Distribución de Producto.",
         "Es el ítem que se carga en un Pedido junto a su precio asociado."
+      ]
+    },
+    {
+      "id": "S02",
+      "nombre": "Cliente Mayorista",
+      "sinonimos": [],
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es una organización o individuo que compra grandes cantidades de Producto, principalmente para la reventa."
+      ],
+      "impacto": [
+        "Es asociado a un Pedido al Agregar Pedido a través del Sistema ERP."
       ]
     },
     {

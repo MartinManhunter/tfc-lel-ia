@@ -1,6 +1,6 @@
-# Reporte de evaluación — `lel_llm_C2c_corpusB_real`
+# Reporte de evaluación — `lel_llm_C2c_referencia`
 
-## Evaluación contra gs_corpus_extendido
+## Evaluación contra GS-Corpus (15)
 
 - Símbolos en el GS: **15**
 - Símbolos producidos: **19**
@@ -43,7 +43,7 @@
 | FN | — | Distribución de Producto |  |  | Verbo |  |
 | FN | — | Pedido Finalizado |  |  | Estado |  |
 
-## Evaluación contra gs_completo
+## Evaluación contra GS-Completo (21)
 
 - Símbolos en el GS: **21**
 - Símbolos producidos: **19**

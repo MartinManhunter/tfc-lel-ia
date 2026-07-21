@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>LEL — lel_llm_C2c_referencia</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 960px; margin: 30px auto;
+         padding: 0 20px; color: #222; background: #fafafa; }
+  h1 { font-size: 1.5em; border-bottom: 3px solid #333; padding-bottom: 8px; }
+  .resumen { display: flex; gap: 14px; margin: 18px 0 28px; flex-wrap: wrap; }
+  .chip { padding: 8px 16px; border-radius: 20px; color: white; font-weight: 600; font-size: 0.92em; }
+  .simbolo { background: white; border-left: 6px solid #ccc; border-radius: 6px;
+              padding: 12px 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .simbolo .nombre { font-weight: 700; font-size: 1.08em; }
+  .simbolo .tipo { display: inline-block; font-size: 0.75em; font-weight: 700; color: white;
+                     padding: 2px 9px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+  .simbolo .sinonimos { color: #777; font-size: 0.85em; font-style: italic; }
+  .campo { margin-top: 6px; font-size: 0.94em; }
+  .campo b { color: #444; }
+  .vacio { color: #bbb; font-style: italic; }
+  h2.grupo { margin-top: 32px; padding: 6px 12px; border-radius: 6px; color: white; }
+  .meta { color: #666; font-size: 0.88em; margin-bottom: 20px; }
+</style>
+</head>
+<body>
+<h1>LEL — lel_llm_C2c_referencia</h1>
+<p class="meta">Proyecto: <b>ecoFactory</b> · Conjunto: corrida_referencia_C2c · Total de símbolos: <b>19</b></p>
+<div class="resumen"><span class="chip" style="background:#2f6f4f">Sujeto: 8</span><span class="chip" style="background:#3b6ea5">Objeto: 8</span><span class="chip" style="background:#b2701a">Verbo: 3</span></div>
+<h2 class="grupo" style="background:#2f6f4f">Sujeto (8)</h2>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">AFIP</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el organismo externo con el que el Sistema ERP mantiene una integración formal para la Facturación.</div>
+  <div class="campo"><b>Impacto:</b> Restringe la posibilidad de modificar una Factura ya emitida.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Cliente</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la persona u organización que le compra Bolsa Ecológica a ecoFactory.</div>
+  <div class="campo"><b>Impacto:</b> Genera un Pedido. Recibe Factura y Remito de ecoFactory.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Cliente Mayorista</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  <div class="sinonimos">Sinónimos: cliente mayorista</div>
+  <div class="campo"><b>Noción:</b> Es un tipo de Cliente que le compra a ecoFactory en cantidad (miles de unidades por tirada), como cadenas de supermercados.</div>
+  <div class="campo"><b>Impacto:</b> Es atendido de forma personalizada por el Gerente Comercial. Genera aproximadamente entre 800 y 1000 Pedido por semana entre todos los Cliente Mayorista.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Dueño</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  <div class="sinonimos">Sinónimos: Dueño de ecoFactory</div>
+  <div class="campo"><b>Noción:</b> Es la persona a cargo de ecoFactory, la empresa que fabrica y distribuye bolsas ecológicas.</div>
+  <div class="campo"><b>Impacto:</b> Define los objetivos y las prioridades del proyecto de automatización. Interactúa con el Gerente Comercial para las decisiones del área comercial.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Gerente Comercial</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la persona a cargo del área comercial de ecoFactory, con dos o tres personas a cargo de la atención personalizada de Cliente Mayorista.</div>
+  <div class="campo"><b>Impacto:</b> Gestiona las cuentas de los Cliente Mayorista más importantes. Carga a mano en el Sistema ERP los datos de entregas cuando no coinciden con lo generado en la planilla.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Operario ERP</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la persona que opera el Sistema ERP en las tareas administrativas diarias de ecoFactory.</div>
+  <div class="campo"><b>Impacto:</b> Carga Pedido, Remito y Factura en el Sistema ERP. Genera informes sobre Pedido, Remito y Facturación.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Responsable ERP</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  <div class="sinonimos">Sinónimos: proveedor del ERP</div>
+  <div class="campo"><b>Noción:</b> Es la persona de la empresa proveedora del Sistema ERP, externa a ecoFactory, que brinda soporte funcional y comercial del sistema.</div>
+  <div class="campo"><b>Impacto:</b> Explica los módulos disponibles del Sistema ERP y su forma de Integración. Provee usuarios, contraseñas y llaves de seguridad para los distintos módulos del Sistema ERP.</div>
+</div>
+<div class="simbolo" style="border-left-color:#2f6f4f">
+  <span class="nombre">Sistema ERP</span><span class="tipo" style="background:#2f6f4f">Sujeto</span>
+  <div class="sinonimos">Sinónimos: ERP, software de gestión</div>
+  <div class="campo"><b>Noción:</b> Es el sistema de gestión administrativa que usa ecoFactory, provisto por una empresa externa. Está organizado en módulos (contabilidad, facturación, compras y ventas).</div>
+  <div class="campo"><b>Impacto:</b> Genera Factura de tipo A, B o C. Registra Pedido, Remito y el estado del stock. Se integra con AFIP y con proveedores externos mediante API.</div>
+</div>
+<h2 class="grupo" style="background:#3b6ea5">Objeto (8)</h2>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Backup</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la copia de resguardo de la Base de Datos del Sistema ERP.</div>
+  <div class="campo"><b>Impacto:</b> Es realizada por un técnico en informática contratado a terceros, con una frecuencia diaria y semanal.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Base de Datos</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el repositorio de datos del Sistema ERP, no accedido directamente por el personal de ecoFactory.</div>
+  <div class="campo"><b>Impacto:</b> Es resguardada mediante Backup una vez por día y una vez por semana por un servicio técnico externo.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Bolsa Ecológica</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  <div class="sinonimos">Sinónimos: bolsas ecológicas, Producto</div>
+  <div class="campo"><b>Noción:</b> Es el producto que fabrica y distribuye ecoFactory, en distintos tipos.</div>
+  <div class="campo"><b>Impacto:</b> Es incluida en un Pedido por el Cliente. Se fabrica en tiradas de 1000, 2000 o 4000 unidades.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Depósito</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  <div class="sinonimos">Sinónimos: Depósitos</div>
+  <div class="campo"><b>Noción:</b> Es el lugar físico en la provincia de Buenos Aires donde ecoFactory almacena la Bolsa Ecológica antes de su entrega.</div>
+  <div class="campo"><b>Impacto:</b> Recibe por mail la indicación de qué Pedido enviar. Genera errores de entrega cuando la comunicación por mail y planillas falla.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Factura</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  <div class="sinonimos">Sinónimos: Facturas</div>
+  <div class="campo"><b>Noción:</b> Es el comprobante fiscal que ecoFactory emite a un Cliente por un Pedido, de tipo A, B o C.</div>
+  <div class="campo"><b>Impacto:</b> Debe corresponderse con el Pedido y con el Remito. No puede modificarse fácilmente una vez emitida, por la integración con AFIP. Puede enviarse al Cliente por mail o por el canal que se elija.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Pedido</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la solicitud de Bolsa Ecológica que un Cliente realiza a ecoFactory.</div>
+  <div class="campo"><b>Impacto:</b> Es cargado por el Operario ERP en el Sistema ERP. Debe corresponderse con el Remito y con la Factura emitida. Es agrupado una vez por día para su gestión.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Remito</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es el comprobante de entrega asociado a un Pedido.</div>
+  <div class="campo"><b>Impacto:</b> Debe chequearse contra el Pedido para verificar que coincidan. Cuando no coincide con el Pedido, obliga a depurar la diferencia a mano.</div>
+</div>
+<div class="simbolo" style="border-left-color:#3b6ea5">
+  <span class="nombre">Stock</span><span class="tipo" style="background:#3b6ea5">Objeto</span>
+  
+  <div class="campo"><b>Noción:</b> Es la cantidad disponible de Bolsa Ecológica registrada en el Sistema ERP.</div>
+  <div class="campo"><b>Impacto:</b> Se actualiza mediante altas, bajas y modificaciones registradas por el Operario ERP.</div>
+</div>
+<h2 class="grupo" style="background:#b2701a">Verbo (3)</h2>
+<div class="simbolo" style="border-left-color:#b2701a">
+  <span class="nombre">Automatizar</span><span class="tipo" style="background:#b2701a">Verbo</span>
+  <div class="sinonimos">Sinónimos: automatización</div>
+  <div class="campo"><b>Noción:</b> Es la acción que busca el Dueño para reducir el trabajo manual en la gestión de Pedido, Remito y Facturación.</div>
+  <div class="campo"><b>Impacto:</b> No reemplaza al Sistema ERP; se realiza integrando o comunicando con él. Debe gestionarse con el Responsable ERP cuando implica modificaciones al Sistema ERP.</div>
+</div>
+<div class="simbolo" style="border-left-color:#b2701a">
+  <span class="nombre">Facturación</span><span class="tipo" style="background:#b2701a">Verbo</span>
+  <div class="sinonimos">Sinónimos: facturar</div>
+  <div class="campo"><b>Noción:</b> Es la actividad de emitir una Factura a partir de un Pedido, a cargo del Operario ERP.</div>
+  <div class="campo"><b>Impacto:</b> Se realiza en la práctica de forma manual, entrando al Sistema ERP y cargando cada dato. Genera problemas cuando el Pedido o el Remito no coinciden con lo facturado.</div>
+</div>
+<div class="simbolo" style="border-left-color:#b2701a">
+  <span class="nombre">Integración</span><span class="tipo" style="background:#b2701a">Verbo</span>
+  <div class="sinonimos">Sinónimos: integrar</div>
+  <div class="campo"><b>Noción:</b> Es la acción de conectar el Sistema ERP con software externo mediante una API u otra tecnología estándar de mercado.</div>
+  <div class="campo"><b>Impacto:</b> Es ofrecida por el Responsable ERP a los clientes del proveedor del Sistema ERP. Ya existe, por ejemplo, con puntos de venta de terceros.</div>
+</div>
+</body>
+</html>
