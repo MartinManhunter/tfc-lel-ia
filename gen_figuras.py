@@ -253,7 +253,7 @@ guardar("fig_2_8_pln.svg", svg(900, 500, "\n".join(b)))
 # ---------- Fig 4.1 Diseño experimental ----------
 b = []
 b.append(text(475, 30, "Diseño experimental: tratamientos y evaluación", 18, AZUL, bold=True))
-b.append(artifact(20, 165, 130, 80, "Corpus de entrevistas (Config. A / B)", fs=12))
+b.append(artifact(20, 165, 130, 80, "Corpus de entrevistas", fs=12))
 metodos = [("C1a — PLN frecuencia", ROJO_F, ROJO, 75),
            ("C1b — PLN spaCy", ROJO_F, ROJO, 165),
            ("C2 — LLM (C2a / C2b / C2c)", AZUL_F, AZUL, 255)]

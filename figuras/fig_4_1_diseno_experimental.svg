@@ -3,9 +3,8 @@
 <rect width="950" height="420" fill="#ffffff"/>
 <text x="475" y="30" font-size="18" fill="#3b6ea5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Diseño experimental: tratamientos y evaluación</text>
 <polygon points="38,165 150,165 132,245 20,245" fill="#eef1f4" stroke="#5b6470" stroke-width="2"/>
-<text x="85.0" y="193.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Corpus de</text>
-<text x="85.0" y="209.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >entrevistas</text>
-<text x="85.0" y="225.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >(Config. A / B)</text>
+<text x="85.0" y="201.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >Corpus de</text>
+<text x="85.0" y="217.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" >entrevistas</text>
 <rect x="210" y="75" width="190" height="60" rx="8" fill="#f6e7e9" stroke="#b23a48" stroke-width="2"/>
 <text x="305.0" y="109.0" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700">C1a — PLN frecuencia</text>
 <line x1="150" y1="205" x2="210" y2="105" stroke="#6b7280" stroke-width="2"  marker-end="url(#ah)"/>
