@@ -107,6 +107,7 @@ function TABLE(headers, rows, widths) {
   const borders = { top: border, bottom: border, left: border, right: border };
   const headRow = new TableRow({
     tableHeader: true,
+    cantSplit: true,
     children: headers.map((htxt, i) => new TableCell({
       borders, width: { size: widths[i], type: WidthType.DXA },
       shading: { fill: AZUL, type: ShadingType.CLEAR },
@@ -115,6 +116,7 @@ function TABLE(headers, rows, widths) {
     }))
   });
   const bodyRows = rows.map((r, ri) => new TableRow({
+    cantSplit: true,
     children: r.map((c, i) => new TableCell({
       borders, width: { size: widths[i], type: WidthType.DXA },
       shading: { fill: ri % 2 ? "F2F6FB" : "FFFFFF", type: ShadingType.CLEAR },
@@ -155,9 +157,9 @@ const FIGW = (file, caption, maxW = 560) => {
   const width = Math.min(maxW, w);
   const height = Math.round(width * h / w);
   return [
-    new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 160, after: 60 },
+    new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 160, after: 60 }, keepNext: true,
       children: [new ImageRun({ type: "png", data: fs.readFileSync(path.join(PNG, file)), transformation: { width, height } })] }),
-    new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 },
+    new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 }, keepLines: true,
       children: [new TextRun({ text: caption, size: 19, color: "333333" })] })
   ];
 };
@@ -182,7 +184,7 @@ front.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 8
 
 // ---------- RESUMEN ----------
 registrar(1, "Resumen");
-front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun("Resumen")] }));
+front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, keepNext: true, children: [new TextRun("Resumen")] }));
 front.push(P("La construcción manual del modelo Léxico Extendido del Lenguaje (LEL) a partir de la información elicitada es una actividad central de la Ingeniería de Requisitos orientada al cliente, pero también laboriosa y propensa a omisiones e inconsistencias. Este Trabajo Final de Carrera diseña e implementa un prototipo funcional capaz de asistir en la construcción del LEL a partir de la transcripción de entrevistas grabadas, empleando Inteligencia Artificial Generativa, específicamente Grandes Modelos de Lenguaje (LLM)."));
 front.push(P("El foco del trabajo es el prototipo y la evaluación de en qué medida la Inteligencia Artificial Generativa mejora la construcción del LEL frente a su construcción utilizando Procesamiento de Lenguaje Natural (PLN) tradicional. Para ponerlo a prueba se define un *Gold Standard* de referencia —un LEL construido manualmente que actúa como patrón de comparación— y se diseña la contrastación con tres enfoques: dos líneas base (*baselines*) de PLN tradicional y un pipeline basado en LLM que extrae, clasifica y describe los símbolos del LEL, con una etapa de auto-verificación. Como caso de muestreo principal se emplea ecoFactory, una empresa real cuyo LEL fue construido manualmente y publicado por los autores en el Workshop em Engenharia de Requisitos (WER 2024) a partir de entrevistas en las que los roles de distintos usuarios fueron interpretados por un experto de dicha organización, y se lo complementa con varios dominios adicionales para evaluar la generalidad del enfoque. El trabajo se apoya, además, en una línea de trabajo previa de la Universidad de Belgrano que empleó PLN para construir un bosquejo del LEL."));
 front.push(P("La evaluación combina métricas objetivas —precisión, cobertura, F1, exactitud de clasificación y calidad de las descripciones— con un análisis cualitativo de defectos, alucinaciones y manejo del lenguaje coloquial. Los resultados preliminares de los baselines establecen el piso contra el cual se contrasta el enfoque generativo. Se discute además las implicancias metodológicas, las amenazas a la validez y las líneas de trabajo futuro."));
@@ -190,13 +192,13 @@ front.push(new Paragraph({ spacing: { before: 120 }, children: [new TextRun({ te
 
 // ---------- ABSTRACT ----------
 registrar(1, "Abstract");
-front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun("Abstract")] }));
+front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, keepNext: true, children: [new TextRun("Abstract")] }));
 front.push(P("Manually building the Language Extended Lexicon (LEL) from elicited information is a core activity of client-oriented Requirements Engineering, yet it is laborious and prone to omissions and inconsistencies. This work designs and implements a functional prototype that assists LEL construction from the transcription of recorded interviews, using Generative Artificial Intelligence, in particular Large Language Models (LLMs)."));
 front.push(P("The work extends a research line at Universidad de Belgrano that used traditional Natural Language Processing (NLP) to build a draft LEL. It relies on a real case study —the company ecoFactory— whose LEL was manually built and published by the authors at the Workshop on Requirements Engineering (WER 2024) from interviews in which the users were role-played. A reference Gold Standard is defined and three approaches are compared: two traditional NLP baselines and an LLM-based pipeline that extracts, classifies and describes the LEL symbols, with a self-verification stage. Evaluation combines objective metrics with a qualitative analysis of defects and hallucinations."));
 front.push(new Paragraph({ spacing: { before: 120 }, children: [new TextRun({ text: "Keywords: ", bold: true }), new TextRun("Requirements Engineering, Language Extended Lexicon, Generative AI, Large Language Models, Natural Language Processing, Elicitation.")] }));
 
 // ---------- ÍNDICE ----------
-front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun("Índice")] }));
+front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, keepNext: true, children: [new TextRun("Índice")] }));
 const TOC_SLOT = front.length;
 front.push(new Paragraph({ children: [] }));   // marcador: se reemplaza por el índice
 

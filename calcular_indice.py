@@ -30,12 +30,15 @@ def encabezados_del_docx(path):
     doc = z.read("word/document.xml").decode("utf-8")
     heads = []
     for p in re.findall(r"<w:p\b.*?</w:p>", doc, re.DOTALL):
-        m = re.search(r'<w:pStyle w:val="(Heading[123])"/>', p)
+        # El styleId puede ser "Heading1/2/3" (recién generado por build_docx.js) o
+        # "Ttulo1/2/3" (renombrado por Word/LibreOffice al guardar en español, p. ej. al
+        # agregar caratula/encabezado a mano). Se aceptan ambas variantes.
+        m = re.search(r'<w:pStyle w:val="(?:Heading|Ttulo)([123])"/>', p)
         if not m:
             continue
         txt = "".join(re.findall(r"<w:t[^>]*>([^<]*)</w:t>", p)).strip()
         if txt:
-            heads.append((int(m.group(1)[-1]), txt))
+            heads.append((int(m.group(1)), txt))
     return heads
 
 
