@@ -8,7 +8,7 @@ max_tokens: 4000
 
 # Modelos sugeridos para el benchmarking (completar con los nombres vigentes):
 #   openai    -> p. ej. un modelo GPT de la familia disponible
-#   anthropic -> p. ej. un modelo Claude de la familia disponible
+#   anthropic -> p. ej. un modelo de la familia disponible
 #   local     -> exponer un endpoint compatible con OpenAI y usar proveedor: openai
 
 # Corpus de entrada: las cuatro entrevistas reales del estudio original de ecoFactory
