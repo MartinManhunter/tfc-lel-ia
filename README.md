@@ -145,6 +145,21 @@ python scripts/run_evaluacion.py resultados/lel_llm_C2c.json \
 El detalle completo de cada paso, incluido el protocolo de la corrida ciega (2–3 modelos,
 3–5 corridas por combinación), está en **`INSTRUCTIVO_EJECUCION.md`**.
 
+## Interfaz gráfica (webapp)
+
+Además de la línea de comandos, el prototipo incluye una **interfaz web de ejecución paso a
+paso**: un botón por cada etapa del pipeline (extraer → clasificar → describir →
+auto-verificar), que muestra el resultado de cada paso y, al final, genera los dos reportes
+(el LEL navegable y la evaluación contra el Gold Standard). No requiere dependencias
+adicionales y reutiliza el mismo motor que la línea de comandos; con el proveedor `mock`
+corre 100 % offline.
+
+```bash
+python webapp/app.py        # abre http://127.0.0.1:8000
+```
+
+Detalle completo en [`webapp/README.md`](webapp/README.md).
+
 ## Licencia y uso
 
 Trabajo académico de la Universidad de Belgrano. Para consultas sobre su reutilización,

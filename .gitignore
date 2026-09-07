@@ -27,5 +27,6 @@ build_docx.bak.js
 .DS_Store
 Thumbs.db
 
-# --- Notas internas del asistente (no publicar) ---
-.CLAUDE_notas_internas.md
+
+# --- Salidas de la interfaz web (generadas en runtime) ---
+resultados/*gui*

@@ -155,3 +155,23 @@ done
 | `OSError: [E050] ... es_core_news_md` | Falta el modelo de spaCy | `python -m spacy download es_core_news_md`. |
 | La respuesta no contiene JSON | El modelo devolvió prosa | Bajá la temperatura; el parser ya tolera fences ```. |
 | Modelo desconocido | `modelo` mal escrito en `config.yaml` | Pegá el identificador exacto de la doc del proveedor. |
+
+---
+
+## 11. Interfaz gráfica de ejecución paso a paso (webapp)
+
+Una pequeña interfaz web permite correr el pipeline **etapa por etapa** con un botón por
+paso, ver el resultado de cada uno en pantalla y generar al final los dos reportes (el LEL
+navegable y la evaluación contra el Gold Standard). No requiere dependencias adicionales
+—usa la biblioteca estándar de Python— y reutiliza el mismo motor que la línea de comandos.
+
+```bash
+python webapp/app.py            # abre http://127.0.0.1:8000 en el navegador
+python webapp/app.py --port 8010 --no-browser
+```
+
+En el panel de configuración se elige el **proveedor** (`mock` corre 100 % offline, sin
+API; `openai` / `anthropic` requieren la API key en el entorno) y, opcionalmente, el
+**modelo**. El botón «Cargar corpus / Reiniciar» prepara la corrida sobre el corpus de
+ecoFactory definido en `config.yaml`. Los reportes generados quedan en `resultados/` y se
+abren desde la misma interfaz. Ver `webapp/README.md` para más detalle.
