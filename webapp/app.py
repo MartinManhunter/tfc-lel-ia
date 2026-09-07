@@ -294,7 +294,7 @@ def main():
     reset_state()
     url = f"http://127.0.0.1:{args.port}"
     print(f"Interfaz del prototipo LEL corriendo en {url}")
-    print(f"Proveedor por defecto: {CFG.get('proveedor', 'mock')}  ·  Ctrl+C para cerrar.")
+    print(f"Ctrl+C para cerrar.")
     if not args.no_browser:
         threading.Timer(0.6, lambda: webbrowser.open(url)).start()
     try:
