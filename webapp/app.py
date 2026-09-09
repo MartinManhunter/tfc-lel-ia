@@ -50,6 +50,33 @@ GOLD = {
     "GS-Completo (21)": os.path.join(RAIZ, CFG.get("gold", {}).get("completo", "data/gold/gs_completo.json")),
 }
 
+
+def _cargar_corpora() -> list:
+    """Corpus seleccionables en la interfaz.
+
+    Se leen de la clave 'corpora' de config.yaml. Si no está (config antigua),
+    se arma una única entrada con el corpus del trabajo, de modo que la interfaz
+    siga funcionando igual que antes.
+    """
+    items = []
+    for c in CFG.get("corpora", []) or []:
+        archivos = [os.path.join(RAIZ, p) for p in c.get("archivos", [])]
+        archivos = [p for p in archivos if os.path.exists(p)]
+        if not archivos:
+            continue
+        items.append({
+            "nombre": c.get("nombre", "(sin nombre)"),
+            "archivos": archivos,
+            "gold": {k: os.path.join(RAIZ, v) for k, v in (c.get("gold") or {}).items()
+                     if os.path.exists(os.path.join(RAIZ, v))},
+        })
+    if not items:
+        items = [{"nombre": "Corpus del trabajo", "archivos": CORPUS_PATHS, "gold": GOLD}]
+    return items
+
+
+CORPORA = _cargar_corpora()
+
 # --------------------------------------------------------------------- estado
 # Estado en memoria de la corrida actual (aplicación local de un solo usuario).
 STATE: dict = {}
@@ -70,12 +97,23 @@ def accion_reset(body: dict) -> dict:
                         temperatura=float(CFG.get("temperatura", 0.2)))
     STATE["llm_cfg"] = llm_cfg
     STATE["cli"] = get_client(llm_cfg)
-    STATE["corpus_text"] = cargar_corpus(CORPUS_PATHS)
+
+    try:
+        idx = int(body.get("corpus", 0))
+    except (TypeError, ValueError):
+        idx = 0
+    sel = CORPORA[idx] if 0 <= idx < len(CORPORA) else CORPORA[0]
+    STATE["corpus_nombre"] = sel["nombre"]
+    STATE["proyecto"] = _proyecto_de(sel["nombre"])
+    STATE["gold"] = sel["gold"]
+
+    STATE["corpus_text"] = cargar_corpus(sel["archivos"])
     STATE["paso"] = 1
     entrevistas = [{"nombre": os.path.basename(p),
                     "chars": len(open(p, encoding="utf-8").read())}
-                   for p in CORPUS_PATHS]
+                   for p in sel["archivos"]]
     return {"ok": True, "proveedor": proveedor, "modelo": modelo or "n/a",
+            "corpus": sel["nombre"], "con_gold": bool(sel["gold"]),
             "entrevistas": entrevistas,
             "total_chars": sum(e["chars"] for e in entrevistas)}
 
@@ -85,10 +123,43 @@ def _requiere(paso: int):
         raise RuntimeError("Ejecutá primero los pasos anteriores (o cargá el corpus).")
 
 
+def _proyecto_de(nombre_corpus: str) -> str:
+    """Nombre del proyecto a partir del corpus elegido.
+
+    Los corpus se nombran «Proyecto — descripción», así que alcanza con quedarse
+    con la parte anterior al guion largo ("Veterinaria — caso de muestreo").
+    """
+    return (nombre_corpus or "").split("—")[0].strip() or (nombre_corpus or "—")
+
+
+_PROVEEDORES = {"mock": "Mock", "openai": "OpenAI", "anthropic": "Anthropic", "echo": "Echo"}
+
+
+def _etiqueta_modelo(cfg) -> str:
+    """Texto legible del modelo usado, para el encabezado de los reportes."""
+    prov = _PROVEEDORES.get(cfg.proveedor, cfg.proveedor.title())
+    if cfg.proveedor == "mock":
+        return f"{prov} — offline (datos de la corrida de referencia)"
+    return f"{prov} — {cfg.modelo}" if cfg.modelo else prov
+
+
+def _cap(nombre: str) -> str:
+    """Mayúscula inicial en el nombre del símbolo, respetando el resto.
+
+    Se aplica apenas se extraen los candidatos para que el nombre viaje ya
+    normalizado a la clasificación, la descripción, el LEL y los reportes.
+    No afecta el emparejamiento del evaluador, que normaliza a minúsculas.
+    """
+    n = (nombre or "").strip()
+    return n[:1].upper() + n[1:] if n else n
+
+
 def accion_extraer(body: dict) -> dict:
     _requiere(1)
     cli, corpus = STATE["cli"], STATE["corpus_text"]
     candidatos = extraer_candidatos(corpus, cli)
+    for c in candidatos:
+        c["nombre"] = _cap(c["nombre"])
     STATE["candidatos"] = candidatos
     STATE["paso"] = max(STATE["paso"], 2)
     return {"ok": True,
@@ -128,8 +199,8 @@ def accion_describir(body: dict) -> dict:
                                 impacto=impacto, sinonimos=c.get("sinonimos", []),
                                 id=f"LLM{i+1:02d}"))
     STATE["simbolos"] = simbolos
-    STATE["lel"] = LEL(proyecto=CFG.get("proyecto", "ecoFactory"),
-                       conjunto=f"GUI ({STATE['llm_cfg'].proveedor}:{STATE['llm_cfg'].modelo or 'n/a'})",
+    STATE["lel"] = LEL(proyecto=STATE.get("proyecto") or CFG.get("proyecto", "ecoFactory"),
+                       conjunto=_etiqueta_modelo(STATE["llm_cfg"]),
                        simbolos=simbolos)
     STATE["paso"] = max(STATE["paso"], 4)
     con_desc = sum(1 for s in simbolos if s.nocion and s.impacto)
@@ -146,7 +217,9 @@ def accion_verificar(body: dict) -> dict:
     _requiere(4)
     cli, corpus = STATE["cli"], STATE["corpus_text"]
     lel = auto_verificar(STATE["lel"], corpus, cli)
-    lel.conjunto = f"GUI+verif ({STATE['llm_cfg'].proveedor}:{STATE['llm_cfg'].modelo or 'n/a'})"
+    for s in lel.simbolos:                     # la etapa 4 puede devolver otra grafía
+        s.nombre = _cap(s.nombre)
+    lel.conjunto = _etiqueta_modelo(STATE["llm_cfg"])
     STATE["lel"] = lel
     STATE["paso"] = max(STATE["paso"], 5)
     conteo = lel.conteo_por_tipo()
@@ -178,7 +251,7 @@ def _render_lel_html(lel: LEL, titulo: str) -> str:
         chips=chips, grupos="\n".join(grupos))
 
 
-def _render_eval_html(reportes: list, titulo: str) -> str:
+def _render_eval_html(reportes: list, titulo: str, corpus: str = "ecoFactory") -> str:
     filas = ""
     for r in reportes:
         filas += (f"<tr><td>{html.escape(r['gold'])}</td>"
@@ -187,7 +260,7 @@ def _render_eval_html(reportes: list, titulo: str) -> str:
                   f"<td>{r['pct_desc']} %</td>"
                   f"<td>{r['vp']} / {r['fp']} / {r['fn']}</td></tr>")
     return f"""<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
-<title>Evaluación — {html.escape(titulo)}</title>
+<title>Reporte de Evaluación</title>
 <style>
  body{{font-family:'Segoe UI',Arial,sans-serif;max-width:960px;margin:30px auto;padding:0 20px;color:#222;background:#fafafa}}
  h1{{font-size:1.5em;border-bottom:3px solid #0E2A4C;padding-bottom:8px}}
@@ -196,8 +269,8 @@ def _render_eval_html(reportes: list, titulo: str) -> str:
  th{{background:#0E2A4C;color:#fff;font-size:.9em}} td:first-child,th:first-child{{text-align:left}}
  .meta{{color:#666;font-size:.88em}}
 </style></head><body>
-<h1>Reporte de evaluación — {html.escape(titulo)}</h1>
-<p class="meta">Métricas del LEL generado contra los Gold Standards de ecoFactory. VP/FP/FN = aciertos / de más / perdidos.</p>
+<h1>Reporte de Evaluación</h1>
+<p class="meta">Métricas del LEL generado contra el LEL de referencia de {html.escape(corpus)}. VP/FP/FN = aciertos / de más / perdidos.</p>
 <table><tr><th>Gold Standard</th><th>Precisión</th><th>Cobertura</th><th>F1</th><th>Exactitud de tipo</th><th>Descripciones</th><th>VP / FP / FN</th></tr>
 {filas}</table></body></html>"""
 
@@ -213,11 +286,37 @@ def accion_reportes(body: dict) -> dict:
     lel_html = f"reporte_{run}.html"
     with open(os.path.join(RESULTADOS, lel_html), "w", encoding="utf-8") as f:
         f.write(_render_lel_html(lel, run))
-    # 2) Reporte de evaluación (vs GS-Corpus y GS-Completo)
-    reportes, md = [], [f"# Reporte de evaluación — `{run}`", ""]
+    # 2) Reporte de evaluación contra el/los Gold Standard del corpus elegido.
+    #    Un corpus de prueba puede no tener referencia: en ese caso solo se
+    #    informan las descripciones y no hay métricas de identificación.
+    # Ojo: un corpus sin referencia trae {} y eso es distinto de "no hay selección".
+    # Usar `or GOLD` lo evaluaría contra el Gold Standard de ecoFactory, que no
+    # corresponde a ese corpus.
+    golds = STATE["gold"] if "gold" in STATE else GOLD
+    corpus_nombre = STATE.get("corpus_nombre", "corpus del trabajo")
+
+    # El proveedor 'mock' reproduce SIEMPRE el LEL de ecoFactory (datos pre-cargados),
+    # sin leer el corpus. Evaluarlo contra el gold de otro dominio daría métricas
+    # sin sentido, así que en ese caso no se evalúa y se explica por qué.
+    mock_fuera_de_dominio = (STATE.get("llm_cfg") and STATE["llm_cfg"].proveedor == "mock"
+                             and STATE.get("proyecto") != "ecoFactory")
+    if mock_fuera_de_dominio:
+        golds = {}
+
+    reportes, md = [], [f"# Reporte de evaluación — `{run}`",
+                        f"Corpus: {corpus_nombre}", ""]
     con_desc = sum(1 for s in lel.simbolos if s.nocion and s.impacto)
     pct = round(100 * con_desc / max(len(lel.simbolos), 1))
-    for etiqueta, gs_path in GOLD.items():
+    if mock_fuera_de_dominio:
+        md.append("El proveedor *mock* reproduce el LEL de referencia de ecoFactory "
+                  "(datos pre-cargados), por lo que no corresponde evaluarlo contra este "
+                  "corpus. Para una corrida real sobre este dominio, usá un proveedor con API.")
+    elif not golds:
+        md.append("Este corpus no tiene un LEL de referencia asociado, "
+                  "por lo que no se calculan métricas de identificación.")
+        md.append(f"Símbolos producidos: {len(lel.simbolos)} · "
+                  f"con noción e impacto: {pct} %.")
+    for etiqueta, gs_path in golds.items():
         rep = evaluar(lel, LEL.load(gs_path), etiqueta)
         reportes.append({"gold": etiqueta, "precision": rep.precision,
                          "cobertura": rep.cobertura, "f1": rep.f1,
@@ -226,7 +325,7 @@ def accion_reportes(body: dict) -> dict:
         md.append(reporte_markdown(rep)); md.append("")
     eval_html = f"reporte_evaluacion_{run}.html"
     with open(os.path.join(RESULTADOS, eval_html), "w", encoding="utf-8") as f:
-        f.write(_render_eval_html(reportes, run))
+        f.write(_render_eval_html(reportes, run, STATE.get("proyecto") or corpus_nombre))
     with open(os.path.join(RESULTADOS, f"reporte_evaluacion_{run}.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(md))
     STATE["paso"] = max(STATE["paso"], 6)
@@ -262,7 +361,11 @@ class Handler(BaseHTTPRequestHandler):
         if self.path in ("/", "/index.html"):
             with open(os.path.join(TEMPLATES, "index.html"), encoding="utf-8") as f:
                 pagina = f.read()
-            pagina = pagina.replace("{{PROVEEDOR}}", html.escape(str(CFG.get("proveedor", "mock"))))
+            opciones = "".join(
+                f'<option value="{i}"{" selected" if i == 0 else ""}>'
+                f'{html.escape(c["nombre"])}</option>'
+                for i, c in enumerate(CORPORA))
+            pagina = pagina.replace("{{CORPORA}}", opciones)
             pagina = pagina.replace("{{MODELO}}", html.escape(str(CFG.get("modelo", "") or "")))
             return self._send(200, pagina, "text/html; charset=utf-8")
         if self.path.startswith("/reports/"):
@@ -294,7 +397,7 @@ def main():
     reset_state()
     url = f"http://127.0.0.1:{args.port}"
     print(f"Interfaz del prototipo LEL corriendo en {url}")
-    print(f"Ctrl+C para cerrar.")
+    print("Ctrl+C para cerrar.")
     if not args.no_browser:
         threading.Timer(0.6, lambda: webbrowser.open(url)).start()
     try:

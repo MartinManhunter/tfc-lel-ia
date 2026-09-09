@@ -88,6 +88,10 @@
         <label for="modelo">Modelo (opcional)</label>
         <input id="modelo" placeholder="p. ej. el modelo vigente">
       </div>
+      <div class="field">
+        <label for="corpus-sel">Corpus</label>
+        <select id="corpus-sel">{{CORPORA}}</select>
+      </div>
       <button id="btn-load" class="ghost">Cargar Corpus</button>
       <button id="btn-reset" class="ghost">Reiniciar</button>
     </div>
@@ -99,7 +103,7 @@
     <div class="step" data-step="1" id="step-1">
       <div class="head">
         <div class="num">1</div>
-        <div class="titles"><b>Extraer candidatos</b><span>Identifica los términos propios del dominio en las entrevistas.</span></div>
+        <div class="titles"><b>Extraer Candidatos</b><span>Identifica los términos propios del dominio en las entrevistas.</span></div>
         <button class="run" data-action="/api/extraer" disabled>Ejecutar</button>
       </div>
       <div class="out" id="out-1"></div>
@@ -107,7 +111,7 @@
     <div class="step" data-step="2" id="step-2">
       <div class="head">
         <div class="num">2</div>
-        <div class="titles"><b>Clasificar símbolos</b><span>Asigna a cada término un tipo: Sujeto, Objeto, Verbo o Estado.</span></div>
+        <div class="titles"><b>Clasificar Símbolos</b><span>Asigna a cada término un tipo: Sujeto, Objeto, Verbo o Estado.</span></div>
         <button class="run" data-action="/api/clasificar" disabled>Ejecutar</button>
       </div>
       <div class="out" id="out-2"></div>
@@ -115,7 +119,7 @@
     <div class="step" data-step="3" id="step-3">
       <div class="head">
         <div class="num">3</div>
-        <div class="titles"><b>Describir símbolos</b><span>Redacta noción e impacto de cada símbolo (lo que el PLN no hace).</span></div>
+        <div class="titles"><b>Describir Símbolos</b><span>Redacta noción e impacto de cada símbolo.</span></div>
         <button class="run" data-action="/api/describir" disabled>Ejecutar</button>
       </div>
       <div class="out" id="out-3"></div>
@@ -123,7 +127,7 @@
     <div class="step" data-step="4" id="step-4">
       <div class="head">
         <div class="num">4</div>
-        <div class="titles"><b>Auto-verificar</b><span>Revisa el borrador contra el checklist del LEL y lo corrige.</span></div>
+        <div class="titles"><b>Auto-Verificar</b><span>Revisa el borrador contra el checklist del LEL y lo corrige.</span></div>
         <button class="run" data-action="/api/verificar" disabled>Ejecutar</button>
       </div>
       <div class="out" id="out-4"></div>
@@ -131,7 +135,7 @@
     <div class="step" data-step="5" id="step-5">
       <div class="head">
         <div class="num">★</div>
-        <div class="titles"><b>Generar los dos reportes</b><span>Reporte del LEL navegable + evaluación contra el Gold Standard.</span></div>
+        <div class="titles"><b>Generar los dos Reportes</b><span>Reporte del LEL navegable + Evaluación contra el Gold Standard.</span></div>
         <button class="run final" data-action="/api/reportes" disabled>Generar</button>
       </div>
       <div class="out" id="out-5"></div>
@@ -166,7 +170,8 @@ function limpiarUI(){
 $("#btn-load").addEventListener("click", async () => {
   const btn = $("#btn-load"); btn.disabled = true; btn.textContent = "Cargando…";
   limpiarUI();
-  const d = await post("/api/reset", {proveedor:$("#prov").value, modelo:$("#modelo").value});
+  const d = await post("/api/reset", {proveedor:$("#prov").value, modelo:$("#modelo").value,
+                                      corpus:$("#corpus-sel").value});
   btn.disabled = false; btn.textContent = "Cargar Corpus";
   if(!d.ok){ $("#corpus").innerHTML = `<div class="err">${d.error||"Error"}</div>`; return; }
   const chips = d.entrevistas.map(e => `<span class="chip file">${e.nombre} · ${e.chars.toLocaleString()} car.</span>`).join("");

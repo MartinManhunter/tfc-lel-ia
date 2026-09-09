@@ -68,7 +68,7 @@ patrón se repite (LLM F1 promedio ≈ 0,90 frente a ≈ 0,50 del PLN por frecue
 │   ├── pipeline_llm.py       Pipeline LLM de 4 etapas (C2a/b/c)
 │   ├── baseline_frecuencia.py  Baseline de frecuencia (C1a)
 │   ├── baseline_spacy.py     Baseline spaCy (C1b)
-│   ├── llm_client.py         Abstracción de proveedor (OpenAI / Anthropic / echo)
+│   ├── llm_client.py         Abstracción de proveedor (OpenAI / Anthropic / echo / mock)
 │   └── schema.py             Esquema común del LEL (Símbolo, LEL)
 ├── scripts/                Puntos de entrada ejecutables
 │   ├── run_baseline_frecuencia.py
@@ -121,8 +121,8 @@ Requisitos: Python 3.10+.
 # 1. Instalar dependencias
 pip install -r requirements.txt
 
-# 2. (opcional) Validar el pipeline sin acceso a red, con un proveedor simulado
-#    En config.yaml: proveedor: echo
+# 2. (opcional) Correr el pipeline sin acceso a red, en modo offline
+#    En config.yaml: proveedor: mock  (reproduce el LEL de la corrida de referencia)
 python scripts/run_pipeline_llm.py
 
 # 3. Correr el baseline de frecuencia (C1a) — determinístico, sin dependencias externas
@@ -152,7 +152,12 @@ paso**: un botón por cada etapa del pipeline (extraer → clasificar → descri
 auto-verificar), que muestra el resultado de cada paso y, al final, genera los dos reportes
 (el LEL navegable y la evaluación contra el Gold Standard). No requiere dependencias
 adicionales y reutiliza el mismo motor que la línea de comandos; con el proveedor `mock`
-corre 100 % offline.
+corre 100 % offline, reproduciendo la corrida de referencia de ecoFactory.
+
+Desde el panel de configuración se elige el proveedor, el modelo y el **corpus**: además de
+ecoFactory están disponibles los casos de muestreo (veterinaria, consultorio, e-commerce) y
+un corpus de prueba, declarados en la clave `corpora` de `config.yaml`. Cada corpus se
+evalúa contra su propio LEL de referencia.
 
 ```bash
 python webapp/app.py        # abre http://127.0.0.1:8000

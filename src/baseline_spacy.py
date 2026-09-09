@@ -97,7 +97,7 @@ def construir(corpus_paths: List[str], min_frec: int = 2, tope: int = 40, proyec
 if __name__ == "__main__":
     base = os.path.dirname(os.path.dirname(__file__))
     corpus = [os.path.join(base, "data/corpus/entrevista_1_dueno.txt"),
-              os.path.join(base, "data/corpus/entrevista_4_operario.txt")]
+              os.path.join(base, "data/corpus/entrevista_3_operario.txt")]
     lel = construir(corpus)
     print(f"Candidatos (spaCy): {len(lel.simbolos)}")
     for s in lel.simbolos:

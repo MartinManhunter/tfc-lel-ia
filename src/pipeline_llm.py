@@ -115,11 +115,34 @@ def describir(simbolo: str, tipo: str, lista_simbolos: List[str],
     return data.get("nocion", []), data.get("impacto", [])
 
 
-def auto_verificar(lel: LEL, corpus: str, cli: LLMClient) -> LEL:
-    borrador = json.dumps(lel.to_dict(), ensure_ascii=False, indent=2)
-    user = _fill("04_verificacion.txt", LEL_BORRADOR=borrador, TRANSCRIPCIONES=corpus)
-    data = _parse_json(cli.completar(SYSTEM, user, stage="verificacion"))
-    return LEL.from_dict(data)
+def auto_verificar(lel: LEL, corpus: str, cli: LLMClient, lote: int = 12) -> LEL:
+    """Revisa el borrador del LEL contra el checklist del método (etapa 4, config. C2c).
+
+    La revisión se hace *por lotes* de símbolos. Pedirle al modelo que devuelva el LEL
+    completo en una sola respuesta desborda el límite de tokens de salida cuando el
+    borrador tiene muchos símbolos: la respuesta llega cortada y el JSON queda inválido.
+    Dividir en lotes acota el tamaño de cada respuesta y hace la etapa robusta a
+    cualquier cantidad de símbolos. Si un lote no se puede parsear, se conservan los
+    símbolos del borrador para ese lote (degradación explícita, nunca pérdida de datos).
+    """
+    simbolos = list(lel.simbolos)
+    verificados, fallos = [], 0
+    total_lotes = (len(simbolos) + lote - 1) // lote
+    for i in range(0, len(simbolos), lote):
+        grupo = simbolos[i:i + lote]
+        print(f"      lote {i // lote + 1}/{total_lotes} ({len(grupo)} símbolos)", flush=True)
+        parcial = LEL(proyecto=lel.proyecto, conjunto=lel.conjunto, simbolos=grupo)
+        borrador = json.dumps(parcial.to_dict(), ensure_ascii=False, indent=2)
+        user = _fill("04_verificacion.txt", LEL_BORRADOR=borrador, TRANSCRIPCIONES=corpus)
+        try:
+            data = _parse_json(cli.completar(SYSTEM, user, stage="verificacion"))
+            verificados.extend(LEL.from_dict(data).simbolos)
+        except Exception:                      # noqa: BLE001
+            fallos += 1
+            verificados.extend(grupo)
+    if fallos:
+        print(f"[auto_verificar] {fallos} lote(s) sin verificar (se conservó el borrador).")
+    return LEL(proyecto=lel.proyecto, conjunto=lel.conjunto, simbolos=verificados)
 
 
 # ---------------- orquestación ----------------
@@ -132,16 +155,29 @@ def construir_lel(corpus_paths: List[str],
     cli = get_client(llm_cfg)
     corpus = cargar_corpus(corpus_paths)
 
+    def _log(msg: str) -> None:
+        # La etapa 3 hace una llamada por símbolo: sin progreso, una corrida larga
+        # parece colgada. flush inmediato para que se vea en vivo en la terminal.
+        print(msg, flush=True)
+
+    _log("[1/4] Extrayendo candidatos...")
     candidatos = extraer_candidatos(corpus, cli)
+    _log(f"      {len(candidatos)} candidatos.")
+
+    _log("[2/4] Clasificando símbolos...")
     tipos = clasificar(candidatos, corpus, cli)
+    _log(f"      {len(tipos)} clasificados.")
 
     nombres = [c["nombre"] for c in candidatos]
     simbolos: List[Simbolo] = []
+    total = len(candidatos)
+    _log(f"[3/4] Describiendo {total} símbolos (una llamada por símbolo)...")
     for i, c in enumerate(candidatos):
         nombre = c["nombre"]
         tipo = tipos.get(nombre, "")
         nocion, impacto = [], []
         if pipe_cfg.descripcion_por_simbolo and tipo:
+            _log(f"      ({i+1}/{total}) {nombre}")
             otros = [n for n in nombres if n != nombre]
             nocion, impacto = describir(nombre, tipo, otros, corpus, cli)
         simbolos.append(Simbolo(nombre=nombre, tipo=tipo, nocion=nocion,
@@ -153,6 +189,7 @@ def construir_lel(corpus_paths: List[str],
               simbolos=simbolos)
 
     if pipe_cfg.auto_verificacion:
+        _log("[4/4] Auto-verificando contra el checklist (por lotes)...")
         lel = auto_verificar(lel, corpus, cli)
         lel.conjunto = f"LLM+verif ({llm_cfg.proveedor}:{llm_cfg.modelo})"
     return lel

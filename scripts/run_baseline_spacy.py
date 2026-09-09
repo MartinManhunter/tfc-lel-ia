@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.join(RAIZ, "src"))
 from baseline_spacy import construir
 
 CORPUS = [os.path.join(RAIZ, "data/corpus/entrevista_1_dueno.txt"),
-          os.path.join(RAIZ, "data/corpus/entrevista_4_operario.txt")]
+          os.path.join(RAIZ, "data/corpus/entrevista_3_operario.txt")]
 
 if __name__ == "__main__":
     lel = construir(CORPUS)

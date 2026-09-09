@@ -19,6 +19,10 @@ cd tfc-lel-ia
 python -m venv .venv && source .venv/bin/activate      # opcional pero recomendado
 pip install -r requirements.txt
 
+# Nota: requirements fija anthropic>=0.34,<1.0 a propósito. El SDK 1.x eliminó el
+# parámetro 'temperature' de messages.create(), que el pipeline usa para fijar la
+# reproducibilidad. No instalar la 1.x.
+
 # Solo si vas a usar el baseline spaCy (C1b): bajar el modelo de español
 python -m spacy download es_core_news_md
 ```
@@ -34,6 +38,14 @@ export OPENAI_API_KEY="sk-..."
 export ANTHROPIC_API_KEY="sk-ant-..."
 ```
 
+En Windows (PowerShell) la variable vale solo para esa terminal. Para dejarla
+persistente en el perfil del usuario:
+
+```powershell
+[Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-ant-...", "User")
+# cerrar y reabrir la terminal (y VS Code) para que la tome
+```
+
 ## 4. Configurar `config.yaml`
 
 ```yaml
@@ -42,7 +54,7 @@ modelo: ""               # COMPLETAR con el nombre del modelo vigente del provee
 temperatura: 0.2         # baja, para favorecer reproducibilidad
 ```
 
-- `proveedor`: el LLM a usar. `mock` corre **offline** (no llama a ningún modelo; valida la plomería).
+- `proveedor`: el LLM a usar. `mock` corre **offline** (no llama a ningún modelo): reproduce el LEL de la corrida de referencia de ecoFactory, útil para demostrar el flujo sin API.
 - `modelo`: el identificador del modelo según la documentación vigente del proveedor
   (los nombres cambian; consultá la doc de OpenAI/Anthropic y pegá el string exacto).
 
@@ -73,32 +85,36 @@ tipo) y guarda un reporte en `resultados/reporte_<nombre>.md`.
 
 ## 6. Probar con una entrevista nueva (entrevista de testing)
 
-El proyecto incluye una entrevista de prueba de un dominio distinto (un gimnasio) en
-`data/testing/`. Todos los scripts aceptan `--corpus` para apuntar a cualquier archivo:
+El proyecto incluye entrevistas de otros dominios para probar el prototipo fuera de
+ecoFactory. Todos los scripts aceptan `--corpus` para apuntar a cualquier archivo:
+
+- `data/pruebas/entrevista_tintoreria_TEST.txt` — corpus de prueba, **sin** LEL de referencia.
+- `data/muestreo/` — los seis casos de muestreo (veterinaria, consultorio, universidad,
+  hotel, e-commerce, farmacia), cada uno con su `gold_<dominio>.json`.
 
 ```bash
-# 1) Baseline de frecuencia sobre la entrevista de testing
+# 1) Baseline de frecuencia sobre un dominio de muestreo
 python scripts/run_baseline_frecuencia.py \
-    --corpus data/testing/entrevista_test_gimnasio.txt \
-    --out resultados/lel_baseline_gimnasio.json
+    --corpus data/muestreo/entrevista_1_veterinario.txt data/muestreo/entrevista_2_recepcionista.txt \
+    --out resultados/lel_baseline_veterinaria.json
 
-# 2) Pipeline LLM sobre la entrevista de testing (modelo real)
+# 2) Pipeline LLM sobre el mismo dominio (modelo real)
 python scripts/run_pipeline_llm.py --config C2c \
-    --corpus data/testing/entrevista_test_gimnasio.txt \
-    --out resultados/lel_llm_gimnasio.json
+    --corpus data/muestreo/entrevista_1_veterinario.txt data/muestreo/entrevista_2_recepcionista.txt \
+    --out resultados/lel_llm_veterinaria.json
 
-# 3) Evaluar contra la referencia del gimnasio (incluida, "a validar")
-python scripts/run_evaluacion.py resultados/lel_llm_gimnasio.json \
-    --gold data/testing/gold_gimnasio.json
+# 3) Evaluar contra el LEL de referencia de ese dominio
+python scripts/run_evaluacion.py resultados/lel_llm_veterinaria.json \
+    --gold data/muestreo/gold_veterinaria.json
 ```
 
 Podés pasar **varias** entrevistas a `--corpus` (separadas por espacio) y **varios** Gold
 Standards a `--gold`.
 
-> Nota metodológica: el LEL de referencia del gimnasio (`gold_gimnasio.json`) es una
-> **referencia inicial a validar**. Como fue redactada junto con la entrevista, sirve para
-> ver que el flujo corre y comparar de forma indicativa, **no** como evaluación rigurosa.
-> Para métricas serias, conviene que la referencia la construya/valide otra persona.
+> Nota metodológica: los LEL de referencia de los casos de muestreo fueron construidos por
+> el propio autor junto con las entrevistas. Sirven para verificar que el flujo corre en un
+> dominio nuevo y comparar de forma indicativa, **no** como evaluación rigurosa. Para
+> métricas serias, la referencia debería construirla o validarla otra persona.
 
 ---
 
@@ -106,13 +122,12 @@ Standards a `--gold`.
 
 ```bash
 # En config.yaml poné  proveedor: mock   (o editalo temporalmente)
-python scripts/run_pipeline_llm.py --config C2c \
-    --corpus data/testing/entrevista_test_gimnasio.txt
+python scripts/run_pipeline_llm.py --config C2c
 ```
 
-El proveedor `mock` devuelve respuestas con el formato correcto de cada etapa, así que el
+El proveedor `mock` reproduce el LEL de la corrida de referencia de ecoFactory (símbolos reales con tipo, noción e impacto), así que el
 pipeline corre de punta a punta y verifica orquestación, prompts, parseo y esquema, sin
-gastar llamadas a un modelo real. (No produce un LEL con contenido real.)
+gastar llamadas a un modelo real. Es un resultado **pre-cargado**, no una inferencia en vivo, y así debe presentarse.
 
 ---
 
@@ -154,7 +169,11 @@ done
 | Error de autenticación / 401 | API key ausente o inválida | Revisá la variable de entorno `*_API_KEY`. |
 | `OSError: [E050] ... es_core_news_md` | Falta el modelo de spaCy | `python -m spacy download es_core_news_md`. |
 | La respuesta no contiene JSON | El modelo devolvió prosa | Bajá la temperatura; el parser ya tolera fences ```. |
-| Modelo desconocido | `modelo` mal escrito en `config.yaml` | Pegá el identificador exacto de la doc del proveedor. |
+| Modelo desconocido / 404 `not_found_error` | El modelo no existe o la cuenta no tiene acceso | Listá los disponibles y pegá el identificador exacto. Los alias tipo `-latest` no siempre funcionan. |
+| `` `temperature` is deprecated for this model `` | Modelos de última generación que ya no aceptan el parámetro | Usá un modelo que sí lo acepte (para no perder la temperatura fija) o dejá que el cliente reintente sin él: avisa por consola. |
+| `No module named 'anthropic'` / `'openai'` | Falta el paquete del proveedor | `pip install "anthropic<1.0"` o `pip install openai`, y **reiniciar** el proceso. |
+| `Could not resolve authentication method` | La API key no está en el entorno de esa terminal | Volvé a exportarla; en Windows conviene dejarla persistente (ver §3). |
+| `Expecting property name enclosed in double quotes` | Respuesta JSON truncada por el límite de tokens | Subí `max_tokens` en `config.yaml`. La etapa 4 ya verifica por lotes para evitarlo. |
 
 ---
 
@@ -172,6 +191,14 @@ python webapp/app.py --port 8010 --no-browser
 
 En el panel de configuración se elige el **proveedor** (`mock` corre 100 % offline, sin
 API; `openai` / `anthropic` requieren la API key en el entorno) y, opcionalmente, el
-**modelo**. El botón «Cargar corpus / Reiniciar» prepara la corrida sobre el corpus de
-ecoFactory definido en `config.yaml`. Los reportes generados quedan en `resultados/` y se
-abren desde la misma interfaz. Ver `webapp/README.md` para más detalle.
+**modelo**, y el **corpus** sobre el que se corre. Los corpus disponibles se declaran en la
+clave `corpora` de `config.yaml` (ecoFactory y los casos de muestreo); cada uno se evalúa
+contra su propio LEL de referencia, y si no tiene, se genera el reporte del LEL sin métricas
+de identificación. El botón «Cargar Corpus» prepara la corrida y «Reiniciar» la descarta.
+Los reportes quedan en `resultados/` y se abren desde la misma interfaz.
+
+> Con `proveedor: mock` la interfaz reproduce la corrida de referencia de ecoFactory
+> (datos pre-cargados, sin llamar a ningún modelo), así que conviene usarlo con ese corpus.
+> Para correr sobre otro dominio hay que usar un proveedor real.
+
+Ver `webapp/README.md` para más detalle.

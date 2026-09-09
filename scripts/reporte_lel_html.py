@@ -27,7 +27,7 @@ PLANTILLA = """<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>LEL — {titulo}</title>
+<title>Léxico Extendido del Lenguaje</title>
 <style>
   body {{ font-family: 'Segoe UI', Arial, sans-serif; max-width: 960px; margin: 30px auto;
          padding: 0 20px; color: #222; background: #fafafa; }}
@@ -48,8 +48,8 @@ PLANTILLA = """<!DOCTYPE html>
 </style>
 </head>
 <body>
-<h1>LEL — {titulo}</h1>
-<p class="meta">Proyecto: <b>{proyecto}</b> · Conjunto: {conjunto} · Total de símbolos: <b>{total}</b></p>
+<h1>Léxico Extendido del Lenguaje</h1>
+<p class="meta">Proyecto: <b>{proyecto}</b> · Modelo: {conjunto} · Total de símbolos: <b>{total}</b></p>
 <div class="resumen">{chips}</div>
 {grupos}
 </body>

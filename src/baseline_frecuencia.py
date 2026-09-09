@@ -129,7 +129,7 @@ if __name__ == "__main__":
     import json
     base = os.path.dirname(os.path.dirname(__file__))
     corpus = [os.path.join(base, "data/corpus/entrevista_1_dueno.txt"),
-              os.path.join(base, "data/corpus/entrevista_4_operario.txt")]
+              os.path.join(base, "data/corpus/entrevista_3_operario.txt")]
     lel = construir(corpus)
     print(f"Candidatos a símbolo extraídos: {len(lel.simbolos)}")
     for s in lel.simbolos:

@@ -22,34 +22,51 @@ python webapp/app.py --no-browser       # no abrir el navegador automáticamente
 
 ## Qué hace
 
-1. **Configuración.** Se elige el proveedor de LLM y, opcionalmente, el modelo:
-   - `mock` — corre **100 % offline**, sin llamar a ningún modelo (ideal para demostrar el
-     flujo sin API). Es el modo recomendado para una demostración.
+1. **Configuración.** Se elige el proveedor de LLM, opcionalmente el modelo, y el corpus:
+
+   - `mock` — corre **100 % offline**, sin llamar a ningún modelo. Reproduce la corrida de
+     referencia de ecoFactory: devuelve sus símbolos reales, con tipo, noción e impacto.
+     Es un resultado **pre-cargado**, no una inferencia en vivo, y así debe presentarse.
    - `anthropic` / `openai` — usan el modelo real; requieren la API key en el entorno
-     (`ANTHROPIC_API_KEY` / `OPENAI_API_KEY`), igual que la línea de comandos.
-   El valor por defecto se toma de `config.yaml`.
+     (`ANTHROPIC_API_KEY` / `OPENAI_API_KEY`), igual que la línea de comandos. El
+     identificador del modelo es obligatorio y debe ser uno vigente para esa cuenta.
 
-2. **Cargar corpus / Reiniciar.** Carga el corpus de ecoFactory definido en `config.yaml`
-   y muestra las entrevistas de entrada.
+   La interfaz arranca en `mock` por defecto; el modelo por defecto se toma de `config.yaml`.
 
-3. **Un botón por etapa del pipeline**, habilitados en secuencia:
-   1. **Extraer candidatos** — términos del dominio hallados en las entrevistas.
-   2. **Clasificar símbolos** — tipo Sujeto / Objeto / Verbo / Estado de cada término.
-   3. **Describir símbolos** — noción e impacto de cada símbolo (lo que el PLN no hace).
-   4. **Auto-verificar** — revisión del borrador contra el checklist del LEL.
+2. **Corpus.** El desplegable lista los corpus declarados en la clave `corpora` de
+   `config.yaml`: el de ecoFactory (las cuatro entrevistas reales) y los casos de muestreo
+   ya documentados en el trabajo, más un corpus de prueba. Cada corpus se evalúa contra
+   **su propio** LEL de referencia; si no tiene ninguno, se genera el reporte del LEL sin
+   métricas de identificación, aclarándolo en el reporte.
 
-4. **Generar los dos reportes** — produce y enlaza:
-   - `resultados/reporte_lel_gui.html` — el LEL navegable (símbolos por tipo, con noción e
-     impacto).
+   > Como el modo `mock` sirve datos pre-cargados de ecoFactory, conviene usarlo con ese
+   > corpus. Para correr sobre otro dominio hay que usar un proveedor real.
+
+3. **Cargar Corpus / Reiniciar.** Carga las entrevistas del corpus elegido y las muestra.
+
+4. **Un botón por etapa del pipeline**, habilitados en secuencia:
+   1. **Extraer Candidatos** — términos del dominio hallados en las entrevistas.
+   2. **Clasificar Símbolos** — tipo Sujeto / Objeto / Verbo / Estado de cada término.
+   3. **Describir Símbolos** — noción e impacto de cada símbolo.
+   4. **Auto-Verificar** — revisión del borrador contra el checklist del LEL. Se procesa
+      **por lotes** de símbolos, para que la respuesta del modelo no se trunque.
+
+5. **Generar los dos Reportes** — produce y enlaza:
+   - `resultados/reporte_lel_gui.html` — el LEL navegable, agrupado por tipo.
    - `resultados/reporte_evaluacion_lel_gui.html` — las métricas (precisión, cobertura, F1,
-     exactitud de tipo, % con descripciones) contra GS-Corpus y GS-Completo.
+     exactitud de tipo, % con descripciones) contra el LEL de referencia del corpus.
+
    También deja el LEL en `resultados/lel_gui.json` y el reporte de evaluación en `.md`.
 
-## Diseño
+## Detalles de presentación
 
-Adopta la identidad visual de la Universidad de Belgrano (paleta navy + acento rojo) y
-reutiliza el mismo sistema de tarjetas, colores por tipo de símbolo y tipografía del reporte
-HTML del LEL, de modo que la herramienta y sus reportes forman un conjunto coherente.
+Los nombres de los símbolos se normalizan con **mayúscula inicial** apenas se extraen, de
+modo que viajen así a la clasificación, la descripción, el LEL y los reportes. No afecta la
+evaluación: el emparejamiento normaliza a minúsculas y sin acentos.
+
+La interfaz adopta la identidad visual de la Universidad de Belgrano y reutiliza el sistema
+de tarjetas y colores por tipo de símbolo del reporte HTML, de modo que la herramienta y sus
+salidas forman un conjunto coherente.
 
 ## Archivos
 

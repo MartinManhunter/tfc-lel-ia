@@ -2,9 +2,9 @@
 # Elegí "la que mejor funcione" corriendo el experimento con cada proveedor/modelo.
 
 proveedor: anthropic        # openai | anthropic | echo (echo = sin red, solo valida)
-modelo: ""                  # COMPLETAR con el modelo vigente del proveedor elegido
+modelo: "claude-sonnet-4-6" # COMPLETAR con el modelo vigente del proveedor elegido
 temperatura: 0.2            # baja, para favorecer reproducibilidad
-max_tokens: 4000
+max_tokens: 8000            # holgura para la etapa 4, cuya salida es un LEL completo
 
 # Modelos sugeridos para el benchmarking (completar con los nombres vigentes):
 #   openai    -> p. ej. un modelo GPT de la familia disponible
@@ -22,3 +22,39 @@ corpus:
 gold:
   completo: data/gold/gs_completo.json
   corpus: data/gold/gs_corpus.json
+  
+corpora:
+  - nombre: "ecoFactory — entrevistas reales (WER 2024)"
+    archivos:
+      - data/corpus/entrevista_1_dueno.txt
+      - data/corpus/entrevista_2_gerente_comercial.txt
+      - data/corpus/entrevista_3_operario.txt
+      - data/corpus/entrevista_4_responsable_erp.txt
+    gold:
+      "GS-Corpus (15)": data/gold/gs_corpus.json
+      "GS-Completo (21)": data/gold/gs_completo.json
+
+  - nombre: "Veterinaria — caso de muestreo"
+    archivos:
+      - data/muestreo/entrevista_1_veterinario.txt
+      - data/muestreo/entrevista_2_recepcionista.txt
+    gold:
+      "LEL de referencia (16)": data/muestreo/gold_veterinaria.json
+
+  - nombre: "Consultorio médico — caso de muestreo"
+    archivos:
+      - data/muestreo/med_1_medico.txt
+      - data/muestreo/med_2_secretaria.txt
+    gold:
+      "LEL de referencia": data/muestreo/gold_consultorio.json
+
+  - nombre: "E-commerce — caso de muestreo"
+    archivos:
+      - data/muestreo/ecom_1_dueno.txt
+      - data/muestreo/ecom_2_logistica.txt
+    gold:
+      "LEL de referencia": data/muestreo/gold_e-commerce.json
+
+  - nombre: "Tintorería — corpus de prueba (sin referencia)"
+    archivos:
+      - data/pruebas/entrevista_tintoreria_TEST.txt

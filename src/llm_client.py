@@ -13,7 +13,7 @@ usar el proveedor 'echo' para validar el armado del pipeline sin llamar a ningú
 """
 from __future__ import annotations
 from dataclasses import dataclass
-import os, time
+import os, re, time
 
 
 @dataclass
@@ -21,7 +21,7 @@ class LLMConfig:
     proveedor: str = "anthropic"      # "openai" | "anthropic" | "echo" | "mock"
     modelo: str = ""                  # nombre del modelo (configurable)
     temperatura: float = 0.2
-    max_tokens: int = 4000
+    max_tokens: int = 8000
     reintentos: int = 3
     pausa_seg: float = 2.0
 
@@ -69,17 +69,30 @@ class AnthropicClient(LLMClient):
         super().__init__(cfg)
         import anthropic                     # import diferido
         self._cli = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+        self._sin_temperatura = False
+
+    def _crear(self, system: str, user: str, con_temperatura: bool = True) -> str:
+        kw = dict(model=self.cfg.modelo, max_tokens=self.cfg.max_tokens,
+                  system=system, messages=[{"role": "user", "content": user}])
+        if con_temperatura:
+            kw["temperature"] = self.cfg.temperatura
+        r = self._cli.messages.create(**kw)
+        return "".join(b.text for b in r.content if getattr(b, "type", "") == "text")
 
     def completar(self, system: str, user: str, stage: str = "") -> str:
         def _call():
-            r = self._cli.messages.create(
-                model=self.cfg.modelo,
-                temperature=self.cfg.temperatura,
-                max_tokens=self.cfg.max_tokens,
-                system=system,
-                messages=[{"role": "user", "content": user}],
-            )
-            return "".join(b.text for b in r.content if getattr(b, "type", "") == "text")
+            try:
+                return self._crear(system, user, con_temperatura=not self._sin_temperatura)
+            except Exception as e:             # noqa: BLE001
+                # Los modelos más nuevos deprecaron 'temperature'. Se reintenta sin fijarla,
+                # avisando: la reproducibilidad deja de estar garantizada por ese parámetro.
+                if "temperature" in str(e).lower() and not self._sin_temperatura:
+                    self._sin_temperatura = True
+                    print("[anthropic] el modelo no acepta 'temperature': se continúa sin "
+                          "fijarla (la reproducibilidad ya no queda garantizada por ese "
+                          "parámetro; conviene reportarlo).", flush=True)
+                    return self._crear(system, user, con_temperatura=False)
+                raise
         return self._con_reintentos(_call)
 
 
@@ -92,33 +105,111 @@ class EchoClient(LLMClient):
 
 
 class MockClient(LLMClient):
-    """Cliente simulado: devuelve JSON con el formato correcto de cada etapa.
-    No produce un LEL real, pero valida de punta a punta la orquestación, el relleno
-    de prompts, el parseo de JSON y el esquema, sin red ni API."""
+    """Cliente offline que reproduce la corrida de referencia, sin llamar a ningún modelo.
+
+    Sirve, etapa por etapa, el LEL ya generado que está en resultados/ (los símbolos
+    reales con su tipo, noción e impacto). Permite demostrar el flujo completo sin red
+    ni API key y con una salida representativa del prototipo.
+
+    IMPORTANTE: es un resultado *pre-cargado*, no una inferencia en vivo. Al mostrarlo
+    debe presentarse como tal. Para una corrida genuina hay que usar el proveedor
+    'openai' o 'anthropic' con su API key.
+
+    Si el archivo de referencia no está disponible, cae en datos sintéticos mínimos
+    para no romper la validación de la orquestación.
+    """
+    _REF = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                        "resultados", "lel_llm_C2c_referencia.json")
     _CICLO = ["Sujeto", "Objeto", "Verbo", "Estado"]
 
     def __init__(self, cfg: LLMConfig):
         super().__init__(cfg)
-        self._cands = []
-        self._tipos = {}
+        self._simbolos = self._cargar_referencia()
+        self._cands = [s["nombre"] for s in self._simbolos]
+        self._tipos = {s["nombre"]: s.get("tipo", "") for s in self._simbolos}
+        self._por_nombre = {s["nombre"]: s for s in self._simbolos}
+
+    def _cargar_referencia(self):
+        import json
+        try:
+            with open(self._REF, encoding="utf-8") as f:
+                d = json.load(f)
+            sims = d.get("simbolos", []) if isinstance(d, dict) else d
+            if sims:
+                return sims
+        except Exception:                      # noqa: BLE001
+            pass
+        # Respaldo sintético: mantiene el formato correcto aunque no haya referencia.
+        return [{"nombre": n, "tipo": self._CICLO[i % 4],
+                 "nocion": ["(sin referencia disponible) noción."],
+                 "impacto": ["(sin referencia disponible) impacto."],
+                 "sinonimos": [], "id": ""}
+                for i, n in enumerate(["Sistema ERP", "Pedido", "Cliente",
+                                       "Factura", "Remito"])]
 
     def completar(self, system: str, user: str, stage: str = "") -> str:
         import json
         if stage == "extraccion":
-            self._cands = ["Sistema ERP", "Pedido", "Cliente", "Agregar Pedido", "Pedido Aprobado"]
-            return json.dumps([{"nombre": n, "sinonimos": []} for n in self._cands], ensure_ascii=False)
+            return json.dumps([{"nombre": s["nombre"], "sinonimos": s.get("sinonimos", [])}
+                               for s in self._simbolos], ensure_ascii=False)
         if stage == "clasificacion":
-            self._tipos = {n: self._CICLO[i % 4] for i, n in enumerate(self._cands)}
-            return json.dumps([{"nombre": n, "tipo": t} for n, t in self._tipos.items()], ensure_ascii=False)
+            return json.dumps([{"nombre": n, "tipo": t} for n, t in self._tipos.items()],
+                              ensure_ascii=False)
         if stage == "descripcion":
-            return json.dumps({"nocion": ["(simulado) descripción de la noción."],
-                               "impacto": ["(simulado) descripción del impacto."]}, ensure_ascii=False)
+            # El prompt 03 lleva: Símbolo a describir: "<nombre>"
+            m = re.search(r'S[íi]mbolo a describir:\s*"([^"]+)"', user)
+            s = self._por_nombre.get(m.group(1)) if m else None
+            if s is None:
+                s = {"nocion": ["(sin referencia para este símbolo)."],
+                     "impacto": ["(sin referencia para este símbolo)."]}
+            return json.dumps({"nocion": s.get("nocion", []),
+                               "impacto": s.get("impacto", [])}, ensure_ascii=False)
         if stage == "verificacion":
-            sim = [{"nombre": n, "tipo": t, "nocion": ["(simulado) noción"],
-                    "impacto": ["(simulado) impacto"], "sinonimos": [], "id": ""}
-                   for n, t in self._tipos.items()]
-            return json.dumps({"proyecto": "ecoFactory", "conjunto": "mock+verif", "simbolos": sim}, ensure_ascii=False)
+            # La referencia ya está verificada: se devuelve el lote recibido tal cual.
+            # (auto_verificar envía el borrador por lotes; devolver el LEL entero en
+            # cada lote duplicaría símbolos.)
+            bloque = self._objeto_json(user)
+            if bloque:
+                try:
+                    borrador = json.loads(bloque)
+                    if isinstance(borrador, dict) and borrador.get("simbolos"):
+                        return json.dumps(borrador, ensure_ascii=False)
+                except Exception:              # noqa: BLE001
+                    pass
+            return json.dumps({"proyecto": "ecoFactory", "conjunto": "mock+verif",
+                               "simbolos": self._simbolos}, ensure_ascii=False)
         return "[]"
+
+    @staticmethod
+    def _objeto_json(texto: str):
+        """Devuelve el primer objeto JSON balanceado del texto.
+
+        El prompt de verificación trae el borrador en JSON seguido de las
+        transcripciones; cortar por la última llave tomaría texto del corpus.
+        """
+        ini = texto.find("{")
+        if ini == -1:
+            return None
+        prof, en_str, esc = 0, False, False
+        for i in range(ini, len(texto)):
+            c = texto[i]
+            if en_str:
+                if esc:
+                    esc = False
+                elif c == "\\":
+                    esc = True
+                elif c == '"':
+                    en_str = False
+                continue
+            if c == '"':
+                en_str = True
+            elif c == "{":
+                prof += 1
+            elif c == "}":
+                prof -= 1
+                if prof == 0:
+                    return texto[ini:i + 1]
+        return None
 
 
 def get_client(cfg: LLMConfig) -> LLMClient:

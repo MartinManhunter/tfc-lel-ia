@@ -1,0 +1,889 @@
+{
+  "proyecto": "ecoFactory",
+  "version": "",
+  "conjunto": "LLM+verif (anthropic:claude-sonnet-4-6)",
+  "simbolos": [
+    {
+      "nombre": "bolsa ecológica",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el producto fabricado por ecoFactory en distintos tipos.",
+        "Se produce en tiradas de distintas cantidades, como 1000, 2000 o 4000 unidades.",
+        "El tipo y la cantidad son atributos que forman parte del pedido realizado por el cliente mayorista.",
+        "Es el objeto central de la entrega que se despacha desde el depósito hacia el cliente mayorista."
+      ],
+      "impacto": [
+        "El área comercial registra el tipo y la cantidad al generar un pedido.",
+        "El depósito prepara el paquete de pedidos con las bolsas ecológicas correspondientes para su entrega.",
+        "Errores en el tipo o en la cantidad provocan que el cliente mayorista reciba una entrega que no coincide con su pedido.",
+        "La información sobre las bolsas ecológicas se traslada mediante documento de Word y planilla de Excel entre el área comercial y el depósito.",
+        "Los datos del pedido, incluyendo tipo y cantidad de bolsas ecológicas, se cargan en el ERP para generar el remito y la factura correspondiente."
+      ],
+      "sinonimos": [
+        "bolsas ecológicas",
+        "bolsa",
+        "bolsas"
+      ],
+      "id": "LLM01"
+    },
+    {
+      "nombre": "pedido",
+      "tipo": "Objeto",
+      "nocion": [
+        "Solicitud realizada por un cliente mayorista al área comercial que especifica el tipo de bolsa ecológica y la cantidad requerida.",
+        "Se agrupa junto a otros pedidos en un paquete de pedidos que el área comercial gestiona una vez por día.",
+        "Está relacionado con el remito y la factura, ya que estos deben corresponderse con lo solicitado.",
+        "Es registrado en el ERP por el operario ERP."
+      ],
+      "impacto": [
+        "El área comercial lo recibe cuando el cliente mayorista llama a la empresa.",
+        "El operario ERP lo carga en el ERP.",
+        "El ERP genera un reporte o PDF a partir de su información.",
+        "El gerente de comercialización verifica que el remito coincida con lo registrado.",
+        "El gerente de comercialización controla que la factura se corresponda con lo registrado.",
+        "Un error en su carga puede provocar que el cliente mayorista reciba un tipo de bolsa ecológica o una cantidad distinta a la solicitada.",
+        "El operario ERP genera informes relacionados con pedidos, remitos y facturación."
+      ],
+      "sinonimos": [
+        "pedidos",
+        "pedida",
+        "pedidas"
+      ],
+      "id": "LLM02"
+    },
+    {
+      "nombre": "remito",
+      "tipo": "Objeto",
+      "nocion": [
+        "Documento que registra la entrega de bolsas ecológicas realizada a un cliente mayorista.",
+        "Se corresponde con un pedido realizado por el cliente mayorista.",
+        "Es generado a partir de la información cargada en el ERP.",
+        "Puede no coincidir con el pedido cuando la gestión interna es manual."
+      ],
+      "impacto": [
+        "El operario ERP genera informes que incluyen los remitos junto con los pedidos y la facturación.",
+        "El gerente de comercialización verifica que coincida con el pedido.",
+        "El gerente de comercialización carga manualmente en el ERP la información del remito cuando no coincide con lo registrado.",
+        "Se compara con la factura para verificar que las bolsas ecológicas entregadas correspondan a las facturadas.",
+        "El dueño identifica la mejora del proceso de remitos como uno de los objetivos mínimos de la automatización de la gestión interna."
+      ],
+      "sinonimos": [
+        "remitos"
+      ],
+      "id": "LLM03"
+    },
+    {
+      "nombre": "factura",
+      "tipo": "Objeto",
+      "nocion": [
+        "Documento generado por el módulo de facturación del ERP que puede ser de tipo factura A, factura B o factura C.",
+        "Se corresponde con un pedido y con el remito recibido por el cliente mayorista.",
+        "Está emitida en relación con la AFIP, lo que impide modificarla fácilmente una vez generada.",
+        "Puede ser enviada al cliente mayorista por mail u otro canal."
+      ],
+      "impacto": [
+        "El operario ERP la genera ingresando al módulo de facturación con todas las cargas previas realizadas en el ERP.",
+        "El módulo de facturación produce un PDF de la misma.",
+        "El gerente de comercialización la controla manualmente contra el pedido y el remito cargados en el ERP.",
+        "Cuando no coincide con el pedido o el remito, debe rehacerse, lo que genera un doble trabajo de verificación.",
+        "El cliente mayorista la recibe y puede reclamar si no se corresponde con lo solicitado."
+      ],
+      "sinonimos": [
+        "facturas"
+      ],
+      "id": "LLM04"
+    },
+    {
+      "nombre": "factura A",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un tipo de factura que puede ser generada por el módulo de facturación del ERP.",
+        "Es una de las variantes de factura disponibles junto con la factura B y la factura C."
+      ],
+      "impacto": [
+        "El operario ERP la genera cargando los datos correspondientes en el módulo de facturación.",
+        "El módulo de facturación permite elegir el canal por el cual se envía al cliente mayorista, como por ejemplo el correo electrónico."
+      ],
+      "sinonimos": [],
+      "id": "LLM05"
+    },
+    {
+      "nombre": "factura B",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un tipo de factura que puede ser generada por el módulo de facturación del ERP.",
+        "Es una de las variantes de factura disponibles junto con la factura A y la factura C."
+      ],
+      "impacto": [
+        "El operario ERP la genera desde el módulo de facturación eligiendo el tipo correspondiente.",
+        "El módulo de facturación permite seleccionar el canal por el cual se envía al cliente mayorista."
+      ],
+      "sinonimos": [],
+      "id": "LLM06"
+    },
+    {
+      "nombre": "factura C",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un tipo de factura que puede ser generada por el módulo de facturación del ERP.",
+        "Es una de las variantes de factura disponibles junto con la factura A y la factura B."
+      ],
+      "impacto": [
+        "El operario ERP la genera desde el módulo de facturación cargando los datos correspondientes al pedido.",
+        "El módulo de facturación permite elegir el canal por el cual se envía al cliente mayorista, como por ejemplo el correo electrónico."
+      ],
+      "sinonimos": [],
+      "id": "LLM07"
+    },
+    {
+      "nombre": "ERP",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Sistema de gestión administrativa utilizado por ecoFactory para procesar la información de la gestión interna.",
+        "Contiene el módulo de facturación, el módulo de contabilidad y el módulo de compras y ventas.",
+        "Es provisto por el proveedor del ERP, quien también ofrece capacitación según los módulos contratados."
+      ],
+      "impacto": [
+        "Genera factura A, factura B y factura C a partir de los datos cargados por el operario ERP.",
+        "Genera remitos y reportes en formato PDF.",
+        "Genera planillas de Excel con información de la gestión interna.",
+        "Registra altas, bajas y modificaciones del stock.",
+        "Procesa pedidos cargados por el operario ERP.",
+        "Registra la confirmación de venta cuando se realiza una entrega al cliente mayorista.",
+        "Genera asientos contables de forma automática a partir de las operaciones registradas en los módulos.",
+        "Se integra con sistemas externos mediante API.",
+        "Provee usuario, contraseña y llave de seguridad para el acceso a sus módulos.",
+        "Gestiona la integración con AFIP para la facturación."
+      ],
+      "sinonimos": [
+        "software de gestión",
+        "software de administración"
+      ],
+      "id": "LLM08"
+    },
+    {
+      "nombre": "módulo de facturación",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es uno de los módulos comprados del ERP.",
+        "Permite cargar productos y generar la factura A, factura B o factura C.",
+        "Está integrado con el módulo de contabilidad y el módulo de compras y ventas.",
+        "Genera reportes, planillas de Excel y PDF como salidas de información.",
+        "El proveedor del ERP brinda capacitación a quienes contratan este módulo.",
+        "El acceso está protegido mediante usuario, contraseña y llave de seguridad provistos por el proveedor del ERP."
+      ],
+      "impacto": [
+        "El operario ERP realiza el proceso de facturación ingresando al módulo con los datos ya cargados en el ERP.",
+        "Genera la factura correspondiente al pedido y al remito.",
+        "Permite elegir el canal de envío de la factura al cliente mayorista.",
+        "Produce asientos contables de manera automática en el módulo de contabilidad.",
+        "Puede integrarse con sistemas externos mediante API.",
+        "El técnico en informática realiza backup de la base de datos que contiene la información del módulo."
+      ],
+      "sinonimos": [],
+      "id": "LLM09"
+    },
+    {
+      "nombre": "módulo de contabilidad",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es uno de los módulos comprados del ERP.",
+        "Está integrado con el módulo de facturación y el módulo de compras y ventas.",
+        "Genera asientos contables de forma automática a partir de las actividades registradas en el ERP."
+      ],
+      "impacto": [
+        "Produce reportes, planillas de Excel y PDF como salidas de la información registrada.",
+        "Los asientos contables se generan automáticamente dentro de él, sin intervención manual del operario ERP.",
+        "El operario ERP opera el módulo para la gestión interna de ecoFactory."
+      ],
+      "sinonimos": [],
+      "id": "LLM10"
+    },
+    {
+      "nombre": "módulo de compras y ventas",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es uno de los módulos del ERP con el que trabaja ecoFactory.",
+        "Forma parte del conjunto de módulos que incluye también el módulo de facturación y el módulo de contabilidad.",
+        "Está integrado con los demás módulos del ERP, de modo que lo registrado en uno se traslada a los otros."
+      ],
+      "impacto": [
+        "Genera distintos tipos de salidas, entre ellas reporte, PDF y planilla de Excel.",
+        "El operario ERP carga en él la orden de compra cuando el depósito recibe productos.",
+        "El operario ERP registra en él la confirmación de venta cuando se realiza una entrega al cliente mayorista.",
+        "El operario ERP carga en él la materia prima cada vez que se realiza una compra.",
+        "Produce información sobre pedidos, remitos, factura y altas, bajas y modificaciones del stock."
+      ],
+      "sinonimos": [],
+      "id": "LLM11"
+    },
+    {
+      "nombre": "depósito",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Instalación ubicada en la provincia de Buenos Aires que prepara y envía los paquetes de pedidos a los clientes mayoristas.",
+        "Recibe la información de los pedidos desde el área comercial para realizar las entregas."
+      ],
+      "impacto": [
+        "Avisa al área comercial cuando se generó una entrega.",
+        "Envía la información de la entrega al área comercial mediante mails.",
+        "Prepara el paquete de pedidos indicado por el área comercial.",
+        "Envía la orden de compra al operario ERP cuando recibe productos."
+      ],
+      "sinonimos": [
+        "depósitos"
+      ],
+      "id": "LLM12"
+    },
+    {
+      "nombre": "cliente mayorista",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el tipo de cliente con el que trabaja ecoFactory, que adquiere bolsas ecológicas en grandes cantidades.",
+        "Entre los clientes mayoristas se encuentran supermercados y otros establecimientos que consumen bolsas ecológicas por tiradas de 1000, 2000 o 4000 unidades."
+      ],
+      "impacto": [
+        "Realiza pedidos de bolsas ecológicas al área comercial.",
+        "Recibe una entrega con las bolsas ecológicas solicitadas junto con el remito correspondiente.",
+        "Recibe la factura generada por el módulo de facturación.",
+        "Contacta a la empresa cuando la factura o el pedido recibido no coincide con lo solicitado."
+      ],
+      "sinonimos": [
+        "cliente",
+        "clientes mayoristas"
+      ],
+      "id": "LLM13"
+    },
+    {
+      "nombre": "cliente nuevo",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es un cliente mayorista que no ha sido registrado previamente en el ERP.",
+        "Su incorporación al sistema requiere que el área comercial realice un alta de cliente con la dirección del cliente y demás datos."
+      ],
+      "impacto": [
+        "Genera que el área comercial realice la identificación del cliente y el registro de su dirección del cliente.",
+        "Da origen a un pedido una vez completado el alta de cliente."
+      ],
+      "sinonimos": [],
+      "id": "LLM14"
+    },
+    {
+      "nombre": "área comercial",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el sector de la empresa compuesto por dos o tres personas que atienden las cuentas de los clientes mayoristas.",
+        "Es responsable de realizar y hacer seguimiento de los pedidos."
+      ],
+      "impacto": [
+        "Recibe los pedidos de los clientes mayoristas.",
+        "Genera paquetes de pedidos una vez por día.",
+        "Hace seguimiento de los pedidos.",
+        "Identifica al cliente mayorista, incluyendo la dirección del cliente, al momento de un alta de cliente."
+      ],
+      "sinonimos": [
+        "comercialización"
+      ],
+      "id": "LLM15"
+    },
+    {
+      "nombre": "gerente de comercialización",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el responsable directo del área comercial de la empresa.",
+        "Es la contraparte designada por el dueño para interactuar con el equipo de desarrollo del proyecto."
+      ],
+      "impacto": [
+        "Define los lineamientos sobre qué puede modificarse del ERP y qué no.",
+        "Gestiona con el proveedor del ERP las modificaciones necesarias en los procesos administrativos.",
+        "Supervisa que la gestión interna de pedidos, remitos y facturación funcione correctamente.",
+        "Verifica que las entregas del depósito coincidan con lo registrado en la planilla.",
+        "Carga manualmente en el ERP la información cuando los datos del depósito no coinciden con los registros.",
+        "Coordina la capacitación del personal una vez definida la solución de automatización."
+      ],
+      "sinonimos": [
+        "gerente comercial"
+      ],
+      "id": "LLM16"
+    },
+    {
+      "nombre": "dueño",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el propietario de ecoFactory.",
+        "Toma las decisiones estratégicas sobre la gestión interna de la empresa.",
+        "Delega la interacción operativa con el equipo de desarrollo en el gerente de comercialización."
+      ],
+      "impacto": [
+        "Identifica los problemas existentes en los procesos de pedido, remito y factura.",
+        "Define los objetivos de automatización de la gestión interna.",
+        "Establece que no hay restricciones presupuestarias para el proyecto de mejora.",
+        "Delega la interacción operativa con el equipo de desarrollo al gerente de comercialización.",
+        "Señala la necesidad de reducir errores en la cantidad de bolsas, tipo de bolsa y dirección del cliente.",
+        "Reconoce que el ERP cubre la integración con AFIP para la parte contable."
+      ],
+      "sinonimos": [],
+      "id": "LLM17"
+    },
+    {
+      "nombre": "operario ERP",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el usuario que opera el ERP dentro de la empresa.",
+        "Trabaja con el módulo de facturación, el módulo de contabilidad y el módulo de compras y ventas."
+      ],
+      "impacto": [
+        "Carga el pedido en el ERP cuando un cliente mayorista llama para solicitarlo.",
+        "Carga la materia prima en el ERP cada vez que se realiza una compra.",
+        "Carga la orden de compra en el ERP cuando el depósito recibe los productos.",
+        "Carga la confirmación de venta en el ERP cuando se realiza una entrega a un cliente mayorista.",
+        "Realiza el proceso de facturación ingresando al ERP y generando la factura.",
+        "Gestiona las altas, bajas y modificaciones del stock en el ERP.",
+        "Genera reportes, planillas de Excel y PDF a partir de los datos del ERP."
+      ],
+      "sinonimos": [],
+      "id": "LLM18"
+    },
+    {
+      "nombre": "responsable de sistemas",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es la persona dentro de ecoFactory encargada de todo lo relacionado con sistemas.",
+        "Se ocupa de decisiones tecnológicas como la elección del ERP."
+      ],
+      "impacto": [
+        "Adquiere equipamiento informático para la empresa.",
+        "Selecciona el ERP utilizado para la gestión interna.",
+        "Actúa como interlocutor técnico ante el proveedor del ERP.",
+        "Es la contraparte tecnológica con quien el equipo de desarrollo puede interactuar."
+      ],
+      "sinonimos": [
+        "líder técnico"
+      ],
+      "id": "LLM19"
+    },
+    {
+      "nombre": "proveedor del ERP",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es la empresa que provee el ERP a ecoFactory.",
+        "Es responsable de la venta, capacitación e integración del ERP."
+      ],
+      "impacto": [
+        "Vende o alquila el ERP con sus módulos, incluyendo el módulo de facturación, el módulo de contabilidad y el módulo de compras y ventas.",
+        "Brinda capacitación a los usuarios según los módulos contratados.",
+        "Provee usuario, contraseña y llave de seguridad para acceder a los distintos módulos del ERP.",
+        "Realiza integraciones del ERP con sistemas externos mediante API.",
+        "Puede generar una réplica de la base de datos del ERP a solicitud del operario ERP o del responsable de sistemas.",
+        "Cuenta con programadores que pueden desarrollar la integración del ERP con fuentes externas."
+      ],
+      "sinonimos": [
+        "responsable ERP"
+      ],
+      "id": "LLM20"
+    },
+    {
+      "nombre": "paquete de pedidos",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un conjunto de pedidos agrupados que el área comercial genera una vez por día.",
+        "Contiene información sobre tipo de bolsa, cantidad de bolsas y dirección del cliente para cada pedido incluido."
+      ],
+      "impacto": [
+        "El área comercial lo genera una vez por día como parte de la gestión interna.",
+        "Se comunica al depósito para indicarle qué entrega debe realizar.",
+        "Su información se carga en el ERP para su procesamiento.",
+        "Los errores en su contenido generan inconsistencias en el remito y en la factura emitida al cliente mayorista."
+      ],
+      "sinonimos": [
+        "paquete"
+      ],
+      "id": "LLM21"
+    },
+    {
+      "nombre": "entrega",
+      "tipo": "Verbo",
+      "nocion": [
+        "Es el proceso por el cual el depósito hace llegar las bolsas ecológicas al cliente mayorista.",
+        "El depósito avisa al área comercial cuando la entrega se ha generado.",
+        "Se realiza luego de que el área comercial envía la información del paquete de pedidos al depósito."
+      ],
+      "impacto": [
+        "El operario ERP carga la confirmación de venta en el ERP cuando la entrega se genera.",
+        "El remito debe coincidir con el pedido para que sea correcta.",
+        "Si el tipo de bolsa o la cantidad de bolsas no coinciden con el pedido, el cliente mayorista recibe productos que no solicitó.",
+        "Un error en la dirección del cliente puede impedir que llegue al destino correcto.",
+        "Una entrega incorrecta puede desencadenar la necesidad de generar un nuevo pedido.",
+        "Una entrega incorrecta puede derivar en una factura que no se corresponde con lo entregado.",
+        "Desencadena el proceso de facturación, en el cual el módulo de facturación genera la factura A, B o C correspondiente."
+      ],
+      "sinonimos": [
+        "entregas"
+      ],
+      "id": "LLM22"
+    },
+    {
+      "nombre": "stock",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es el conjunto de productos registrados en el ERP.",
+        "Está relacionado con los pedidos, remitos y la facturación gestionados en el ERP."
+      ],
+      "impacto": [
+        "El operario ERP registra las altas, bajas y modificaciones en el ERP.",
+        "El ERP genera reportes sobre su estado.",
+        "La carga de materia prima en el ERP lo actualiza."
+      ],
+      "sinonimos": [],
+      "id": "LLM23"
+    },
+    {
+      "nombre": "materia prima",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un insumo que ingresa al proceso productivo de ecoFactory.",
+        "Su incorporación queda registrada en el ERP."
+      ],
+      "impacto": [
+        "El operario ERP la carga en el ERP cada vez que se realiza una compra.",
+        "Su carga en el ERP actualiza el stock."
+      ],
+      "sinonimos": [],
+      "id": "LLM24"
+    },
+    {
+      "nombre": "orden de compra",
+      "tipo": "Objeto",
+      "nocion": [
+        "Documento que el depósito envía al área comercial cuando recibe los productos.",
+        "Está relacionado con el pedido y el remito dentro del proceso de gestión interna."
+      ],
+      "impacto": [
+        "El operario ERP la carga en el ERP cada vez que el depósito la envía.",
+        "Su carga en el ERP forma parte de las tareas repetitivas del operario ERP."
+      ],
+      "sinonimos": [],
+      "id": "LLM25"
+    },
+    {
+      "nombre": "alta de cliente",
+      "tipo": "Verbo",
+      "nocion": [
+        "Proceso mediante el cual el área comercial registra e identifica a un cliente nuevo en el ERP.",
+        "Se realiza una vez por día, al momento en que un cliente nuevo se contacta con la empresa.",
+        "Durante este proceso se registra la dirección del cliente y demás datos identificatorios."
+      ],
+      "impacto": [
+        "El área comercial carga los datos del cliente nuevo, incluyendo su dirección del cliente, en el ERP.",
+        "Una carga incorrecta de la dirección del cliente provoca que la entrega se realice en un lugar que no corresponde.",
+        "Una vez registrado el cliente nuevo, el área comercial puede comenzar a gestionar pedidos a su nombre.",
+        "Los errores en los datos del cliente nuevo generan problemas en la facturación y en la logística."
+      ],
+      "sinonimos": [
+        "identificación del cliente"
+      ],
+      "id": "LLM26"
+    },
+    {
+      "nombre": "dirección del cliente",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un dato asociado al cliente mayorista que indica el lugar físico al que debe enviarse la entrega.",
+        "Forma parte de la información del cliente que se gestiona en el alta de cliente.",
+        "Viaja junto con el pedido en documentos de Word y planillas de Excel."
+      ],
+      "impacto": [
+        "El área comercial la carga al realizar el alta de cliente.",
+        "Una carga incorrecta provoca que la entrega sea enviada a un lugar que no corresponde.",
+        "Un error en su registro genera costos adicionales en la logística."
+      ],
+      "sinonimos": [],
+      "id": "LLM27"
+    },
+    {
+      "nombre": "tipo de bolsa",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es una característica de la bolsa ecológica que identifica la variedad o clase de producto solicitado.",
+        "Forma parte de la información incluida en el pedido realizado por el cliente mayorista."
+      ],
+      "impacto": [
+        "El área comercial registra el tipo de bolsa al generar el pedido.",
+        "El depósito utiliza el tipo de bolsa para armar el paquete de pedidos a entregar.",
+        "Cuando el tipo de bolsa no coincide con lo solicitado en el pedido, se generan errores que afectan el remito y la factura.",
+        "Los errores en el tipo de bolsa pueden requerir la generación de un nuevo pedido."
+      ],
+      "sinonimos": [],
+      "id": "LLM28"
+    },
+    {
+      "nombre": "cantidad de bolsas",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un dato asociado a cada tipo de bolsa dentro de un pedido.",
+        "Forma parte de la información que viaja entre el área comercial y el depósito para la preparación de la entrega.",
+        "Se registra en planillas de Excel y documentos de Word que se intercambian por mail."
+      ],
+      "impacto": [
+        "El área comercial la incluye al generar el pedido.",
+        "El depósito la utiliza para armar el paquete de pedidos correspondiente a cada entrega.",
+        "Cuando se registra de forma incorrecta, el cliente mayorista recibe una entrega que no coincide con lo solicitado en el pedido.",
+        "Los errores en ella generan inconsistencias entre el remito y el pedido.",
+        "Los errores en ella provocan problemas en la factura emitida por el módulo de facturación.",
+        "El operario ERP depura manualmente las diferencias cuando la cantidad registrada en la planilla de Excel no coincide con lo cargado en el ERP."
+      ],
+      "sinonimos": [],
+      "id": "LLM29"
+    },
+    {
+      "nombre": "tirada",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es una cantidad de bolsas ecológicas producidas en un mismo lote de fabricación.",
+        "Puede comprender 1000, 2000 o 4000 unidades de bolsas ecológicas."
+      ],
+      "impacto": [
+        "La cantidad de bolsas ecológicas producidas en una tirada determina el volumen disponible para atender un pedido.",
+        "El stock se ve afectado por la cantidad de bolsas ecológicas generadas en cada tirada."
+      ],
+      "sinonimos": [],
+      "id": "LLM30"
+    },
+    {
+      "nombre": "planilla de Excel",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un tipo de salida que generan los módulos del ERP, junto con el reporte y el PDF.",
+        "Contiene información con la que el operario ERP gestiona las actividades de la empresa.",
+        "Es uno de los formatos en que viaja la información entre áreas, junto con el documento de Word y el PDF."
+      ],
+      "impacto": [
+        "El operario ERP utiliza la información que contiene para cargar datos manualmente en el ERP.",
+        "El gerente de comercialización la chequea para verificar que la entrega coincida con el pedido.",
+        "La información del cliente, incluyendo la dirección del cliente, viaja en ella entre distintas áreas.",
+        "La información del paquete de pedidos, incluyendo el tipo de bolsa y la cantidad de bolsas, se traslada en ella, lo que puede generar errores en el remito y la factura."
+      ],
+      "sinonimos": [
+        "planilla",
+        "planillas"
+      ],
+      "id": "LLM31"
+    },
+    {
+      "nombre": "documento de Word",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un archivo de texto en el que se registra información relacionada con pedidos, remitos, facturas y datos de clientes mayoristas.",
+        "Contiene información sobre la dirección del cliente, el tipo de bolsa y la cantidad de bolsas correspondientes a un pedido.",
+        "Es utilizado por el área comercial y el depósito como medio de intercambio de información."
+      ],
+      "impacto": [
+        "La información recibida por mail es pasada manualmente a este archivo por el operario ERP u otros integrantes del área comercial.",
+        "Es enviado y recibido por mail entre el área comercial y el depósito para coordinar la entrega y el paquete de pedidos.",
+        "Los errores introducidos en este archivo provocan inconsistencias en el pedido, el remito y la factura que llega al cliente mayorista.",
+        "La información que contiene es cargada manualmente al ERP para continuar con la gestión interna."
+      ],
+      "sinonimos": [],
+      "id": "LLM32"
+    },
+    {
+      "nombre": "reporte",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un tipo de salida que generan los módulos del ERP.",
+        "Los módulos que lo generan son el módulo de contabilidad, el módulo de facturación y el módulo de compras y ventas.",
+        "Existe junto a otros tipos de salida del ERP, como la planilla de Excel y el PDF."
+      ],
+      "impacto": [
+        "El ERP lo genera a partir de las actividades realizadas en sus módulos.",
+        "El operario ERP lo utiliza para gestionar información relacionada con pedidos, remitos, factura y stock."
+      ],
+      "sinonimos": [
+        "informes"
+      ],
+      "id": "LLM33"
+    },
+    {
+      "nombre": "PDF",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un tipo de salida que genera el ERP a partir de las actividades realizadas en sus módulos.",
+        "Existe junto a otros tipos de salida del ERP, como el reporte y la planilla de Excel.",
+        "Contiene información relacionada con los pedidos, remitos y facturación gestionados en el ERP."
+      ],
+      "impacto": [
+        "El ERP lo genera a partir de las operaciones registradas en el módulo de facturación, el módulo de contabilidad o el módulo de compras y ventas.",
+        "El operario ERP lo envía hacia el depósito u otras áreas como parte de la gestión interna.",
+        "La información que contiene es cargada manualmente de vuelta al ERP cuando regresa desde el depósito u otras áreas."
+      ],
+      "sinonimos": [],
+      "id": "LLM34"
+    },
+    {
+      "nombre": "AFIP",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Es el organismo estatal con el que la empresa debe cumplir obligaciones formales de facturación.",
+        "El ERP tiene integración con este organismo para cubrir los mecanismos formales del país."
+      ],
+      "impacto": [
+        "Regula la factura de modo que no puede modificarse fácilmente una vez emitida.",
+        "Condiciona el proceso de facturación que realiza el operario ERP a través del módulo de facturación."
+      ],
+      "sinonimos": [],
+      "id": "LLM35"
+    },
+    {
+      "nombre": "asiento contable",
+      "tipo": "Objeto",
+      "nocion": [
+        "Es un registro contable generado automáticamente por el módulo de contabilidad del ERP.",
+        "Se produce como consecuencia de las actividades realizadas en los distintos módulos del ERP, como el módulo de facturación y el módulo de compras y ventas."
+      ],
+      "impacto": [
+        "El módulo de contabilidad lo genera de forma automática sin intervención del operario ERP.",
+        "Se acumula en la base de datos del ERP a medida que se registran operaciones en los módulos."
+      ],
+      "sinonimos": [
+        "asientos"
+      ],
+      "id": "LLM36"
+    },
+    {
+      "nombre": "backup",
+      "tipo": "Verbo",
+      "nocion": [
+        "Actividad que realiza el técnico en informática para preservar la información almacenada en la base de datos del ERP.",
+        "El técnico en informática ejecuta esta actividad de forma programada: una vez por día y una vez por semana.",
+        "Se realiza como un servicio técnico contratado a terceros por ecoFactory."
+      ],
+      "impacto": [
+        "El técnico en informática accede a la base de datos del ERP para realizar la copia de resguardo.",
+        "El operario ERP no interviene en esta actividad."
+      ],
+      "sinonimos": [
+        "backups"
+      ],
+      "id": "LLM37"
+    },
+    {
+      "nombre": "base de datos",
+      "tipo": "Objeto",
+      "nocion": [
+        "Repositorio donde se almacena la información gestionada por el ERP.",
+        "El operario ERP no accede ni manipula directamente la base de datos.",
+        "El técnico en informática es quien interactúa con la base de datos para realizar el backup."
+      ],
+      "impacto": [
+        "El técnico en informática realiza un backup de la base de datos una vez por día y una vez por semana.",
+        "El proveedor del ERP puede realizar un corte de la base de datos a una fecha determinada para permitir su consulta externa.",
+        "Se puede acceder a la base de datos mediante una API para tomar información del ERP desde una fuente externa."
+      ],
+      "sinonimos": [],
+      "id": "LLM38"
+    },
+    {
+      "nombre": "API",
+      "tipo": "Objeto",
+      "nocion": [
+        "Interfaz estándar de integración utilizada para conectar una fuente externa con el ERP.",
+        "Permite que sistemas externos tomen información del ERP mediante tecnologías convencionales de internet.",
+        "El proveedor del ERP cuenta con programadores capaces de realizar la integración a través de ella."
+      ],
+      "impacto": [
+        "El responsable de sistemas y el proveedor del ERP gestionan su implementación para lograr la integración entre el ERP y sistemas externos.",
+        "Permite automatizar procesos por fuera del ERP tomando información del módulo de facturación, módulo de contabilidad y módulo de compras y ventas.",
+        "Se utiliza de manera similar a la integración existente entre el ERP y dragon fish mediante web service."
+      ],
+      "sinonimos": [
+        "web service"
+      ],
+      "id": "LLM39"
+    },
+    {
+      "nombre": "integración",
+      "tipo": "Verbo",
+      "nocion": [
+        "Proceso por el cual el ERP se conecta con sistemas externos para intercambiar información.",
+        "El proveedor del ERP es quien puede llevar a cabo este proceso.",
+        "El gerente de comercialización plantea la posibilidad de automatizar o integrar sistemas externos al ERP en lugar de reemplazarlo."
+      ],
+      "impacto": [
+        "El ERP se integra con puntos de venta externos, como dragon fish, mediante un web service.",
+        "Una API permite que una fuente externa tome información del ERP.",
+        "El proveedor del ERP dispone de programadores para realizar la integración mediante tecnologías estándar del mercado.",
+        "La integración del ERP con la AFIP cubre los mecanismos formales de facturación del país.",
+        "La imposibilidad de reemplazar el ERP condiciona que cualquier mejora deba realizarse mediante integración con el sistema existente."
+      ],
+      "sinonimos": [
+        "integraciones"
+      ],
+      "id": "LLM40"
+    },
+    {
+      "nombre": "punto de venta",
+      "tipo": "Objeto",
+      "nocion": [
+        "Sistema externo con el que el ERP tiene integración establecida.",
+        "Dragon fish es un ejemplo de sistema que realiza punto de venta para comercios.",
+        "Se comunica con el ERP mediante una integración basada en web service."
+      ],
+      "impacto": [
+        "El ERP se integra al punto de venta mediante una API para intercambiar información.",
+        "El proveedor del ERP gestiona la integración con el punto de venta utilizando tecnologías estándar de integración."
+      ],
+      "sinonimos": [
+        "puntos de venta"
+      ],
+      "id": "LLM41"
+    },
+    {
+      "nombre": "dragon fish",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Proveedor de soluciones de punto de venta utilizado por comercios en los principales shopping de Argentina.",
+        "Se integra con el ERP mediante web service."
+      ],
+      "impacto": [
+        "Realiza la gestión de punto de venta para los comercios que lo utilizan.",
+        "Se integra con el ERP a través de una API para intercambiar información."
+      ],
+      "sinonimos": [],
+      "id": "LLM42"
+    },
+    {
+      "nombre": "llave de seguridad",
+      "tipo": "Objeto",
+      "nocion": [
+        "Mecanismo de seguridad provisto por el proveedor del ERP.",
+        "Está asociada a los distintos módulos del ERP."
+      ],
+      "impacto": [
+        "El proveedor del ERP la entrega al operario ERP junto con la contraseña para acceder a los módulos.",
+        "El operario ERP la utiliza para operar los módulos de facturación, contabilidad y compras y ventas."
+      ],
+      "sinonimos": [
+        "llaves de seguridad"
+      ],
+      "id": "LLM43"
+    },
+    {
+      "nombre": "usuario",
+      "tipo": "Objeto",
+      "nocion": [
+        "Credencial de acceso que el proveedor del ERP entrega al operario ERP junto con la contraseña y la llave de seguridad para operar los módulos del ERP.",
+        "Está asociado a los módulos de facturación, contabilidad y compras y ventas del ERP."
+      ],
+      "impacto": [
+        "El operario ERP lo utiliza para acceder al ERP y realizar la gestión interna.",
+        "El proveedor del ERP lo provee junto con la contraseña y la llave de seguridad."
+      ],
+      "sinonimos": [
+        "usuarios"
+      ],
+      "id": "LLM44"
+    },
+    {
+      "nombre": "contraseña",
+      "tipo": "Objeto",
+      "nocion": [
+        "Elemento de seguridad provisto por el proveedor del ERP junto con la llave de seguridad.",
+        "Es asignada al operario ERP para acceder a los distintos módulos del ERP."
+      ],
+      "impacto": [
+        "El proveedor del ERP provee las contraseñas al operario ERP para acceder al ERP.",
+        "El nivel de seguridad asociado a las contraseñas depende de las políticas de cada cliente."
+      ],
+      "sinonimos": [
+        "contraseñas"
+      ],
+      "id": "LLM45"
+    },
+    {
+      "nombre": "capacitación",
+      "tipo": "Verbo",
+      "nocion": [
+        "El proveedor del ERP realiza la capacitación al operario ERP sobre el uso de los módulos contratados.",
+        "Se lleva a cabo una vez que se define la solución a implementar.",
+        "Abarca los módulos específicos que el cliente contrata, como el módulo de facturación."
+      ],
+      "impacto": [
+        "Permite al operario ERP aprender a utilizar los módulos del ERP contratados.",
+        "Es necesaria para que el operario ERP pueda operar la nueva solución integrada al ERP."
+      ],
+      "sinonimos": [],
+      "id": "LLM46"
+    },
+    {
+      "nombre": "logística",
+      "tipo": "Objeto",
+      "nocion": [
+        "Conjunto de actividades relacionadas con el traslado y la entrega de los pedidos desde los depósitos hasta los clientes mayoristas.",
+        "Involucra la cantidad de días que se tarda en realizar una entrega de un lugar a otro.",
+        "Es un aspecto diferenciado de la gestión interna de preparación y entrega de los productos."
+      ],
+      "impacto": [
+        "Genera problemas cuando la dirección del cliente está cargada incorrectamente en el ERP, provocando que la entrega no llegue al destino correcto.",
+        "Impacta en el costo de la empresa cuando se producen errores en el pedido y es necesario realizar una nueva entrega.",
+        "Se ve afectada por los errores en el paquete de pedidos, lo que puede derivar en que el cliente mayorista reciba bolsas ecológicas que no pidió."
+      ],
+      "sinonimos": [],
+      "id": "LLM47"
+    },
+    {
+      "nombre": "gestión interna",
+      "tipo": "Verbo",
+      "nocion": [
+        "Conjunto de actividades administrativas que el área comercial y el gerente de comercialización llevan a cabo dentro de ecoFactory para gestionar pedidos, remitos y facturación.",
+        "Se realiza de forma cotidiana en respuesta a los pedidos de los clientes mayoristas.",
+        "Su propósito es mejorar la eficacia y eficiencia de los procesos internos."
+      ],
+      "impacto": [
+        "Involucra la carga y seguimiento de pedidos en el ERP.",
+        "Involucra la generación y verificación de remitos contra los pedidos registrados en el ERP.",
+        "Involucra el proceso de facturación mediante el módulo de facturación, generando factura A, factura B o factura C según corresponda.",
+        "Involucra el alta de cliente y la verificación de la dirección del cliente para evitar errores en la logística.",
+        "Involucra el control del stock y la carga de materia prima en el ERP.",
+        "Se ve dificultada cuando la información viaja en planilla de Excel o documento de Word, lo que genera errores en los pedidos, remitos y facturas.",
+        "Se ve dificultada cuando el remito no coincide con el pedido, requiriendo depuración manual en el ERP.",
+        "Desencadena la generación de un paquete de pedidos una vez por día por parte del área comercial.",
+        "Desencadena la confirmación de venta y el envío de la información al depósito para la entrega.",
+        "Desencadena la emisión de un reporte o PDF desde el ERP como resultado de las operaciones registradas.",
+        "Desencadena la realización de asientos contables de forma automática en el módulo de contabilidad."
+      ],
+      "sinonimos": [],
+      "id": "LLM48"
+    },
+    {
+      "nombre": "confirmación de venta",
+      "tipo": "Verbo",
+      "nocion": [
+        "Actividad mediante la cual el operario ERP registra en el ERP que una entrega fue realizada a un cliente mayorista.",
+        "Se ejecuta cada vez que se concreta una entrega de un pedido al cliente mayorista."
+      ],
+      "impacto": [
+        "El operario ERP ingresa al ERP y registra la entrega correspondiente al pedido.",
+        "Una vez registrada la entrega, se habilita el proceso de facturación en el módulo de facturación.",
+        "El operario ERP ingresa al ERP y genera la factura correspondiente de forma manual.",
+        "Si el remito no coincide con el pedido, el operario ERP depura las diferencias manualmente antes de completar el registro."
+      ],
+      "sinonimos": [],
+      "id": ""
+    },
+    {
+      "nombre": "técnico en informática",
+      "tipo": "Sujeto",
+      "nocion": [
+        "Servicio técnico externo contratado por la empresa para realizar tareas relacionadas con la base de datos del ERP."
+      ],
+      "impacto": [
+        "Realiza el backup de la base de datos del ERP una vez por día.",
+        "Realiza el backup de la base de datos del ERP una vez por semana."
+      ],
+      "sinonimos": [
+        "servicio técnico"
+      ],
+      "id": ""
+    }
+  ]
+}

@@ -11,4 +11,8 @@ spacy>=3.7
 
 # Pipeline LLM (según el proveedor elegido):
 openai>=1.0
-anthropic>=0.34
+# El SDK 1.x de Anthropic cambió la firma de messages.create() (entre otras cosas,
+# movió/eliminó el parámetro 'temperature', del que depende la reproducibilidad). Se
+# acota a la línea 0.x, con la que está probado el cliente. Aun así, el cliente tolera
+# modelos que rechacen 'temperature': reintenta sin fijarla y lo avisa por consola.
+anthropic>=0.34,<1.0
